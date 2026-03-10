@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-09_10-33-27",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -51,22 +51,26 @@\n ring\n- \n %7B%0A\n-%09\n+    \n switch\n- \n %7B%0A\n-%09\n+    \n case\n@@ -78,18 +78,24 @@\n i %3C 12:%0A\n-%09%09\n+        \n return %22\n@@ -103,17 +103,20 @@\n rian%C3%A7a%22%0A\n-%09\n+    \n case i %3C\n@@ -120,18 +120,24 @@\n i %3C 18:%0A\n-%09%09\n+        \n return %22\n@@ -143,17 +143,20 @@\n %22jovem%22%0A\n-%09\n+    \n case i %3C\n@@ -160,18 +160,24 @@\n i %3C 65:%0A\n-%09%09\n+        \n return %22\n@@ -184,17 +184,20 @@\n adulto%22%0A\n-%09\n+    \n case i %3C\n@@ -203,18 +203,24 @@\n %3C 1000:%0A\n-%09%09\n+        \n return %22\n@@ -226,17 +226,20 @@\n %22idoso%22%0A\n-%09\n+    \n default:\n@@ -243,10 +243,16 @@\n lt:%0A\n-%09%09\n+        \n retu\n@@ -262,17 +262,20 @@\n %22mumia%22%0A\n-%09\n+    \n %7D%0A%7D%0A%0Afun\n@@ -285,17 +285,20 @@\n ain() %7B%0A\n-%09\n+    \n var n st\n@@ -302,17 +302,20 @@\n  string%0A\n-%09\n+    \n var i in\n@@ -317,17 +317,20 @@\n  i int%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -354,9 +354,12 @@\n i)%0A%0A\n-%09\n+    \n fmt.\n@@ -370,16 +370,10 @@\n tln(\n+ \n n\n- + %22%5Cn%22\n  + c\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-09_10-33-49",
+            "content": "@@ -85,19 +85,16 @@\n return %22\n-eh \n crian%C3%A7a%22\n@@ -118,19 +118,16 @@\n return %22\n-eh \n jovem%22%0A%09\n@@ -149,19 +149,16 @@\n return %22\n-eh \n adulto%22%0A\n@@ -183,19 +183,16 @@\n return %22\n-eh \n idoso%22%0A%09\n@@ -214,11 +214,8 @@\n rn %22\n-eh \n mumi\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-09_10-34-05",
+            "content": "@@ -324,16 +324,23 @@\n ntln(n +\n+ %22%5Cn%22 +\n  classif\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-09_10-34-18",
+            "content": "@@ -85,17 +85,16 @@\n return %22\n- \n eh crian\n@@ -121,17 +121,16 @@\n return %22\n- \n eh jovem\n@@ -155,17 +155,16 @@\n return %22\n- \n eh adult\n@@ -192,17 +192,16 @@\n return %22\n- \n eh idoso\n@@ -222,17 +222,16 @@\n return %22\n- \n eh mumia\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-09_10-34-24",
+            "content": "@@ -94,17 +94,17 @@\n eh crian\n-c\n+%C3%A7\n a%22%0A%09case\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-09_10-34-32",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc classify(i int) string {\n\tswitch {\n\tcase i < 12:\n\t\treturn \" eh crianca\"\n\tcase i < 18:\n\t\treturn \" eh jovem\"\n\tcase i < 65:\n\t\treturn \" eh adulto\"\n\tcase i < 1000:\n\t\treturn \" eh idoso\"\n\tdefault:\n\t\treturn \" eh mumia\"\n\t}\n}\n\nfunc main() {\n\tvar n string\n\tvar i int\n\n\tfmt.Scanf(\"%s\\n%d\", &n, &i)\n\n\tfmt.Println(n + classify(i))\n}\n",
+            "lines": "27"
+        }
+    ]
+}

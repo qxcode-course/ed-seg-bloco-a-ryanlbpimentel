@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-09_10-28-13",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc calcular(a, b, c float64) float64 {\n\tp := (a + b + c) / 2\n\theron := (p * (p - a) * (p - b) * (p - c))\n\tarea := math.Sqrt(math.Abs(heron))\n\n\treturn area\n}\n\n//6 * (6-4) * (6-5) * (6-6) =\n\nfunc main() {\n\tvar a, b, c float64\n\n\tfmt.Scanf(\"%f\\n%f\\n%f\", &a, &b, &c)\n\tarea := calcular(a, b, c)\n\n\tfmt.Printf(\"%.2f\\n\", area)\n}\n",
+            "lines": "25"
+        }
+    ]
+}

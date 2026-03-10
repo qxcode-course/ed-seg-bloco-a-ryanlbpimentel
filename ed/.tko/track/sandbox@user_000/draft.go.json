@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-09_10-17-31",
+            "content": "@@ -155,25 +155,8 @@\n )))%0A\n-    print(p,area)\n %0A%09re\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-09_10-17-48",
+            "content": "@@ -1,351 +1,62 @@\n-package main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math%22%0A)%0A%0Afunc calcular(a, b, c float64) float64 %7B%0A%09p := (a + b + c) / 2%0A%09area := math.Sqrt((p * (p - a) * (p - b) * (p\n+@@ -151,29 +151,25 @@%0A \n  - c)))\n-%0A\n+%250A\n     %0A\n-    if area %3C 0%7B%0A        return area*-1%0A    %7D%0A%09return area%0A%7D%0A%0Afunc main() %7B%0A%09var a, b, c float64%0A%0A%09fmt.Scanf(%22%25f %25f %25f%22, &a, &b, &c)%0A    area := calcular(a, b, c)%0A%0A    fmt.P\n+-fmt.P%0A+p%0A \n rint\n-ln(\n+(p,\n area)%0A\n-%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-09_10-18-56",
+            "content": "@@ -102,17 +102,26 @@\n  2%0A%09\n-heron := \n+area := math.Sqrt(\n (p *\n@@ -153,62 +153,60 @@\n  c))\n-%0A%09area := math.Sqrt(heron)%0A%0A%09fmt.Print(p, heron, area)\n+)%0A    %0A    if area %3C 0%7B%0A        return area*-1%0A    %7D\n %0A%09re\n@@ -289,17 +289,20 @@\n &b, &c)%0A\n-%09\n+    \n area := \n@@ -320,17 +320,20 @@\n  b, c)%0A%0A\n-%09\n+    \n fmt.Prin\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-09_10-19-25",
+            "content": "@@ -164,23 +164,41 @@\n qrt(\n-math.Abs(heron)\n+heron)%0A%0A%09fmt.Print(p, heron, area\n )%0A%09r\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-09_10-19-49",
+            "content": "@@ -181,83 +181,22 @@\n n))%0A\n-%0A    fmt.Print(p,heron,area)%0A%09return area%0A%7D%0A%0A//6 * (6-4) * (6-5) * (6-6) = \n+%09return area%0A%7D\n %0A%0Afu\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-09_10-21-03",
+            "content": "@@ -196,42 +196,16 @@\n int(\n-(p - a), (p - b), (p - c), \n+p,\n heron,\n- \n area\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-09_10-21-39",
+            "content": "@@ -196,11 +196,8 @@\n int(\n-p, \n (p -\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-09_10-21-56",
+            "content": "@@ -196,13 +196,49 @@\n int(\n-a,b,c\n+p, (p - a), (p - b), (p - c), heron, area\n )%0A%09r\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-09_10-22-13",
+            "content": "@@ -178,17 +178,20 @@\n eron))%0A%0A\n-%09\n+    \n fmt.Prin\n@@ -194,20 +194,18 @@\n Print(a,\n- \n b,\n- \n c)%0A%09retu\n@@ -244,16 +244,17 @@\n  (6-6) =\n+ \n %0A%0Afunc m\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-09_10-22-15",
+            "content": "@@ -299,14 +299,12 @@\n (%22%25f\n-/n%25f/n\n+ %25f \n %25f%22,\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-09_10-22-27",
+            "content": "@@ -299,13 +299,13 @@\n (%22%25f\n-%5Cn%25f%5C\n+/n%25f/\n n%25f%22\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-09_10-22-37",
+            "content": "@@ -178,16 +178,36 @@\n eron))%0A%0A\n+%09fmt.Print(a, b, c)%0A\n %09return \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-09_10-22-44",
+            "content": "@@ -340,26 +340,11 @@\n rint\n-f(%22Area: %25.2f%5Cn%22, \n+ln(\n area\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-09_10-23-01",
+            "content": "@@ -339,16 +339,22 @@\n Printf(%22\n+Area: \n %25.2f%5Cn%22,\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-09_10-23-08",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc calcular(a, b, c float64) float64 {\n\tp := (a + b + c) / 2\n\theron := (p * (p - a) * (p - b) * (p - c))\n\tarea := math.Sqrt(math.Abs(heron))\n\n\treturn area\n}\n\n//6 * (6-4) * (6-5) * (6-6) =\n\nfunc main() {\n\tvar a, b, c float64\n\n\tfmt.Scanf(\"%f\\n%f\\n%f\", &a, &b, &c)\n\tarea := calcular(a, b, c)\n\n\tfmt.Printf(\"%.2f\\n\", area)\n}\n",
+            "lines": "25"
+        }
+    ]
+}
