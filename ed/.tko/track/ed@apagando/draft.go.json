@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_16-31-57",
+            "content": "@@ -481,28 +481,8 @@\n %7D%0A%0A%09\n-fmt.Print(filaFinal)\n %0A%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-16_16-32-10",
+            "content": "@@ -398,9 +398,9 @@\n %5Bi%5D \n-!\n+=\n = fi\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-16_16-32-35",
+            "content": "@@ -467,18 +467,8 @@\n i%5D)%0A\n-%09%09%09%09break%0A\n %09%09%09%7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-16_16-32-56",
+            "content": "@@ -333,22 +333,24 @@\n nge fila\n-Sairam\n+Original\n %7B%0A%09%09for \n@@ -360,32 +360,30 @@\n = range fila\n-Original\n+Sairam\n %7B%0A%09%09%09if fila\n@@ -386,33 +386,33 @@\n fila\n-Sairam\n+Original\n %5Bi%5D \n-=\n+!\n = fila\n-Original\n+Sairam\n %5Bj%5D%7B\n@@ -459,17 +459,17 @@\n riginal%5B\n-j\n+i\n %5D)%0A%09%09%09%09b\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-16_16-35-21",
+            "content": "@@ -396,9 +396,9 @@\n %5Bi%5D \n-!\n+=\n = fi\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-16_16-35-37",
+            "content": "@@ -337,37 +337,15 @@\n fila\n-Original%7B%0A%09%09achou := false%0A%09%09\n+Sairam%7B\n %0A%09%09f\n@@ -358,30 +358,32 @@\n = range fila\n-Sairam\n+Original\n %7B%0A%09%09%09if fila\n@@ -386,76 +386,39 @@\n fila\n-Original\n+Sairam\n %5Bi%5D \n-== j%7B%0A%09%09%09%09achou = true%0A%09%09%09%7D%0A%09%09%7D%0A%09%09%0A%09%09if achou == false\n+!= filaOriginal%5Bj%5D\n %7B%0A\n+%09\n %09%09%09f\n@@ -459,20 +459,35 @@\n riginal%5B\n-i\n+j\n %5D)%0A\n+%09%09%09%09break%0A%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-16_16-38-23",
+            "content": "@@ -421,21 +421,9 @@\n  == \n-filaSairam%5Bj%5D\n+j\n %7B%0A%09%09\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-16_16-38-56",
+            "content": "@@ -544,36 +544,8 @@\n %09%7D%0A%0A\n-%09for i := range filaFinal%7B%0A%09\n %09fmt\n@@ -560,19 +560,13 @@\n ilaFinal\n-%5Bi%5D)%0A%09%7D\n+)\n %0A%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-16_16-39-28",
+            "content": "@@ -595,13 +595,8 @@\n l%5Bi%5D\n-, %22 %22\n )%0A%09%7D\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-16_16-39-35",
+            "content": "@@ -599,10 +599,8 @@\n , %22 \n-%5Cn\n %22)%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-16_16-39-45",
+            "content": "@@ -599,28 +599,15 @@\n , %22 \n+%5Cn\n %22)%0A%09%7D%0A%0A\n-%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-16_16-40-01",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n,nSairam int\n\tfmt.Scan(&n)\n\n\tvar filaOriginal = make([]int, n)\n\tvar filaFinal = []int{}\n\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&filaOriginal[i])\n\t}\n\n\tfmt.Scan(&nSairam)\n\n\tvar filaSairam = make([]int, nSairam)\n\n\tfor i := 0; i < nSairam; i++ {\n\t\tfmt.Scan(&filaSairam[i])\n\t}\n\n\tfor i := range filaOriginal{\n\t\tachou := false\n\t\t\n\t\tfor j := range filaSairam{\n\t\t\tif filaOriginal[i] == filaSairam[j]{\n\t\t\t\tachou = true\n\t\t\t}\n\t\t}\n\t\t\n\t\tif achou == false{\n\t\t\tfilaFinal = append(filaFinal, filaOriginal[i])\n\t\t}\n\t}\n\n\tfor i := range filaFinal{\n\t\tfmt.Print(filaFinal[i], \" \")\n\t}\n\n\tfmt.Println()\n}\n",
+            "lines": "43"
+        }
+    ]
+}
