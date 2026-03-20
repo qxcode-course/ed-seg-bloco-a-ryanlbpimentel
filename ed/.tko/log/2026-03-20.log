@@ -1,0 +1,37 @@
+2026-03-20 14:01:42, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-20 14:01:44, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100
+2026-03-20 14:01:44, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-20 14:21:09, MOVE, v:1, k:ed@pintando, mode:DOWN
+2026-03-20 14:21:10, MOVE, v:1, k:ed@mumia, mode:DOWN
+2026-03-20 14:21:10, MOVE, v:1, k:ed@fuga, mode:DOWN
+2026-03-20 14:21:11, MOVE, v:1, k:ed@pedra, mode:DOWN
+2026-03-20 14:21:12, MOVE, v:1, k:ed@casais, mode:DOWN
+2026-03-20 14:21:12, MOVE, v:1, k:ed@baruel, mode:DOWN
+2026-03-20 14:21:13, MOVE, v:1, k:ed@gomos, mode:DOWN
+2026-03-20 14:22:04, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-20 14:22:04, EXEC, v:1, k:ed@pintando, mode:FREE, size:5
+2026-03-20 14:22:17, EXEC, v:1, k:ed@pintando, mode:FREE
+2026-03-20 14:22:42, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:25
+2026-03-20 14:22:43, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-20 14:23:03, SELF, v:1, k:ed@pintando, self:1, rate:100, study:8
+2026-03-20 14:23:03, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-20 14:23:04, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-20 14:23:06, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-20 14:23:06, EXEC, v:1, k:ed@mumia, mode:FREE, size:5
+2026-03-20 14:23:18, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100, size:27
+2026-03-20 14:23:19, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-20 14:24:03, SELF, v:1, k:ed@mumia, self:1, rate:100, study:5
+2026-03-20 14:24:03, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-20 14:24:04, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-20 14:24:06, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-20 14:24:07, EXEC, v:1, k:ed@fuga, mode:FREE, size:5
+2026-03-20 14:24:16, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-20 14:24:24, SELF, v:1, k:ed@fuga, self:1, study:15
+2026-03-20 14:24:37, SELF, v:1, k:ed@fuga, self:1, study:15
+2026-03-20 14:24:37, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-20 14:24:38, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100, size:32
+2026-03-20 14:24:39, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-03-20 14:24:39, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-20 14:25:18, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-20 14:25:17, EXEC, v:1, k:ed@pedra, mode:FREE, size:5
+2026-03-20 14:25:44, MOVE, v:1, k:ed@pedra, mode:BACK

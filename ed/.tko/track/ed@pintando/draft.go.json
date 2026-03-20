@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_14-22-04",
+            "content": "@@ -1,9 +1,8 @@\n- \n package \n@@ -10,354 +10,66 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22math%22%0A)%0A%0Afunc calcular(a, b, c float64) float64 %7B%0A%09p := (a + b + c) / 2%0A%09heron := (p * (p - a) * (p - b) * (p - c))%0A%09area := math.Sqrt(math.Abs(heron))%0A%0A%09return area%0A%7D%0A%0A//6 * (6-4) * (6-5) * (6-6) =%0A%0Afunc main() %7B%0A%09var a, b, c float64%0A%0A%09fmt.Scanf(%22%25f%5Cn%25f%5Cn%25f%22, &a, &b, &c)%0A%09area := calcular(a, b, c)%0A%0A%09fmt.Printf(%22%25.2f%5Cn%22, area\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-20_14-22-42",
+            "content": " package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc calcular(a, b, c float64) float64 {\n\tp := (a + b + c) / 2\n\theron := (p * (p - a) * (p - b) * (p - c))\n\tarea := math.Sqrt(math.Abs(heron))\n\n\treturn area\n}\n\n//6 * (6-4) * (6-5) * (6-6) =\n\nfunc main() {\n\tvar a, b, c float64\n\n\tfmt.Scanf(\"%f\\n%f\\n%f\", &a, &b, &c)\n\tarea := calcular(a, b, c)\n\n\tfmt.Printf(\"%.2f\\n\", area)\n}\n",
+            "lines": "25"
+        }
+    ]
+}

@@ -1,11 +1,6 @@
----
-# Não altere essa chave, ela deve ser única para cada rascunho
-key=user_001
----
-
 # Pintando a casa
 
-![_](cover.jpg)
+![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/pintando/cover.jpg)
 
 ## Contexto
 
@@ -13,7 +8,7 @@ Fernando comprou uma casa triangular. Ao tentar calcular a quantidade de tinta n
 
 Implemente um programa que, dado o tamanho dos três lados de um triângulo, calcule a área utilizando a Fórmula de Heron:
 
-![formula](heron.jpg)​
+![formula](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/pintando/heron.jpg)​
 
 ### Entrada
 

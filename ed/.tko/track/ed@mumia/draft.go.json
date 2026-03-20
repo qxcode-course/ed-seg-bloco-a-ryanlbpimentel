@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_14-23-06",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,329 +23,53 @@\n mt%22%0A\n-%0Afunc classify(i int) string %7B%0A%09switch %7B%0A%09case i %3C 12:%0A%09%09return %22 eh crianca%22%0A%09case i %3C 18:%0A%09%09return %22 eh jovem%22%0A%09case i %3C 65:%0A%09%09return %22 eh adulto%22%0A%09case i %3C 1000:%0A%09%09return %22 eh idoso%22%0A%09default:%0A%09%09return %22 eh mumia%22%0A%09%7D%0A%7D%0A%0Afunc main() %7B%0A%09var n string%0A%09var i int%0A%0A%09fmt.Scanf(%22%25s%5Cn%25d%22, &n, &i)%0A%0A%09fmt.Println(n + classify(i)\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-20_14-23-18",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc classify(i int) string {\n\tswitch {\n\tcase i < 12:\n\t\treturn \" eh crianca\"\n\tcase i < 18:\n\t\treturn \" eh jovem\"\n\tcase i < 65:\n\t\treturn \" eh adulto\"\n\tcase i < 1000:\n\t\treturn \" eh idoso\"\n\tdefault:\n\t\treturn \" eh mumia\"\n\t}\n}\n\nfunc main() {\n\tvar n string\n\tvar i int\n\n\tfmt.Scanf(\"%s\\n%d\", &n, &i)\n\n\tfmt.Println(n + classify(i))\n}\n",
+            "lines": "27"
+        }
+    ]
+}

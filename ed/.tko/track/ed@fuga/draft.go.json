@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_14-24-07",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,327 +37,39 @@\n ) %7B%0A\n-%09var h, p, f, d int%0A%0A%09fmt.Scanf(%22%25d %25d %25d %25d%22, &h, &p, &f, &d)%0A%09for %7B%0A%09%09if d == 1 %7B%0A%09%09%09f = f - 1%0A%09%09%09if f %3C 0 %7B%0A%09%09%09%09f = 15%0A%09%09%09%7D%0A%09%09%7D else if d == -1 %7B%0A%09%09%09f = f + 1%0A%09%09%09if f %3E 15 %7B%0A%09%09%09%09f = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%09//fmt.Println(h,p,f)%0A%0A%09%09if f == p %7B%0A%09%09%09fmt.Println(%22S%22)%0A%09%09%09break%0A%09%09%7D else if f == h %7B%0A%09%09%09fmt.Println(%22N%22)%0A%09%09%09break%0A%09%09%7D%0A%0A%09%7D\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-20_14-24-38",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar h, p, f, d int\n\n\tfmt.Scanf(\"%d %d %d %d\", &h, &p, &f, &d)\n\tfor {\n\t\tif d == 1 {\n\t\t\tf = f - 1\n\t\t\tif f < 0 {\n\t\t\t\tf = 15\n\t\t\t}\n\t\t} else if d == -1 {\n\t\t\tf = f + 1\n\t\t\tif f > 15 {\n\t\t\t\tf = 0\n\t\t\t}\n\t\t}\n\t\t//fmt.Println(h,p,f)\n\n\t\tif f == p {\n\t\t\tfmt.Println(\"S\")\n\t\t\tbreak\n\t\t} else if f == h {\n\t\t\tfmt.Println(\"N\")\n\t\t\tbreak\n\t\t}\n\n\t}\n}\n",
+            "lines": "32"
+        }
+    ]
+}
