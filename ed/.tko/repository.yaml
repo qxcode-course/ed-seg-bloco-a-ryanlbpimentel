@@ -13,14 +13,20 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@revisão
+- ed@análise
 - ed@main-quest
 tasks:
   ed@pintando: '{self:1, rate:100, study:8}'
   ed@mumia: '{self:1, rate:100, study:5}'
   ed@fuga: '{self:1, rate:100, study:15}'
+  ed@pedra: '{self:1, rate:100, study:20}'
+  ed@casais: '{self:1, rate:100, study:12}'
+  ed@baruel: '{self:1, rate:100, study:35}'
+  ed@gomos: '{self:1, rate:100, study:25}'
   ed@princesa: '{self:1, rate:100, study:240}'
   ed@apagando: '{self:1, rate:100, study:30}'
+  ed@buscas: '{self:1, rate:100, study:20}'
+  ed@rotacoes: '{self:1, rate:100, study:22}'
 flags:
   painel: 1
   quests: 0
@@ -29,4 +35,4 @@ flags:
   task_graph_mode: 0
   show_time: 1
 lang: go
-selected: ed@pedra
+selected: ed@análise

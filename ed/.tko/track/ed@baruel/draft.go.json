@@ -1,0 +1,179 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_06-39-51",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,503 +41,35 @@\n     \n-var qtdFigurinhas, qtdBaruel int%0A    fmt.Scan(&qtdFigurinhas, &qtdBaruel)%0A%0A    var figurinhas = make(map%5Bint%5Dint)%0A%0A    for i := 0; i %3C qtdBaruel; i++ %7B%0A        var figurinha int%0A        fmt.Scan(&figurinha)%0A        figurinhas%5Bfigurinha%5D++%0A    %7D%0A%0A    // As figurinhas que repetiram%0A    for i := 1; i %3C= qtdBaruel; i++ %7B%0A        if figurinhas%5Bi%5D %3E 1 %7B%0A            fmt.Print(i)%0A            figurinhas%5Bi%5D--%0A%0A            if i %3C qtdBaruel %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A        %7D%0A    %7D%0A\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-23_06-45-58",
+            "content": "@@ -35,17 +35,20 @@\n ain() %7B%0A\n-%09\n+    \n var qtdF\n@@ -72,17 +72,20 @@\n uel int%0A\n-%09\n+    \n fmt.Scan\n@@ -114,17 +114,20 @@\n aruel)%0A%0A\n-%09\n+    \n var figu\n@@ -154,17 +154,20 @@\n t%5Dint)%0A%0A\n-%09\n+    \n for i :=\n@@ -191,18 +191,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n var figu\n@@ -217,18 +217,24 @@\n nha int%0A\n-%09%09\n+        \n fmt.Scan\n@@ -246,18 +246,24 @@\n urinha)%0A\n-%09%09\n+        \n figurinh\n@@ -282,13 +282,19 @@\n %5D++%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n // A\n@@ -320,17 +320,20 @@\n petiram%0A\n-%09\n+    \n for i :=\n@@ -362,36 +362,16 @@\n + %7B%0A\n-%09%09fmt.Println(figurinhas)%0A%09%09\n+        \n if f\n@@ -389,19 +389,28 @@\n %5D %3E 1 %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -414,19 +414,28 @@\n rint(i)%0A\n-%09%09%09\n+            \n figurinh\n@@ -443,19 +443,28 @@\n s%5Bi%5D--%0A%0A\n-%09%09%09\n+            \n if i %3C q\n@@ -478,37 +478,67 @@\n l %7B%0A\n-%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%7D%0A%09\n+                fmt.Print(%22 %22)%0A            %7D%0A        %7D%0A    \n %7D%0A%0A%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-23_06-46-30",
+            "content": "@@ -298,24 +298,30 @@\n  := \n-range figurinhas\n+1; i %3C= qtdBaruel; i++\n  %7B%0A%09\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_06-47-47",
+            "content": "@@ -315,18 +315,16 @@\n has %7B%0A%09%09\n-//\n fmt.Prin\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_06-47-56",
+            "content": "@@ -370,103 +370,47 @@\n 1 %7B%0A\n-            for j := 0; j %3C figurinhas%5Bi%5D; j++ %7B%0A                fmt.Print(i)%0A%0A                \n+%09%09%09fmt.Print(i)%0A%09%09%09figurinhas%5Bi%5D--%0A%0A%09%09%09\n if i\n@@ -428,20 +428,16 @@\n l %7B%0A%09%09%09%09\n-    \n fmt.Prin\n@@ -450,109 +450,9 @@\n %0A%09%09%09\n-    %7D%0A%0A                if j %3C figurinhas%5Bi%5D-1 %7B%0A                    break%0A                %7D%0A%09%09%09%7D%0A%0A%09%09%09\n+%7D\n %0A%09%09%7D\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_06-49-34",
+            "content": "@@ -366,19 +366,28 @@\n %5D %3E 1 %7B%0A\n-%09%09%09\n+            \n for j :=\n@@ -419,30 +419,54 @@\n + %7B%0A\n-%09%09%09%09fmt.Print(i)%0A%0A%09%09%09%09\n+                fmt.Print(i)%0A%0A                \n if i\n@@ -484,17 +484,20 @@\n l %7B%0A%09%09%09%09\n-%09\n+    \n fmt.Prin\n@@ -510,16 +510,31 @@\n %0A%09%09%09\n-%09%7D%0A%0A%09%09%09%09\n+    %7D%0A%0A                \n if j\n@@ -558,31 +558,58 @@\n 1 %7B%0A\n-%09%09%09%09%09break%0A%09%09%09%09\n+                    break%0A                \n %7D%0A%09%09%09%7D%0A%0A\n %09%09%7D%0A\n@@ -604,16 +604,20 @@\n %7D%0A%09%09%09%7D%0A%0A\n+%09%09%09%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-23_06-49-37",
+            "content": "@@ -487,10 +487,9 @@\n f j \n-==\n+%3C\n  fig\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-23_06-50-21",
+            "content": "@@ -504,9 +504,9 @@\n %5Bi%5D-\n-2\n+1\n  %7B%0A%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-23_06-50-31",
+            "content": "@@ -256,32 +256,8 @@\n %09%7D%0A%0A\n-%09var repetiram = false%0A%0A\n %09// \n@@ -284,16 +284,16 @@\n petiram%0A\n+\n %09for i :\n@@ -410,29 +410,8 @@\n + %7B%0A\n-%09%09%09%09repetiram = true%0A\n %09%09%09%09\n@@ -476,40 +476,8 @@\n %09%09%09%7D\n- else %7B%0A%09%09%09%09%09fmt.Println()%0A%09%09%09%09%7D\n %0A%0A%09%09\n@@ -531,16 +531,16 @@\n %09%7D%0A%0A\n+\n %09%09%7D%0A%09%7D%0A%0A\n %09if \n@@ -539,54 +539,6 @@\n %09%7D%0A%0A\n-%09if repetiram == false %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A%0A\n %7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-23_06-51-33",
+            "content": "@@ -546,10 +546,8 @@\n tln(\n-%22%22\n )%0A%09%09\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-23_06-51-42",
+            "content": "@@ -543,17 +543,16 @@\n rintln(%22\n-a\n %22)%0A%09%09%09%09%7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-23_06-51-48",
+            "content": "@@ -513,24 +513,59 @@\n t(%22 %22)%0A%09%09%09%09%7D\n+ else %7B%0A%09%09%09%09%09fmt.Println(%22a%22)%0A%09%09%09%09%7D\n %0A%0A%09%09%09%09if j =\n@@ -665,34 +665,8 @@\n )%0A%09%7D\n- else %7B%0A%09%09fmt.Println()%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-23_06-52-05",
+            "content": "@@ -649,14 +649,11 @@\n rint\n-f(%22%5Cn%22\n+ln(\n )%0A%09%7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-23_06-52-17",
+            "content": "@@ -630,76 +630,16 @@\n )%0A%09%7D\n-%0A%0A%09for i := 1; i %3C= qtdFigurinhas; i++ %7B%0A%09%09if figurinhas%5Bi%5D == 0\n+ else\n  %7B%0A\n-%09\n %09%09fm\n@@ -649,15 +649,15 @@\n rint\n-(i)%0A%09%09%7D\n+f(%22%5Cn%22)\n %0A%09%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-23_06-54-15",
+            "content": "@@ -632,29 +632,8 @@\n %09%7D%0A%0A\n-%09var faltam = false%0A%0A\n %09for\n@@ -701,136 +701,23 @@\n %09%09%09f\n-altam = true%0A%09%09%09fmt.Print(i)%0A%0A%09%09%09if i %3C qtdFigurinhas %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09if faltam == false %7B%0A%09%09fmt.Println(%22N%22)\n+mt.Print(i)%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-23_06-54-57",
+            "content": "@@ -630,42 +630,8 @@\n )%0A%09%7D\n- else%7B%0A        fmt.Println()%0A    %7D\n %0A%0A%09v\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-23_06-55-05",
+            "content": "@@ -887,42 +887,8 @@\n )%0A%09%7D\n- else%7B%0A        fmt.Println()%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-03-23_06-55-13",
+            "content": "@@ -623,37 +623,42 @@\n tln(%22N%22)%0A%09%7D else\n- \n %7B%0A\n-%09%09\n+        \n fmt.Println()%0A%09%7D\n@@ -655,17 +655,20 @@\n intln()%0A\n-%09\n+    \n %7D%0A%0A%09var \n@@ -888,21 +888,26 @@\n %0A%09%7D else\n- \n %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -912,14 +912,17 @@\n intln()%0A\n-%09\n+    \n %7D%0A%0A%7D%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-23_06-55-15",
+            "content": "@@ -484,23 +484,17 @@\n i %3C \n-figurinhas%5Bi%5D-1\n+qtdBaruel\n  %7B%0A%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-23_06-55-50",
+            "content": "@@ -480,25 +480,31 @@\n %09if i %3C \n-qtdBaruel\n+figurinhas%5Bi%5D-1\n  %7B%0A%09%09%09%09%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-23_06-56-17",
+            "content": "@@ -494,31 +494,8 @@\n uel \n-&& j %3C figurinhas%5Bi%5D-2 \n %7B%0A%09%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-23_06-56-59",
+            "content": "@@ -511,17 +511,17 @@\n nhas%5Bi%5D-\n-1\n+2\n  %7B%0A%09%09%09%09%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-23_06-57-04",
+            "content": "@@ -495,18 +495,17 @@\n el && j \n-==\n+%3C\n  figurin\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-23_06-58-00",
+            "content": "@@ -495,17 +495,18 @@\n el && j \n-%3C\n+==\n  figurin\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-23_06-58-39",
+            "content": "@@ -402,17 +402,17 @@\n or j := \n-1\n+0\n ; j %3C fi\n@@ -560,33 +560,33 @@\n = figurinhas%5Bi%5D-\n-1\n+2\n  %7B%0A%09%09%09%09%09break%0A%09%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-23_06-59-37",
+            "content": "@@ -434,51 +434,8 @@\n + %7B%0A\n-%09%09%09%09if j == 1 %7B%0A%09%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%09%7D%0A%0A\n %09%09%09%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-23_07-00-49",
+            "content": "@@ -448,29 +448,8 @@\n = 1 \n-&& repetiram == true \n %7B%0A%09%09\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-23_07-00-59",
+            "content": "@@ -884,18 +884,16 @@\n gurinhas\n--1\n  %7B%0A%09%09%09%09f\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-23_07-01-24",
+            "content": "@@ -831,66 +831,8 @@\n 0 %7B%0A\n-%09%09%09if i == 1 && faltam == true %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%0A\n %09%09%09f\n@@ -880,24 +880,26 @@\n tdFigurinhas\n+-1\n  %7B%0A%09%09%09%09fmt.P\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-23_07-02-14",
+            "content": "@@ -917,16 +917,67 @@\n Print(i)\n+%0A%0A%09%09%09if i %3C qtdFigurinhas %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-23_07-02-53",
+            "content": "@@ -830,24 +830,37 @@\n  0 %7B%0A%09%09%09\n+if i == 1 && \n faltam =\n  true%0A%09%09\n@@ -851,22 +851,26 @@\n faltam =\n+=\n  true\n-%0A\n+ %7B%0A%09\n %09%09%09fmt.P\n@@ -878,56 +878,30 @@\n int(\n-i)%0A%0A            if i %3C qtdFigurinhas && \n+%22 %22)%0A%09%09%09%7D%0A%0A%09%09%09\n faltam =\n = tr\n@@ -900,61 +900,29 @@\n am =\n-=\n  true\n- %7B%0A                fmt.Print(%22 %22)%0A            %7D\n+%0A%09%09%09fmt.Print(i)\n %0A%09%09%7D\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-23_07-03-33",
+            "content": "@@ -827,16 +827,50 @@\n  == 0 %7B%0A\n+%09%09%09faltam = true%0A%09%09%09fmt.Print(i)%0A%0A\n         \n@@ -962,42 +962,8 @@\n    %7D\n-%0A%0A%09%09%09faltam = true%0A%09%09%09fmt.Print(i)\n %0A%09%09%7D\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-23_07-04-19",
+            "content": "@@ -831,18 +831,26 @@\n 0 %7B%0A\n-%09%09%09\n+            \n if i %3C\n-=\n  qtd\n@@ -880,20 +880,32 @@\n  true %7B%0A\n-%09%09%09%09\n+                \n fmt.Prin\n@@ -911,19 +911,28 @@\n nt(%22 %22)%0A\n-%09%09%09\n+            \n %7D%0A%0A%09%09%09fa\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-23_07-04-35",
+            "content": "@@ -322,20 +322,15 @@\n  := \n-0; i %3C= qtdF\n+range f\n igur\n@@ -330,29 +330,24 @@\n e figurinhas\n-; i++\n  %7B%0A%09%09//fmt.P\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-23_07-06-44",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtdFigurinhas, qtdBaruel int\n\tfmt.Scan(&qtdFigurinhas, &qtdBaruel)\n\n\tvar figurinhas = make(map[int]int)\n\n\tfor i := 0; i < qtdBaruel; i++ {\n\t\tvar figurinha int\n\t\tfmt.Scan(&figurinha)\n\t\tfigurinhas[figurinha]++\n\t}\n\n\tvar repetiram = false\n\n\t// As figurinhas que repetiram\n\tfor i := 0; i <= qtdFigurinhas; i++ {\n\t\t//fmt.Println(figurinhas)\n\t\tif figurinhas[i] > 1 {\n\t\t\tfor j := 1; j < figurinhas[i]; j++ {\n\t\t\t\tif j == 1 && repetiram == true {\n\t\t\t\t\tfmt.Print(\" \")\n\t\t\t\t}\n\n\t\t\t\trepetiram = true\n\t\t\t\tfmt.Print(i)\n\n\t\t\t\tif i < qtdBaruel && j < figurinhas[i]-1 {\n\t\t\t\t\tfmt.Print(\" \")\n\t\t\t\t}\n\n\t\t\t\tif j == figurinhas[i]-1 {\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t}\n\n\t\t}\n\t}\n\n\tif repetiram == false {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println()\n\t}\n\n\tvar faltam = false\n\n\tfor i := 1; i <= qtdFigurinhas; i++ {\n\t\tif figurinhas[i] == 0 {\n\t\t\tif i <= qtdFigurinhas && faltam == true {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\n\t\t\tfaltam = true\n\t\t\tfmt.Print(i)\n\t\t}\n\t}\n\n\tif faltam == false {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println()\n\t}\n\n}\n",
+            "lines": "68"
+        }
+    ]
+}

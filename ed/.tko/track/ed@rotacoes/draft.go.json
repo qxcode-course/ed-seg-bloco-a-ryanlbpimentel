@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_07-43-19",
+            "content": "@@ -336,10 +336,8 @@\n rint\n-ln\n (arr\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-23_07-43-23",
+            "content": "@@ -320,20 +320,18 @@\n  ultimo%0A\n-%09%7D%0A\n %0A\n+%09\n %09fmt.Pri\n@@ -339,12 +339,15 @@\n tln(arr)\n+%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-23_07-44-36",
+            "content": "@@ -328,35 +328,8 @@\n %09%7D%0A%0A\n-%09for i := 0; i %3C n; i++ %7B%0A%09\n %09fmt\n@@ -338,24 +338,15 @@\n rint\n+ln\n (arr\n-%5Bi%5D, %22 %22)%0A%09%7D\n+)\n %0A%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-23_07-44-43",
+            "content": "@@ -328,25 +328,8 @@\n %09%7D%0A%0A\n-%09fmt.Print(%22%5B %22)%0A\n %09for\n@@ -381,26 +381,8 @@\n )%0A%09%7D\n-%0A%09fmt.Print(%22%5D%5Cn%22)\n %0A%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-23_07-45-06",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n, rotacoes int\n\tfmt.Scan(&n, &rotacoes)\n\n\tarr := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&arr[i])\n\t}\n\n\tfor i := 0; i < rotacoes; i++ {\n\t\tvar ultimo = arr[len(arr)-1]\n\n\t\tfor j := 0; j < len(arr)-1; j++ {\n\t\t\tarr[len(arr)-1-j] = arr[len(arr)-2-j]\n\t\t}\n\t\tarr[0] = ultimo\n\t}\n\n\tfmt.Print(\"[ \")\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Print(arr[i], \" \")\n\t}\n\tfmt.Print(\"]\\n\")\n\n}\n",
+            "lines": "30"
+        }
+    ]
+}

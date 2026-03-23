@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_07-07-06",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,270 +37,39 @@\n ) %7B%0A\n-%09var qtdGomos int%0A%09var direcao string%0A%0A%09type gomo struct %7B%0A%09%09x int%0A%09%09y int%0A%09%7D%0A%0A%09cobra := make(%5B%5Dgomo, 0)%0A%0A%09fmt.Print(cobra)%0A%0A%09fmt.Scan(&qtdGomos, &direcao)%0A%0A%09for i := 0; i %3C qtdGomos; i++ %7B%0A%09%09var x, y int%0A%09%09fmt.Scan(&x, &y)%0A%09%09cobra = append(cobra, gomo%7Bx, y%7D)%0A%09%7D%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-23_07-16-39",
+            "content": "@@ -299,29 +299,10 @@\n y%7D)%0A%09%7D%0A%0A\n-%09fmt.Print(cobra)%0A%0A\n %7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-23_07-16-44",
+            "content": "@@ -303,29 +303,8 @@\n %09%7D%0A%0A\n-%09cobra%5B1%5D = cobra%5B0%5D%0A\n %09fmt\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-23_07-17-26",
+            "content": "@@ -304,46 +304,28 @@\n %7D%0A%0A%09\n-for i := qtdGomos - 1; i %3E= 0; i-- %7B%0A%09\n+cobra%5B1%5D = cobra%5B0%5D%0A\n %09fmt\n@@ -340,15 +340,9 @@\n obra\n-%5Bi%5D)%0A%09%7D\n+)\n %0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-23_07-20-05",
+            "content": "@@ -141,16 +141,35 @@\n mo, 0)%0A%0A\n+%09fmt.Print(cobra)%0A%0A\n %09fmt.Sca\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_07-20-10",
+            "content": "@@ -324,236 +324,27 @@\n %7B%0A%09%09\n-if i %3E 0 %7B%0A%09%09%09cobra%5Bi%5D.x = cobra%5Bi-1%5D.x%0A%09%09%09cobra%5Bi%5D.y = cobra%5Bi-1%5D.y%0A%09%09%7D else %7B%0A%09%09%09switch direcao %7B%0A%09%09%09case %22N%22:%0A%09%09%09%09cobra%5Bi%5D.y++%0A%09%09%09case %22S%22:%0A%09%09%09%09cobra%5Bi%5D.y--%0A%09%09%09case %22L%22:%0A%09%09%09%09cobra%5Bi%5D.x++%0A%09%09%09case %22O%22:%0A%09%09%09%09cobra%5Bi%5D.x--%0A%09%09%09%7D%0A%09%09%7D\n+fmt.Print(cobra%5Bi%5D)\n %0A%09%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-23_07-20-55",
+            "content": "@@ -557,103 +557,6 @@\n %09%7D%0A%0A\n-    for i := 0; i %3C qtdGomos; i++ %7B%0A        fmt.Printf(%22%25d %25d%5Cn%22, cobra%5Bi%5D.x, cobra%5Bi%5D.y)%0A    %7D%0A%0A\n %7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-23_07-21-16",
+            "content": "@@ -549,25 +549,28 @@\n %09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n-%09\n+    \n for i := 0; \n@@ -589,18 +589,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -643,14 +643,17 @@\n a%5Bi%5D.y)%0A\n-%09\n+    \n %7D%0A%0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-23_07-21-18",
+            "content": "@@ -433,9 +433,9 @@\n se %22\n-L\n+N\n %22:%0A%09\n@@ -450,11 +450,11 @@\n %5Bi%5D.\n-x--\n+y++\n %0A%09%09%09\n@@ -463,9 +463,9 @@\n se %22\n-R\n+S\n %22:%0A%09\n@@ -480,11 +480,11 @@\n %5Bi%5D.\n-x++\n+y--\n %0A%09%09%09\n@@ -493,9 +493,9 @@\n se %22\n-U\n+L\n %22:%0A%09\n@@ -498,35 +498,35 @@\n %22:%0A%09%09%09%09cobra%5Bi%5D.\n-y--\n+x++\n %0A%09%09%09case %22D%22:%0A%09%09\n@@ -523,9 +523,9 @@\n se %22\n-D\n+O\n %22:%0A%09\n@@ -532,27 +532,27 @@\n %09%09%09cobra%5Bi%5D.\n-y++\n+x--\n %0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-23_07-22-06",
+            "content": "@@ -549,16 +549,52 @@\n %09%09%7D%0A%09%09%7D%0A\n+%09%7D%0A%0A%09for i := 0; i %3C qtdGomos; i++ %7B\n %0A%09%09fmt.P\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-23_07-22-39",
+            "content": "@@ -554,45 +554,8 @@\n %09%7D%0A%0A\n-%09%7D%0A%0A%09for i := 0; i %3C qtdGomos; i++ %7B%0A\n %09%09fm\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_07-23-04",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtdGomos int\n\tvar direcao string\n\n\ttype gomo struct {\n\t\tx int\n\t\ty int\n\t}\n\n\tcobra := make([]gomo, 0)\n\n\tfmt.Scan(&qtdGomos, &direcao)\n\n\tfor i := 0; i < qtdGomos; i++ {\n\t\tvar x, y int\n\t\tfmt.Scan(&x, &y)\n\t\tcobra = append(cobra, gomo{x, y})\n\t}\n\n\tfor i := qtdGomos - 1; i >= 0; i-- {\n\t\tif i > 0 {\n\t\t\tcobra[i].x = cobra[i-1].x\n\t\t\tcobra[i].y = cobra[i-1].y\n\t\t} else {\n\t\t\tswitch direcao {\n\t\t\tcase \"L\":\n\t\t\t\tcobra[i].x--\n\t\t\tcase \"R\":\n\t\t\t\tcobra[i].x++\n\t\t\tcase \"U\":\n\t\t\t\tcobra[i].y--\n\t\t\tcase \"D\":\n\t\t\t\tcobra[i].y++\n\t\t\t}\n\t\t}\n\n\t}\n\n\tfor i := 0; i < qtdGomos; i++ {\n\t\tfmt.Printf(\"%d %d\\n\", cobra[i].x, cobra[i].y)\n\t}\n\n}\n",
+            "lines": "47"
+        }
+    ]
+}

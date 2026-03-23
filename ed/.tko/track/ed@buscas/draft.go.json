@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_07-25-26",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,439 +37,39 @@\n ) %7B%0A\n-%09var nString int%0A%09fmt.Scan(&nString)%0A%0A%09original := make(%5B%5Dstring, nString)%0A%0A%09for i := 0; i %3C nString; i++ %7B%0A%09%09fmt.Scan(&original%5Bi%5D)%0A%09%7D%0A%0A%09var nStringConsulta int%0A%09fmt.Scan(&nStringConsulta)%0A%09consulta := make(map%5Bstring%5Dint, nString)%0A%0A%09for i := 0; i %3C nStringConsulta; i++ %7B%0A%09%09var palavra string%0A%09%09fmt.Scan(&palavra)%0A%09%09consulta%5Bpalavra%5D = 0%0A%09%7D%0A%0A%09for i := 0; i %3C nString; i++ %7B%0A%09%09consulta%5Boriginal%5Bi%5D%5D++%0A%09%7D%0A%0A    fmt.Println(consulta)%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-23_07-34-07",
+            "content": "@@ -270,63 +270,10 @@\n ring\n-Consulta)%0A%09palavras := make(%5B%5Dstring, nStringConsulta\n )%0A\n+\n %0A%09fo\n@@ -379,32 +379,8 @@\n = 0%0A\n-%09%09palavras%5Bi%5D = palavra%0A\n %09%7D%0A%0A\n@@ -445,50 +445,12 @@\n %09%7D%0A%0A\n-%09for i := 0; i %3C nStringConsulta; i++ %7B%0A%09%09\n+    \n fmt.\n@@ -469,24 +469,9 @@\n ulta\n-%5Bpalavras%5Bi%5D%5D)%0A%09%7D\n+)%0A\n %0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-23_07-35-46",
+            "content": "@@ -569,16 +569,18 @@\n mt.Print\n+ln\n (consult\n@@ -599,59 +599,8 @@\n %5D%5D)%0A\n-%09%09if i %3C nStringConsulta-1 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A\n %09%7D%0A%7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_07-35-59",
+            "content": "@@ -644,36 +644,8 @@\n  %22)%0A\n-%09%09%7D else %7B%0A%09%09%09fmt.Println()%0A\n %09%09%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-23_07-36-09",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar nString int\n\tfmt.Scan(&nString)\n\n\toriginal := make([]string, nString)\n\n\tfor i := 0; i < nString; i++ {\n\t\tfmt.Scan(&original[i])\n\t}\n\n\tvar nStringConsulta int\n\tfmt.Scan(&nStringConsulta)\n\tconsulta := make(map[string]int, nStringConsulta)\n\tpalavras := make([]string, nStringConsulta)\n\n\tfor i := 0; i < nStringConsulta; i++ {\n\t\tvar palavra string\n\t\tfmt.Scan(&palavra)\n\t\tconsulta[palavra] = 0\n\t\tpalavras[i] = palavra\n\t}\n\n\tfor i := 0; i < nString; i++ {\n\t\tconsulta[original[i]]++\n\t}\n\n\tfor i := 0; i < nStringConsulta; i++ {\n\t\tfmt.Print(consulta[palavras[i]])\n\t\tif i < nStringConsulta-1 {\n\t\t\tfmt.Print(\" \")\n\t\t} else {\n\t\t\tfmt.Println()\n\t\t}\n\t}\n}\n",
+            "lines": "39"
+        }
+    ]
+}
