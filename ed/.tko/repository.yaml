@@ -2,37 +2,32 @@ version: '0.2'
 sources:
 - name: sandbox
   target: sandbox
+  index: README.md
   type: local
   writeable: true
   quests: null
   tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
+  index: README.md
+  type: git
+  writeable: false
+  quests: null
+  tasks: null
+- name: eval1
+  target: https://github.com/senapk/eval_26_ed_1
+  index: README.md
   type: git
   writeable: false
   quests: null
   tasks: null
 expanded:
-- ed@análise
-- ed@main-quest
-tasks:
-  ed@pintando: '{self:1, rate:100, study:8}'
-  ed@mumia: '{self:1, rate:100, study:5}'
-  ed@fuga: '{self:1, rate:100, study:15}'
-  ed@pedra: '{self:1, rate:100, study:20}'
-  ed@casais: '{self:1, rate:100, study:12}'
-  ed@baruel: '{self:1, rate:100, study:35}'
-  ed@gomos: '{self:1, rate:100, study:25}'
-  ed@princesa: '{self:1, rate:100, study:240}'
-  ed@apagando: '{self:1, rate:100, study:30}'
-  ed@buscas: '{self:1, rate:100, study:20}'
-  ed@rotacoes: '{self:1, rate:100, study:22}'
+- eval1@teste-1
 flags:
-  painel: 1
-  quests: 0
-  tracks: 0
-  tasks: 0
-  task_graph_mode: 0
-  show_time: 1
+  inbox: all
+  panel: graph
+  show_panel: 'true'
+  task_graph_mode: executions
+  show_time: 'true'
 lang: go
-selected: ed@análise
+selected: eval1@queimada

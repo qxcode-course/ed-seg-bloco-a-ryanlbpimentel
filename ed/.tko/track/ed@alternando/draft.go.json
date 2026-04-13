@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_12-31-37",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,869 +23,53 @@\n mt%22%0A\n-%0A\n func \n-printar(fila %5B%5Dbool, e int) %7B%0A%09fmt.Print(%22%5B %22)%0A%0A%09for i := range fila %7B%0A%0A%09%09if fila%5Bi%5D == true %7B%0A%09%09%09if (i) == e %7B%0A%09%09%09%09fmt.Print(i+1, %22%3E %22)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Print(i+1, %22 %22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(%22%5D%22)%0A%7D%0A%0Afunc contar(fila %5B%5Dbool) int %7B%0A%09contador := 0%0A%0A%09for i := range fila %7B%0A%0A%09%09if fila%5Bi%5D == true %7B%0A%09%09%09contador++%0A%09%09%7D%0A%09%7D%0A%0A%09return contador%0A%7D%0A%0Afunc matar(fila %5B%5Dbool, n int, e int) %7B%0A%09printar(fila, e)%0A%0A%09for %7B%0A%09%09if fila%5B(e+1)%25n%5D == true %7B%0A%09%09%09fila%5B(e+1)%25n%5D = false%0A%0A%09%09%09for %7B%0A%09%09%09%09if fila%5B(e+2)%25n%5D == true %7B%0A%09%09%09%09%09e = (e + 2) %25 n%0A%09%09%09%09%09break%0A%09%09%09%09%7D%0A%09%09%09%09e = (e + 1) %25 n%0A%09%09%09%7D%0A%0A%09%09%09break%0A%09%09%7D else %7B%0A%09%09%09e = (e + 1) %25 n%0A%09%09%09continue%0A%09%09%7D%0A%09%7D%0A%0A%09if contar(fila) == 1 %7B%0A%09%09printar(fila, e)%0A%09%09return%0A%09%7D%0A%0A%09matar(fila, n, e)%0A%7D%0A%0Afunc main() %7B%0A%09var n, e int%0A%09fmt.Scan(&n, &e)%0A%0A%09fila := make(%5B%5Dbool, n)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fila%5Bi%5D = true%0A%09%7D%0A%0A%09e = e - 1%0A%0A%09matar(fila, n, e)%0A\n+main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-23_12-34-12",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc printar(fila []bool, e int) {\n\tfmt.Print(\"[ \")\n\n\tfor i := range fila {\n\n\t\tif fila[i] == true {\n\t\t\tif (i) == e {\n\t\t\t\tfmt.Print(i+1, \"> \")\n\t\t\t} else {\n\t\t\t\tfmt.Print(i+1, \" \")\n\t\t\t}\n\t\t}\n\t}\n\n\tfmt.Println(\"]\")\n}\n\nfunc contar(fila []bool) int {\n\tcontador := 0\n\n\tfor i := range fila {\n\n\t\tif fila[i] == true {\n\t\t\tcontador++\n\t\t}\n\t}\n\n\treturn contador\n}\n\nfunc matar(fila []bool, n int, e int) {\n\tprintar(fila, e)\n\n\tfor {\n\t\tif fila[(e+1)%n] == true {\n\t\t\tfila[(e+1)%n] = false\n\n\t\t\tfor {\n\t\t\t\tif fila[(e+2)%n] == true {\n\t\t\t\t\te = (e + 2) % n\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t\te = (e + 1) % n\n\t\t\t}\n\n\t\t\tbreak\n\t\t} else {\n\t\t\te = (e + 1) % n\n\t\t\tcontinue\n\t\t}\n\t}\n\n\tif contar(fila) == 1 {\n\t\tprintar(fila, e)\n\t\treturn\n\t}\n\n\tmatar(fila, n, e)\n}\n\nfunc main() {\n\tvar n, e int\n\tfmt.Scan(&n, &e)\n\n\tfila := make([]bool, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tfila[i] = true\n\t}\n\n\te = e - 1\n\n\tmatar(fila, n, e)\n\n}\n",
+            "lines": "79"
+        }
+    ]
+}

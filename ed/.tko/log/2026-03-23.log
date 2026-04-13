@@ -150,3 +150,7 @@
 2026-03-23 07:45:06, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:100, size:30
 2026-03-23 07:45:09, MOVE, v:1, k:ed@rotacoes, mode:BACK
 2026-03-23 07:45:24, SELF, v:1, k:ed@rotacoes, self:1, rate:100, study:22
+2026-03-23 12:31:35, MOVE, v:1, k:ed@alternando, mode:DOWN
+2026-03-23 12:31:36, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-03-23 12:31:37, EXEC, v:1, k:ed@alternando, mode:FREE, size:5
+2026-03-23 12:34:12, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:79

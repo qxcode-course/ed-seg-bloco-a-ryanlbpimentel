@@ -1,6 +1,6 @@
 package main
 
-import "fmt" 
+import "fmt"
 
 func printar(fila []bool, e int) {
 	fmt.Print("[ ")
