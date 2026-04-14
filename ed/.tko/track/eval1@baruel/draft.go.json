@@ -1,0 +1,184 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_16-30-24",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-13_16-30-46",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -38,213 +38,39 @@\n ) %7B%0A\n-%09var qtd, qtdBaruel int%0A%0A%09original := make(%5B%5Dint, 0)%0A%0A%09fmt.Scan(&qtd, qtdBaruel)%0A%0A%09for i := 0; i %3C qtd; i++ %7B%0A%09%09var valor int%0A%09%09fmt.Scan(&valor)%0A%09%09original = append(original, valor)%0A%09%7D%0A%0A%09fmt.Print(original\n+    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-04-13_16-32-18",
+            "content": "@@ -105,17 +105,16 @@\n n(&qtd, \n-&\n qtdBarue\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-13_16-32-33",
+            "content": "@@ -138,22 +138,16 @@\n  i %3C qtd\n-Baruel\n ; i++ %7B%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-13_16-32-42",
+            "content": "@@ -233,229 +233,26 @@\n %7D%0A%0A%09\n-repetidas := make(map%5Bint%5Dint, 0)%0A%0A%09for _, valor := range original %7B%0A%09%09repetidas%5Bvalor%5D++%0A%09%7D%0A%0A%09for valor, count := range repetidas %7B%0A%09%09if count %3E 1 %7B%0A%09%09%09for i := 0; i %3C count; i++ %7B%0A%09%09%09%09fmt.Printf(%22%25d %22, valor)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+fmt.Print(original)\n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-13_16-34-55",
+            "content": "@@ -407,10 +407,8 @@\n ount\n--1\n ; i+\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-13_16-35-16",
+            "content": "@@ -327,31 +327,8 @@\n %09%7D%0A%0A\n-%09var qtdRepetidas = 0%0A%0A\n %09for\n@@ -417,27 +417,8 @@\n + %7B%0A\n-%09%09%09%09qtdRepetidas++%0A\n %09%09%09%09\n@@ -454,11 +454,10 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n %7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-13_16-36-02",
+            "content": "@@ -501,49 +501,6 @@\n %09%7D%0A%0A\n-%09fmt.Println()%0A%09fmt.Println(qtdRepetidas)%0A%0A\n %7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_16-36-24",
+            "content": "@@ -514,10 +514,8 @@\n tln(\n-%22%22\n )%0A%09f\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_16-36-32",
+            "content": "@@ -389,27 +389,8 @@\n s %7B%0A\n-%09%09fmt.Print(valor)%0A\n %09%09if\n@@ -473,16 +473,17 @@\n intf(%22%25d\n+ \n %22, valor\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_16-37-49",
+            "content": "@@ -385,16 +385,35 @@\n tidas %7B%0A\n+%09%09fmt.Print(valor)%0A\n %09%09if cou\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_16-38-00",
+            "content": "@@ -444,67 +444,23 @@\n %09%09%09%09\n-if count == 2 %7B%0A%09%09%09%09%09fmt.Printf(%22%25d%22, valor)%0A%09%09%09%09%7D else %7B%0A%09\n+qtdRepetidas++%0A\n %09%09%09%09\n@@ -471,17 +471,16 @@\n Printf(%22\n- \n %25d%22, val\n@@ -487,33 +487,8 @@\n or)%0A\n-%09%09%09%09%7D%0A%09%09%09%09qtdRepetidas++%0A\n %09%09%09%7D\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_16-38-56",
+            "content": "@@ -447,14 +447,18 @@\n %09if \n-i\n+count\n  == \n-0\n+2\n  %7B%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_16-39-18",
+            "content": "@@ -436,16 +436,33 @@\n ; i++ %7B%0A\n+%09%09%09%09if i == 0 %7B%0A%09\n %09%09%09%09fmt.\n@@ -481,16 +481,65 @@\n  valor)%0A\n+%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22 %25d%22, valor)%0A%09%09%09%09%7D%0A\n %09%09%09%09qtdR\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_16-41-10",
+            "content": "@@ -454,17 +454,16 @@\n intf(%22%25d\n- \n %22, valor\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_16-41-13",
+            "content": "@@ -440,24 +440,8 @@\n + %7B%0A\n-%09%09%09%09if i %3E 0 %7B%0A%09\n %09%09%09%09\n@@ -469,56 +469,8 @@\n or)%0A\n-%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22%25d%22, valor)%0A%09%09%09%09%7D%0A\n %09%09%09%09\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_16-41-32",
+            "content": "@@ -453,23 +453,8 @@\n %3E 0 \n-&& i %3C count-1 \n %7B%0A%09%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_16-41-45",
+            "content": "@@ -487,11 +487,11 @@\n tf(%22\n- \n %25d\n+ \n %22, v\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_16-41-50",
+            "content": "@@ -348,30 +348,8 @@\n  = 0\n-%0A%09var primeiro = false\n %0A%0A%09f\n@@ -447,48 +447,73 @@\n %09if \n-primeiro == false %7B%0A%09%09%09%09%09primeiro = true\n+i %3E 0 && i %3C count-1 %7B%0A%09%09%09%09%09fmt.Printf(%22 %25d%22, valor)%0A%09%09%09%09%7D else %7B\n %0A%09%09%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_16-43-05",
+            "content": "@@ -539,51 +539,8 @@\n or)%0A\n-%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22 %25d%22, valor)%0A\n %09%09%09%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-13_16-43-13",
+            "content": "@@ -323,16 +323,38 @@\n %5D++%0A%09%7D%0A%0A\n+%09var qtdRepetidas = 0%0A\n %09var pri\n@@ -591,213 +591,80 @@\n %0A%09%09%09\n-%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(%22%22)%0A%0A%09qtdFaltam := 0%0A%09for i := 0; i %3C qtdBaruel; i++ %7B%0A%09%09if repetidas%5Bi%5D == 0 %7B%0A%09%09%09qtdFaltam++%0A%09%09%7D%0A%09%7D%0A%0A%09if qtdFaltam %3E 0 %7B%0A%09%09fmt.Printf(%22%25d%22, qtdFaltam)%0A%09%7D else %7B%0A%09%09fmt.Printf(%22N%22)%0A%09%7D\n+%09qtdRepetidas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(%22%22)%0A%09fmt.Println(qtdRepetidas)%0A\n %0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-45-31",
+            "content": "@@ -672,32 +672,8 @@\n 0 %7B%0A\n-%09%09%09fmt.Printf(%22%25d %22, i)%0A\n %09%09%09q\n@@ -705,20 +705,59 @@\n dFaltam \n-== 0\n+%3E 0 %7B%0A%09%09fmt.Printf(%22%25d%22, qtdFaltam)%0A%09%7D else\n  %7B%0A%09%09fmt\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-13_16-46-17",
+            "content": "@@ -623,15 +623,14 @@\n  := \n-1\n+0\n ; i %3C\n-=\n  qtd\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-13_16-46-33",
+            "content": "@@ -630,16 +630,22 @@\n i %3C= qtd\n+Baruel\n ; i++ %7B%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-13_16-46-47",
+            "content": "@@ -350,28 +350,8 @@\n se%0A%0A\n-%09qtdRepetidas := 0%0A%0A\n %09for\n@@ -569,92 +569,18 @@\n %0A%09%09%09\n-%09qtdRepetidas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09if qtdRepetidas == 0 %7B%0A%09%09fmt.Printf(%22N%5Cn%22)%0A%09%7D else %7B%0A%09\n+%7D%0A%09%09%7D%0A%09%7D%0A%0A\n %09fmt\n@@ -591,19 +591,16 @@\n ntln(%22%22)\n-%0A%09%7D\n %0A%0A%09qtdFa\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-13_16-47-35",
+            "content": "@@ -781,56 +781,15 @@\n (%22%25d\n+ \n %22, i)%0A\n-%09%09%09if i != qtd %7B%0A%09%09%09%09fmt.Printf(%22 %22)%0A%09%09%09%7D%0A\n %09%09%09q\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-13_16-48-00",
+            "content": "@@ -888,38 +888,8 @@\n f(%22N\n-%5Cn%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22\n %22)%0A%09\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-13_16-48-11",
+            "content": "@@ -767,29 +767,42 @@\n %0A%09%09%09\n-if i != qtd &&\n+fmt.Printf(%22%25d%22, i)%0A%09%09%09if\n  i != \n-1\n+qtd\n  %7B%0A%09\n@@ -825,39 +825,16 @@\n %22)%0A%09%09%09%7D%0A\n-%09%09%09fmt.Printf(%22%25d%22, i)%0A\n %09%09%09qtdFa\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-13_16-48-52",
+            "content": "@@ -782,22 +782,14 @@\n  && \n-qtdFaltam\n+i\n  != \n-0\n+1\n  %7B%0A%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-13_16-49-11",
+            "content": "@@ -788,17 +788,18 @@\n dFaltam \n-%3E\n+!=\n  0 %7B%0A%09%09%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-13_16-49-32",
+            "content": "@@ -702,25 +702,24 @@\n Faltam := 0%0A\n-%0A\n %09for i := 1;\n@@ -779,10 +779,10 @@\n qtd \n-%7C%7C\n+&&\n  qtd\n@@ -792,12 +792,11 @@\n tam \n-== 1\n+%3E 0\n  %7B%0A%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-13_16-51-43",
+            "content": "@@ -780,17 +780,8 @@\n qtd \n-&& i %3E 0 \n %7C%7C q\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-04-13_16-52-15",
+            "content": "@@ -783,17 +783,17 @@\n  && i %3E \n-1\n+0\n  %7C%7C qtdF\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-04-13_16-52-22",
+            "content": "@@ -778,16 +778,25 @@\n = qtd &&\n+ i %3E 1 %7C%7C\n  qtdFalt\n@@ -802,11 +802,12 @@\n tam \n-%3E 0\n+== 1\n  %7B%0A%09\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-04-13_16-52-35",
+            "content": "@@ -769,19 +769,22 @@\n %09%09%09if i \n-%3E 1\n+!= qtd\n  && qtdF\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-04-13_16-52-49",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtd, qtdBaruel int\n\n\toriginal := make([]int, 0)\n\n\tfmt.Scan(&qtd, &qtdBaruel)\n\n\tfor i := 0; i < qtdBaruel; i++ {\n\t\tvar valor int\n\t\tfmt.Scan(&valor)\n\t\toriginal = append(original, valor)\n\t}\n\n\trepetidas := make(map[int]int, 0)\n\n\tfor _, valor := range original {\n\t\trepetidas[valor]++\n\t}\n\n\tvar primeiro = false\n\n\tqtdRepetidas := 0\n\n\tfor valor, count := range repetidas {\n\t\tif count > 1 {\n\t\t\tfor i := 0; i < count-1; i++ {\n\t\t\t\tif primeiro == false {\n\t\t\t\t\tprimeiro = true\n\t\t\t\t\tfmt.Printf(\"%d\", valor)\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\" %d\", valor)\n\t\t\t\t}\n\t\t\t\tqtdRepetidas++\n\t\t\t}\n\t\t}\n\t}\n\n\tif qtdRepetidas == 0 {\n\t\tfmt.Printf(\"N\\n\")\n\t} else {\n\t\tfmt.Println(\"\")\n\t}\n\n\tqtdFaltam := 0\n\n\tfor i := 1; i <= qtd; i++ {\n\t\tif repetidas[i] == 0 {\n\t\t\tif i > 1 && qtdFaltam > 0 {\n\t\t\t\tfmt.Printf(\" \")\n\t\t\t}\n\t\t\tfmt.Printf(\"%d\", i)\n\t\t\tqtdFaltam++\n\t\t}\n\t}\n\n\tif qtdFaltam == 0 {\n\t\tfmt.Printf(\"N\\n\")\n\t} else {\n\t\tfmt.Println(\"\")\n\t}\n}\n",
+            "lines": "65"
+        }
+    ]
+}

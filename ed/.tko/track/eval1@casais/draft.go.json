@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_16-53-36",
+            "content": "@@ -10,36 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22math%22%0A)%0A%0A\n func\n@@ -41,414 +41,35 @@\n     \n-var qtd int%0A    fmt.Scan(&qtd)%0A%0A    casais := make(map%5Bint%5Dint)%0A    qtdCasais := 0%0A    %0A    for i := 0; i %3C qtd; i++ %7B%0A        var animal int%0A        fmt.Scan(&animal)%0A%0A        if casais%5Bint(math.Abs(float64(animal)))%5D %3E 0 && animal %3C 0 %7B%0A            qtdCasais++%0A        %7D else if casais%5Bint(math.Abs(float64(animal)))%5D %3C 0 && animal %3E 0 %7B%0A            qtdCasais++%0A        %7D%0A    %7D%0A%0A    fmt.Println(qtdCasais\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-13_16-56-51",
+            "content": "@@ -48,17 +48,20 @@\n ain() %7B%0A\n-%09\n+    \n var qtd \n@@ -64,17 +64,20 @@\n qtd int%0A\n-%09\n+    \n fmt.Scan\n@@ -84,17 +84,20 @@\n (&qtd)%0A%0A\n-%09\n+    \n casais :\n@@ -116,17 +116,20 @@\n nt%5Dint)%0A\n-%09\n+    \n qtdCasai\n@@ -135,18 +135,25 @@\n is := 0%0A\n-%0A%09\n+    %0A    \n for i :=\n@@ -171,18 +171,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n var anim\n@@ -194,18 +194,24 @@\n mal int%0A\n-%09%09\n+        \n fmt.Scan\n@@ -221,18 +221,24 @@\n nimal)%0A%0A\n-%09%09\n+        \n if casai\n@@ -287,27 +287,36 @@\n nimal %3C 0 %7B%0A\n-%09%09%09\n+            \n qtdCasais++%0A\n@@ -315,18 +315,24 @@\n asais++%0A\n-%09%09\n+        \n %7D else i\n@@ -396,32 +396,53 @@\n 0 %7B%0A\n-%09%09%09qtdCasais++%0A%09%09%7D%0A%09%7D%0A%0A%09\n+            qtdCasais++%0A        %7D%0A    %7D%0A%0A    \n fmt.\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_16-56-53",
+            "content": "@@ -23,16 +23,24 @@\n %0A%09%22fmt%22%0A\n+%09%22math%22%0A\n )%0A%0Afunc \n@@ -206,15 +206,38 @@\n ais%5B\n--\n+int(math.Abs(float64(\n animal\n+)))\n %5D %3E \n@@ -288,22 +288,46 @@\n  casais%5B\n+int(math.Abs(float64(\n animal\n+)))\n %5D %3C 0 &&\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_16-58-37",
+            "content": "@@ -188,127 +188,25 @@\n %0A%0A%09%09\n-var numNeutro int%0A%0A%09%09if animal %3C 0 %7B%0A%09%09%09numNeutro = -animal%0A%09%09%7D else %7B%0A%09%09%09numNeutro = animal%0A%09%09%7D%0A%0A%09%09if casais%5BnumNeutro\n+if casais%5B-animal\n %5D %3E \n@@ -257,25 +257,22 @@\n  casais%5B\n-numNeutro\n+animal\n %5D %3C 0 &&\n@@ -304,50 +304,8 @@\n s++%0A\n-%09%09%7D else %7B%0A%09%09%09casais%5BnumNeutro%5D += animal%0A\n %09%09%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-13_17-00-13",
+            "content": "@@ -306,19 +306,18 @@\n eutro%5D %3E\n-= 1\n+ 0\n  && anim\n@@ -320,20 +320,18 @@\n animal %3C\n-= -1\n+ 0\n  %7B%0A%09%09%09qt\n@@ -375,12 +375,10 @@\n o%5D %3C\n-= -1\n+ 0\n  && \n@@ -389,11 +389,10 @@\n al %3E\n-= 1\n+ 0\n  %7B%0A%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_17-00-55",
+            "content": "@@ -457,18 +457,20 @@\n mal%0A%09%09%7D%0A\n-%0A\n %09\n+%7D%0A%0A\n %09fmt.Pri\n@@ -487,20 +487,8 @@\n sais\n-, animal)%0A%09%7D%0A\n+)\n %0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_17-02-37",
+            "content": "@@ -347,43 +347,8 @@\n s++%0A\n-            casais%5BnumNeutro%5D -= 1%0A\n %09%09%7D \n@@ -415,43 +415,8 @@\n s++%0A\n-            casais%5BnumNeutro%5D += 1%0A\n %09%09%7D \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-13_17-04-08",
+            "content": "@@ -335,35 +335,44 @@\n %0A%09%09%09qtdCasais++%0A\n-%09%09%09\n+            \n casais%5BnumNeutro\n@@ -446,19 +446,28 @@\n asais++%0A\n-%09%09%09\n+            \n casais%5Bn\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_17-04-24",
+            "content": "@@ -478,28 +478,8 @@\n e %7B%0A\n-%09%09%09if animal %3C 0 %7B%0A%09\n %09%09%09c\n@@ -499,56 +499,17 @@\n ro%5D \n--= 1%0A%09%09%09%7D else %7B%0A%09%09%09%09casais%5BnumNeutro%5D += 1%0A%09%09%09%7D\n++= animal\n %0A%09%09%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_17-05-41",
+            "content": "@@ -572,16 +572,11 @@\n %09%09%7D%0A\n-%09%7D%0A%0A    \n+%0A%09%09\n fmt.\n@@ -601,12 +601,15 @@\n  animal)\n+%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_17-05-50",
+            "content": "@@ -572,17 +572,20 @@\n %09%09%7D%0A%09%7D%0A%0A\n-%09\n+    \n fmt.Prin\n@@ -597,13 +597,21 @@\n tdCasais\n+, animal\n )%0A%0A%7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_17-05-53",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar qtd int\n\tfmt.Scan(&qtd)\n\n\tcasais := make(map[int]int)\n\tqtdCasais := 0\n\n\tfor i := 0; i < qtd; i++ {\n\t\tvar animal int\n\t\tfmt.Scan(&animal)\n\n\t\tvar numNeutro int\n\n\t\tif animal < 0 {\n\t\t\tnumNeutro = -animal\n\t\t} else {\n\t\t\tnumNeutro = animal\n\t\t}\n\n\t\tif casais[numNeutro] >= 1 && animal <= -1 {\n\t\t\tqtdCasais++\n\t\t\tcasais[numNeutro] -= 1\n\t\t} else if casais[numNeutro] <= -1 && animal >= 1 {\n\t\t\tqtdCasais++\n\t\t\tcasais[numNeutro] += 1\n\t\t} else {\n\t\t\tif animal < 0 {\n\t\t\t\tcasais[numNeutro] -= 1\n\t\t\t} else {\n\t\t\t\tcasais[numNeutro] += 1\n\t\t\t}\n\t\t}\n\t}\n\n\tfmt.Println(qtdCasais)\n\n}\n",
+            "lines": "43"
+        }
+    ]
+}

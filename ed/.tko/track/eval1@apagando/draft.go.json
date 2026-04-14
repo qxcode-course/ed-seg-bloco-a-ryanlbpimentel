@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_17-10-18",
+            "content": "@@ -565,75 +565,26 @@\n %0A%09%7D%0A\n-%0A%09for i := 0; i %3C len(final); i++ %7B%0A%09%09fmt.Printf(%22%25d %22, final%5Bi%5D)%0A%09%7D\n+%09fmt.Println(final)\n %0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-13_17-10-55",
+            "content": "@@ -601,43 +601,8 @@\n + %7B%0A\n-%09%09if i %3E 0 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A\n %09%09fm\n@@ -613,16 +613,17 @@\n intf(%22%25d\n+ \n %22, final\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_17-11-08",
+            "content": "@@ -667,23 +667,7 @@\n )%0A%09%7D\n-%0A%0A%09fmt.Println()\n %0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-13_17-11-15",
+            "content": "@@ -682,10 +682,8 @@\n tln(\n-%22%22\n )%0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-13_17-11-27",
+            "content": "@@ -593,24 +593,59 @@\n nal); i++ %7B%0A\n+%09%09if i %3E 0 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A\n %09%09fmt.Printf\n@@ -648,17 +648,16 @@\n intf(%22%25d\n- \n %22, final\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-13_17-11-48",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtd, qtdRemover int\n\tfmt.Scan(&qtd)\n\n\tnumeros := make([]int, qtd)\n\n\tfor i := 0; i < qtd; i++ {\n\t\tfmt.Scan(&numeros[i])\n\t}\n\n\tfmt.Scan(&qtdRemover)\n\n\tremover := make([]int, qtdRemover)\n\n\tfor i := 0; i < qtdRemover; i++ {\n\t\tfmt.Scan(&remover[i])\n\t}\n\n\tdeveRemover := false\n\n\tfinal := make([]int, 0)\n\n\tfor i := 0; i < qtd; i++ {\n\t\tfor j := 0; j < qtdRemover; j++ {\n\t\t\tif numeros[i] == remover[j] {\n\t\t\t\tdeveRemover = true\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t\tif !deveRemover {\n\t\t\tfinal = append(final, numeros[i])\n\t\t}\n\t\tdeveRemover = false\n\t}\n\n\tfor i := 0; i < len(final); i++ {\n\t\tfmt.Printf(\"%d \", final[i])\n\t}\n\n\tfmt.Println(\"\")\n}\n",
+            "lines": "45"
+        }
+    ]
+}
