@@ -22,12 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- eval1@teste-1
+- ed@list
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'true'
-  task_graph_mode: executions
+  panel: skills
+  show_panel: 'false'
+  task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: eval1@queimada
+selected: ed@basic
+selected_index: 0

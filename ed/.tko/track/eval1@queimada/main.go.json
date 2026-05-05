@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_10-16-03",
+            "content": "@@ -200,17 +200,17 @@\n %5Bc%5D != '\n-#\n+o\n ' %7B%0A%09%09re\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_10-16-36",
+            "content": "@@ -200,17 +200,17 @@\n %5Bc%5D != '\n-o\n+#\n ' %7B%0A%09%09re\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_10-16-51",
+            "content": "@@ -200,17 +200,17 @@\n %5Bc%5D != '\n-#\n+o\n ' %7B%0A%09%09re\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_10-20-21",
+            "content": "@@ -200,17 +200,17 @@\n %5Bc%5D != '\n-o\n+#\n ' %7B%0A%09%09re\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_10-20-32",
+            "content": "@@ -220,17 +220,9 @@\n n%0A%09%7D\n- else %7B\n %0A\n-%09\n %09gri\n@@ -235,17 +235,16 @@\n %5D = '#'%0A\n-%09\n %09burnTre\n@@ -256,25 +256,24 @@\n id, l-1, c)%0A\n-%09\n %09burnTrees(g\n@@ -285,17 +285,16 @@\n l+1, c)%0A\n-%09\n %09burnTre\n@@ -310,17 +310,16 @@\n l, c-1)%0A\n-%09\n %09burnTre\n@@ -335,18 +335,16 @@\n l, c+1)%0A\n-%09%7D\n %0A%09// se \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_10-20-50",
+            "content": "@@ -204,9 +204,9 @@\n != '\n-#\n+o\n ' %7B%0A\n@@ -240,17 +240,17 @@\n %5D%5Bc%5D = '\n-o\n+#\n '%0A%09%09burn\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_10-21-40",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\t_, _, _ = grid, l, c\n\tif l < 0 || l >= len(grid) || c < 0 || c >= len(grid[0]) {\n\t\treturn\n\t} else if grid[l][c] != '#' {\n\t\treturn\n\t} else {\n\t\tgrid[l][c] = 'o'\n\t\tburnTrees(grid, l-1, c)\n\t\tburnTrees(grid, l+1, c)\n\t\tburnTrees(grid, l, c-1)\n\t\tburnTrees(grid, l, c+1)\n\t}\n\t// se estiver fora da matriz, retorne\n\t// se o elemento atual n\u00e3o for uma arvore, retorne\n\t// queime a arvore colocando o caractere 'o' na posi\u00e7\u00e3o atual\n\t// chame a recurs\u00e3o para todos os 4 vizinhos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "49"
+        }
+    ]
+}

@@ -3,44 +3,110 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
+	"slices"
+	"sort"
 	"strconv"
 	"strings"
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	var vetFinal = []int{}
+
+	for _, val := range vet {
+		if val > 0 {
+			vetFinal = append(vetFinal, val)
+		}
+	}
+
+	return vetFinal
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	var vetFinal = []int{}
+
+	for _, val := range vet {
+		if val > -10 && val <= 0 {
+			vetFinal = append(vetFinal, val)
+		}
+	}
+	return vetFinal
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	slices.Sort(vet)
+	return vet
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+
+	sort.Slice(vet, func(i, j int) bool {
+		return math.Abs(float64(vet[i])) < math.Abs(float64(vet[j]))
+	})
+
+	return vet
 }
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	vetInvertido := []int{}
+
+	for i := len(vet) - 1; i >= 0; i-- {
+		vetInvertido = append(vetInvertido, vet[i])
+	}
+
+	return vetInvertido
 }
 
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	vetFinal := []int{}
+
+	var achou = false
+
+	for _, val := range vet {
+		for _, val2 := range vetFinal {
+			if val == val2 {
+				achou = true
+				break
+			}
+		}
+		if !achou {
+			vetFinal = append(vetFinal, val)
+		}
+		achou = false
+	}
+
+	return vetFinal
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	vetCopia := vet
+	vetFinal := []int{}
+
+	var contador = 0
+
+	for _, v1 := range vet {
+		if slices.Contains(vetFinal, v1) {
+			continue
+		}
+
+		for _, v2 := range vetCopia {
+			if v1 == v2 {
+				contador++
+			}
+		}
+
+		if contador > 1 {
+			for i := 0; i < contador-1; i++ {
+				vetFinal = append(vetFinal, v1)
+			}
+		}
+		contador = 0
+	}
+
+	slices.Sort(vetFinal)
+
+	return vetFinal
 }
 
 func main() {
@@ -103,4 +169,3 @@ func str2vet(s string) []int {
 	}
 	return vet
 }
-

@@ -1,0 +1,43 @@
+2026-04-14 10:13:54, MOVE, v:1, k:eval1@queimada, mode:DOWN
+2026-04-14 10:13:54, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-04-14 10:16:03, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:14, size:49
+2026-04-14 10:16:36, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:0, size:49
+2026-04-14 10:16:51, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:14, size:49
+2026-04-14 10:17:35, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:14
+2026-04-14 10:20:21, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:0, size:49
+2026-04-14 10:20:32, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:14, size:49
+2026-04-14 10:20:51, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:14, size:49
+2026-04-14 10:21:40, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:100, size:49
+2026-04-14 10:21:42, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-04-14 10:21:55, SELF, v:1, k:eval1@queimada, self:1, rate:100
+2026-04-14 10:22:11, SELF, v:1, k:eval1@queimada, self:1, rate:100, study:15, problem:1
+2026-04-14 10:22:11, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-04-14 10:22:12, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-04-14 10:22:36, SELF, v:1, k:eval1@queimada, self:1, rate:100, study:15
+2026-04-14 10:22:58, MOVE, v:1, k:eval1@triangulo, mode:PICK
+2026-04-14 10:23:42, MOVE, v:1, k:eval1@triangulo, mode:BACK
+2026-04-14 10:25:15, SELF, v:1, k:ed@gomos, self:1, rate:66
+2026-04-14 10:25:15, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-04-14 10:25:16, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100
+2026-04-14 10:25:17, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-04-14 10:25:22, SELF, v:1, k:ed@gomos, self:1, rate:100
+2026-04-14 10:25:31, SELF, v:1, k:ed@gomos, self:1, rate:100, study:20
+2026-04-14 10:25:31, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-04-14 10:25:32, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-04-14 10:25:38, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-04-14 10:25:39, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-04-14 10:25:39, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-04-14 10:25:40, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-04-14 10:25:42, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100
+2026-04-14 10:25:42, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-04-14 10:25:43, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-04-14 10:25:44, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-04-14 10:25:45, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-04-14 10:25:57, SELF, v:1, k:ed@pintando, self:1, rate:100, study:5
+2026-04-14 10:26:07, SELF, v:1, k:ed@mumia, self:1, rate:100, study:4
+2026-04-14 10:26:07, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-04-14 10:26:08, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-04-14 10:27:02, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-14 10:27:11, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-14 10:27:28, MOVE, v:1, k:ed@queimada, mode:DOWN
+2026-04-14 10:27:29, MOVE, v:1, k:ed@queimada, mode:PICK
