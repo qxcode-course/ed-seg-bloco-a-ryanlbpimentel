@@ -18,24 +18,13 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded:
-- ed@basic
-- ed@backtrack
-- ed@linear
-- ed@dfs
-- ed@vector
-- ed@rec
-- ed@tree
-- eval1@eval1
-- ed@list
-- ed@map_set
-- ed@bfs
+expanded: []
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@especiais
-selected_index: 13
+selected: ed@vector
+selected_index: 3

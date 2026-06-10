@@ -1,0 +1,41 @@
+2026-05-22 17:15:29, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-05-22 17:15:45, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:84
+2026-05-22 17:16:03, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:18:17, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:99
+2026-05-22 17:19:54, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:100
+2026-05-22 17:23:39, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-05-22 17:23:39, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:101
+2026-05-22 17:23:44, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:17, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:101
+2026-05-22 17:24:23, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:101
+2026-05-22 17:24:24, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:28, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:101
+2026-05-22 17:24:41, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:102
+2026-05-22 17:24:42, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:42, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:43, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:43, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:44, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:44, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:44, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:45, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:45, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-05-22 17:24:54, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:102
+2026-05-22 17:24:54, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-05-22 17:24:54, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-05-22 17:25:39, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:103
+2026-05-22 17:27:10, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:104
+2026-05-22 17:28:04, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:105
+2026-05-22 17:28:38, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:107
+2026-05-22 17:29:25, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:104
+2026-05-22 17:30:05, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:105
+2026-05-22 17:30:16, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-05-22 17:30:05, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-05-22 17:30:34, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:105
+2026-05-22 17:30:49, EXEC, v:1, k:ed@treinando, mode:FULL, rate:16, size:105
+2026-05-22 17:35:22, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-05-22 17:30:49, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-05-22 17:35:28, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:123
+2026-05-22 17:36:50, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33
+2026-05-22 17:39:13, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-05-22 17:36:50, MOVE, v:1, k:ed@treinando, mode:EDIT

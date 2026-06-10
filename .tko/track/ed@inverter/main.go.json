@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-03_17-45-17",
+            "content": "@@ -152,17 +152,16 @@\n e) %7B%0A%09x \n-:\n = node.L\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-03_17-45-24",
+            "content": "@@ -149,16 +149,32 @@\n Node) %7B%0A\n+%09x := node.Left%0A\n %09node.Le\n@@ -203,25 +203,18 @@\n Right = \n-node.Left\n+x%0A\n %0A%09if nod\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-03_17-45-33",
+            "content": "@@ -159,17 +159,18 @@\n ode.Left\n-,\n+ =\n  node.Ri\n@@ -172,19 +172,18 @@\n de.Right\n- = \n+%0A%09\n node.Rig\n@@ -184,17 +184,18 @@\n de.Right\n-,\n+ =\n  node.Le\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-06-03_17-45-42",
+            "content": "@@ -200,10 +200,8 @@\n eft%0A\n-%09%0A\n %09if \n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-06-03_17-45-45",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc Reverse(node *Node) {\n\tnode.Left, node.Right = node.Right, node.Left\n\t\n\tif node.Left != nil {\n\t\tReverse(node.Left)\n\t}\n\tif node.Right != nil {\n\t\tReverse(node.Right)\n\t}\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tReverse(root)   // Inverte a \u00e1rvore\n\tBShow(root, \"\") // Chama novamente para mostrar a \u00e1rvore invertida\n}\n",
+            "lines": "78"
+        }
+    ]
+}

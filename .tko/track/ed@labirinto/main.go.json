@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_23-40-25",
+            "content": "@@ -532,205 +532,32 @@\n  %7B%0A%09\n-if startPos == endPos %7B%0A%09%09return true%0A%09%7D%0A%0A%09grid%5BstartPos.l%5D%5BstartPos.c%5D = 'X'%0A%0A%09search(grid, getNeig(startPos)%5B0%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B1%5D, endPos)%0A%09search(grid, getNeig(\n+_, _, _ = grid, \n startPos\n )%5B2%5D\n@@ -556,20 +556,16 @@\n tPos\n-)%5B2%5D\n , endPos\n )%0A%09s\n@@ -564,90 +564,8 @@\n dPos\n-)%0A%09search(grid, getNeig(startPos)%5B3%5D, endPos)%0A%0A%09grid%5BstartPos.l%5D%5BstartPos.c%5D = ' '\n %0A%09re\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-06-03_17-58-29",
+            "content": "@@ -784,16 +784,52 @@\n ndPos)%0A%0A\n+%09grid%5BstartPos.l%5D%5BstartPos.c%5D = ' '%0A\n %09return \n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-06-03_17-58-52",
+            "content": "@@ -607,16 +607,193 @@\n  = 'X'%0A%0A\n+%09search(grid, getNeig(startPos)%5B0%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B1%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B2%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B3%5D, endPos)%0A%0A\n %09return \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-06-03_17-58-54",
+            "content": "@@ -611,98 +611,8 @@\n X'%0A%0A\n-%09if inside(grid, getNeig(startPos)%5B1%5D) %7B%0A%09%09search(grid, getNeig(startPos)%5B1%5D, endPos)%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-06-03_18-01-44",
+            "content": "@@ -701,98 +701,8 @@\n %09%7D%0A%0A\n-%09if inside(grid, getNeig(startPos)%5B1%5D) %7B%0A%09%09search(grid, getNeig(startPos)%5B1%5D, endPos)%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-03_18-02-01",
+            "content": "@@ -732,17 +732,17 @@\n artPos)%5B\n-2\n+1\n %5D) %7B%0A%09%09s\n@@ -775,9 +775,9 @@\n os)%5B\n-2\n+1\n %5D, e\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-03_18-02-05",
+            "content": "@@ -654,14 +654,12 @@\n %7B%0A%09%09\n-if mat\n+sear\n ch(g\n@@ -689,17 +689,63 @@\n 1%5D, \n-' ')\n+endPos)%0A%09%7D%0A%0A%09if inside(grid, getNeig(startPos)%5B2%5D) \n %7B%0A%09%09\n-%09\n sear\n@@ -752,16 +752,17 @@\n ch(grid,\n+ \n getNeig(\n@@ -763,33 +763,33 @@\n tNeig(startPos)%5B\n-1\n+2\n %5D, endPos)%0A%09%09%7D%0A%09\n@@ -783,20 +783,16 @@\n endPos)%0A\n-%09%09%7D%0A\n %09%7D%0A%0A%09ret\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-03_18-09-07",
+            "content": "@@ -642,17 +642,17 @@\n artPos)%5B\n-3\n+1\n %5D) %7B%0A%09%09i\n@@ -683,17 +683,17 @@\n artPos)%5B\n-3\n+1\n %5D, ' ')%7B\n@@ -730,9 +730,8 @@\n os)%5B\n-3\n 1%5D, \n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-06-03_18-09-21",
+            "content": "@@ -727,16 +727,17 @@\n rtPos)%5B3\n+1\n %5D, endPo\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-06-03_18-09-24",
+            "content": "@@ -646,510 +646,93 @@\n os)%5B\n-1%5D) %7B%0A%09%09if match(grid, getNeig(startPos)%5B1%5D, ' ')%7B%0A%09%09%09search(grid,getNeig(startPos)%5B1%5D, endPos)%0A%09%09%7D%0A%09%7D%0A%0A%09if inside(grid, getNeig(startPos)%5B2%5D) %7B%0A%09%09if match(grid, getNeig(startPos)%5B2%5D, ' ')%7B%0A%09%09%09search(grid,getNeig(startPos)%5B2%5D, endPos)%0A%09%09%7D%0A%09%7D%0A%0A%09if inside(grid, getNeig(startPos)%5B3%5D) %7B%0A%09%09if match(grid, getNeig(startPos)%5B3%5D, ' ')%7B%0A%09%09%09search(grid,getNeig(startPos)%5B3%5D, endPos)%0A%09%09%7D%0A%09%7D%0A%0A%09if inside(grid, getNeig(startPos)%5B4%5D) %7B%0A%09%09if match(grid, getNeig(startPos)%5B4%5D, ' ')%7B%0A%09%09%09search(grid,getNeig(startPos)%5B4\n+3%5D) %7B%0A%09%09if match(grid, getNeig(startPos)%5B3%5D, ' ')%7B%0A%09%09%09search(grid,getNeig(startPos)%5B3\n %5D, e\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-06-03_18-10-11",
+            "content": "@@ -746,16 +746,433 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09if inside(grid, getNeig(startPos)%5B2%5D) %7B%0A%09%09if match(grid, getNeig(startPos)%5B2%5D, ' ')%7B%0A%09%09%09search(grid,getNeig(startPos)%5B2%5D, endPos)%0A%09%09%7D%0A%09%7D%0A%0A%09if inside(grid, getNeig(startPos)%5B3%5D) %7B%0A%09%09if match(grid, getNeig(startPos)%5B3%5D, ' ')%7B%0A%09%09%09search(grid,getNeig(startPos)%5B3%5D, endPos)%0A%09%09%7D%0A%09%7D%0A%0A%09if inside(grid, getNeig(startPos)%5B4%5D) %7B%0A%09%09if match(grid, getNeig(startPos)%5B4%5D, ' ')%7B%0A%09%09%09search(grid,getNeig(startPos)%5B4%5D, endPos)%0A%09%09%7D%0A%09%7D%0A%0A\n %09return \n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-06-03_18-11-44",
+            "content": "@@ -572,185 +572,64 @@\n e%0A%09%7D\n- else if !inside(grid, startPos) %7C%7C !match(grid, startPos, ' ')%7B%0A%09%09return false%0A%09%7D%0A%0A%09grid%5BstartPos.l%5D%5BstartPos.c%5D = 'X'%0A%0A%09search(grid,getNeig(startPos)%5B1%5D, endPos)%0A%09search\n+%0A%0A%09grid%5BstartPos.l%5D%5BstartPos.c%5D = 'X'%0A%0A%09if inside\n (grid,\n+ \n getN\n@@ -646,33 +646,30 @@\n os)%5B\n-2%5D, endPos)%0A%09sear\n+1%5D) %7B%0A%09%09if mat\n ch(grid,\n getN\n@@ -656,32 +656,33 @@\n %09%09if match(grid,\n+ \n getNeig(startPos\n@@ -687,20 +687,20 @@\n os)%5B\n-3%5D, endPos)%0A\n+1%5D, ' ')%7B%0A%09%09\n %09sea\n@@ -730,9 +730,9 @@\n os)%5B\n-4\n+1\n %5D, e\n@@ -737,16 +737,23 @@\n  endPos)\n+%0A%09%09%7D%0A%09%7D\n %0A%0A%09retur\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-06-03_18-15-19",
+            "content": "@@ -731,16 +731,145 @@\n  endPos)\n+%0A%09search(grid,getNeig(startPos)%5B2%5D, endPos)%0A%09search(grid,getNeig(startPos)%5B3%5D, endPos)%0A%09search(grid,getNeig(startPos)%5B4%5D, endPos)\n %0A%0A%09retur\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-06-03_18-15-29",
+            "content": "@@ -724,9 +724,9 @@\n os)%5B\n-2\n+1\n %5D, e\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-03_18-15-39",
+            "content": "@@ -724,9 +724,9 @@\n os)%5B\n-3\n+2\n %5D, e\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-03_18-15-44",
+            "content": "@@ -685,17 +685,17 @@\n s.c%5D = '\n-.\n+X\n '%0A%0A%09sear\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-03_18-20-36",
+            "content": "@@ -556,46 +556,8 @@\n s %7B%0A\n-%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = ' ' %0A\n %09%09re\n@@ -694,105 +694,49 @@\n '%0A%0A%09\n-for _, vizin := range getNeig(startPos)%7B%0A%09%09if search(grid, vizin, endPos) %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D\n+search(grid,getNeig(startPos)%5B3%5D, endPos)\n %0A%0A%09r\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-03_18-28-31",
+            "content": "@@ -586,17 +586,17 @@\n s.c%5D = '\n-.\n+ \n ' %0A%09%09ret\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-03_18-28-59",
+            "content": "@@ -588,17 +588,18 @@\n c%5D = '.'\n+ \n %0A\n-\n %09%09return\n@@ -606,19 +606,22 @@\n  true%0A%09%7D\n-%0A%0A%09\n+ else \n if !insi\n@@ -669,17 +669,16 @@\n os, ' ')\n- \n %7B%0A%09%09retu\n@@ -763,25 +763,24 @@\n ig(startPos)\n- \n %7B%0A%09%09if searc\n@@ -827,49 +827,12 @@\n %09%09%7D%0A\n+\n %09%7D%0A%0A\n-%09grid%5BstartPos.l%5D%5BstartPos.c%5D = ' '%0A%0A\n %09ret\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-03_18-30-45",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc getNeig(p Pos) []Pos {\n\treturn []Pos{{p.l, p.c - 1}, {p.l - 1, p.c}, {p.l, p.c + 1}, {p.l + 1, p.c}}\n}\n\nfunc inside(grid [][]rune, p Pos) bool {\n\treturn !(p.l < 0 || p.l >= len(grid) || p.c < 0 || p.c >= len(grid[0]))\n}\n\nfunc match(grid [][]rune, p Pos, value rune) bool {\n\treturn inside(grid, p) && grid[p.l][p.c] == value\n}\n\n// Fun\u00e7\u00e3o recursiva que tenta encontrar o caminho do in\u00edcio ao fim\nfunc search(grid [][]rune, startPos, endPos Pos) bool {\n\tif startPos == endPos {\n\t\tgrid[startPos.l][startPos.c] = '.'\n\t\treturn true\n\t}\n\n\tif !inside(grid, startPos) || !match(grid, startPos, ' ') {\n\t\treturn false\n\t}\n\n\tgrid[startPos.l][startPos.c] = '.'\n\n\tfor _, vizin := range getNeig(startPos) {\n\t\tif search(grid, vizin, endPos) {\n\t\t\treturn true\n\t\t}\n\t}\n\n\tgrid[startPos.l][startPos.c] = ' '\n\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tnl_nc := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(nl_nc, \"%d %d\", &nl, &nc)\n\tgrid := make([][]rune, nl)\n\n\t// L\u00ea a gridriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tgrid[i] = []rune(scanner.Text())\n\t}\n\n\t// Procura posi\u00e7\u00f5es de in\u00edcio e endPos e conserta para _\n\tvar startPos, endPos Pos\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif grid[l][c] == 'I' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tstartPos = Pos{l, c}\n\t\t\t}\n\t\t\tif grid[l][c] == 'F' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tendPos = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(grid, startPos, endPos)\n\n\t// Imprime o labirinto final\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "84"
+        }
+    ]
+}

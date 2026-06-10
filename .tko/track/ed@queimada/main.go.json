@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_23-31-06",
+            "content": "@@ -180,381 +180,10 @@\n n%0A%09%7D\n- else if grid%5Bl%5D%5Bc%5D != '#' %7B%0A%09%09return%0A%09%7D else %7B%0A%09%09grid%5Bl%5D%5Bc%5D = 'o'%0A%09%09burnTrees(grid, l-1, c)%0A%09%09burnTrees(grid, l+1, c)%0A%09%09burnTrees(grid, l, c-1)%0A%09%09burnTrees(grid, l, c+1)%0A%09%7D%0A%09// se estiver fora da matriz, retorne%0A%09// se o elemento atual n%C3%A3o for uma arvore, retorne%0A%09// queime a arvore colocando o caractere 'o' na posi%C3%A7%C3%A3o atual%0A%09// chame a recurs%C3%A3o para todos os 4 vizinhos\n+%0A%09\n %0A%7D%0A%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-24_23-31-25",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\t_, _, _ = grid, l, c\n\tif l < 0 || l >= len(grid) || c < 0 || c >= len(grid[0]) {\n\t\treturn\n\t} else if grid[l][c] != '#' {\n\t\treturn\n\t} else {\n\t\tgrid[l][c] = 'o'\n\t\tburnTrees(grid, l-1, c)\n\t\tburnTrees(grid, l+1, c)\n\t\tburnTrees(grid, l, c-1)\n\t\tburnTrees(grid, l, c+1)\n\t}\n\t// se estiver fora da matriz, retorne\n\t// se o elemento atual n\u00e3o for uma arvore, retorne\n\t// queime a arvore colocando o caractere 'o' na posi\u00e7\u00e3o atual\n\t// chame a recurs\u00e3o para todos os 4 vizinhos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "49"
+        }
+    ]
+}

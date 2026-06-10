@@ -1,0 +1,184 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-07_03-32-46",
+            "content": "@@ -479,48 +479,26 @@\n fmt.\n-Scan(&n)%0A%0A    fmt.Println(enesimo_primo(\n+Println(fmt.Scan(&\n n, 0\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-07_03-33-34",
+            "content": "@@ -412,17 +412,17 @@\n  return \n-1\n+0\n %0A    %7D%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-34-15",
+            "content": "@@ -399,22 +399,8 @@\n else\n- if eh_primo()\n %7B%0A  \n@@ -412,17 +412,17 @@\n  return \n-0\n+1\n %0A    %7D%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-34-35",
+            "content": "@@ -399,17 +399,16 @@\n else if \n-!\n eh_primo\n@@ -404,32 +404,24 @@\n if eh_primo(\n-primo, 2\n )%7B%0A        r\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-34-36",
+            "content": "@@ -456,17 +456,17 @@\n  return \n-1\n+0\n %0A%7D%0A%0Afunc\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-34-42",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -20,16 +20,17 @@\n  %22fmt%22%0A%0A\n+%0A\n func eh_\n@@ -262,20 +262,22 @@\n int) int\n- \n %7B%0A\n-%09\n+    \n if conta\n@@ -284,21 +284,26 @@\n dor == n\n- \n %7B%0A\n-%09%09\n+        \n return p\n@@ -307,21 +307,27 @@\n n primo%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n if eh_pr\n@@ -339,21 +339,26 @@\n rimo, 2)\n- \n %7B%0A\n-%09%09\n+        \n enesimo_\n@@ -385,17 +385,20 @@\n  primo)%0A\n-%09\n+    \n %7D else i\n@@ -418,21 +418,26 @@\n rimo, 2)\n- \n %7B%0A\n-%09%09\n+        \n return 0\n@@ -437,21 +437,28 @@\n eturn 0%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A%0A    \n return 1\n@@ -475,17 +475,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -490,17 +490,20 @@\n  n int%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -508,17 +508,20 @@\n an(&n)%0A%0A\n-%09\n+    \n fmt.Prin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-34-46",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -21,17 +21,16 @@\n  %22fmt%22%0A%0A\n-%0A\n func eh_\n@@ -262,22 +262,20 @@\n int) int\n+ \n %7B%0A\n-    \n+%09\n if conta\n@@ -282,26 +282,21 @@\n dor == n\n+ \n %7B%0A\n-        \n+%09%09\n return p\n@@ -304,32 +304,13 @@\n imo%0A\n-    %7D%0A%0A    for%7B%0A        \n+%09%7D%0A%0A%09\n if e\n@@ -330,22 +330,13 @@\n , 2)\n+ \n %7B%0A\n-            \n+%09%09\n enes\n@@ -371,80 +371,65 @@\n mo)%0A\n-            break%0A        %7D%0A%0A        contador++%0A    %7D%0A    %0A%0A    \n+%09%7D else if !eh_primo(primo, 2) %7B%0A%09%09return 0%0A%09%7D%0A%0A%09\n return \n-0\n+1\n %0A%7D%0A%0A\n@@ -442,20 +442,17 @@\n ain() %7B%0A\n-    \n+%09\n var n in\n@@ -454,20 +454,17 @@\n  n int%0A%0A\n-    \n+%09\n fmt.Scan\n@@ -473,12 +473,9 @@\n n)%0A%0A\n-    \n+%09\n fmt.\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-07_03-38-13",
+            "content": "@@ -439,21 +439,24 @@\n         \n-primo\n+contador\n ++%0A    %7D\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-07_03-38-18",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -20,16 +20,17 @@\n  %22fmt%22%0A%0A\n+%0A\n func eh_\n@@ -262,20 +262,22 @@\n int) int\n- \n %7B%0A\n-%09\n+    \n if conta\n@@ -284,21 +284,26 @@\n dor == n\n- \n %7B%0A\n-%09%09\n+        \n return p\n@@ -311,21 +311,32 @@\n imo%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n for\n- \n %7B%0A\n-%09%09\n+        \n if e\n@@ -356,14 +356,22 @@\n , 2)\n- \n %7B%0A\n-%09%09%09\n+            \n enes\n@@ -406,37 +406,69 @@\n mo)%0A\n-%09%09%09break%0A%09%09%7D%0A%0A%09%09primo++%0A%09%7D%0A%0A%09\n+            break%0A        %7D%0A%0A        primo++%0A    %7D%0A    %0A%0A    \n retu\n@@ -489,17 +489,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -504,17 +504,20 @@\n  n int%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -522,17 +522,20 @@\n an(&n)%0A%0A\n-%09\n+    \n fmt.Prin\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-07_03-38-20",
+            "content": "@@ -300,24 +300,32 @@\n n primo%0A%09%7D%0A%0A\n+%09for %7B%0A%09\n %09if eh_primo\n@@ -337,16 +337,17 @@\n o, 2) %7B%0A\n+%09\n %09%09enesim\n@@ -381,47 +381,33 @@\n o)%0A%09\n-%7D%0A%0A%09enesimo_primo(n, contador, primo+1)\n+%09%09break%0A%09%09%7D%0A%0A%09%09primo++%0A%09%7D\n %0A%0A%09r\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-07_03-39-19",
+            "content": "@@ -375,20 +375,8 @@\n %09%7D%0A%0A\n-    primo++%0A\n %09ene\n@@ -404,16 +404,18 @@\n r, primo\n++1\n )%0A%0A%09retu\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-07_03-39-53",
+            "content": "@@ -371,17 +371,20 @@\n mo)%0A%09%7D%0A%0A\n-%09\n+    \n primo++%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-39-56",
+            "content": "@@ -503,14 +503,14 @@\n o(n, 0, \n-2\n+1\n ))%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-40-20",
+            "content": "@@ -371,16 +371,25 @@\n mo)%0A%09%7D%0A%0A\n+%09primo++%0A\n %09enesimo\n@@ -413,18 +413,16 @@\n r, primo\n-+1\n )%0A%0A%09retu\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-42-26",
+            "content": "@@ -331,23 +331,16 @@\n  2) %7B%0A%09%09\n-return \n enesimo_\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-07_03-42-33",
+            "content": "@@ -372,18 +372,16 @@\n 1, primo\n-+1\n )%0A%09%7D%0A%0A%09e\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-07_03-43-00",
+            "content": "@@ -1,526 +1,58 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc eh_primo(x int, div int) bool %7B%0A%09if x %3C= 1 %7B%0A%09%09return false%0A%09%7D%0A%0A%09if (x%25div == 0) && (x != div) %7B%0A%09%09return false%0A%09%7D else if div %3E= x %7B%0A%09%09return true%0A%09%7D%0A%0A%09return eh_primo(x, div+1)%0A%7D%0A%0Afunc enesimo_primo(n int, contador int, primo int) int %7B%0A%09if contador == n %7B%0A%09%09return primo%0A%09%7D%0A%0A%09if eh_primo(primo, 2) %7B%0A%09%09return enesimo_primo(n, contador+1, primo)%0A%09%7D%0A%0A    primo++%0A%09enesimo_primo(n, contador, primo)%0A%0A%09return 0%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%0A%09fmt.Scan(&n)%0A%0A%09fmt.Println(enesimo_primo(n, 0, 2))%0A%7D\n+@@ -372,16 +372,18 @@%0A 1, primo%0A++1%0A )%250A%2509%257D%250A%250A%2509e\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-06-07_03-43-30",
+            "content": "@@ -378,17 +378,20 @@\n mo)%0A%09%7D%0A%0A\n-%09\n+    \n primo++%0A\n@@ -513,14 +513,14 @@\n o(n, 0, \n-1\n+2\n ))%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-43-40",
+            "content": "@@ -382,12 +382,9 @@\n %09%7D%0A%0A\n-    \n+%09\n prim\n@@ -510,14 +510,14 @@\n o(n, 0, \n-2\n+1\n ))%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-43-46",
+            "content": "@@ -378,17 +378,20 @@\n mo)%0A%09%7D%0A%0A\n-%09\n+    \n primo++%0A\n@@ -517,9 +517,9 @@\n  0, \n-3\n+2\n ))%0A%7D\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-43-51",
+            "content": "@@ -514,9 +514,9 @@\n  0, \n-4\n+3\n ))%0A%7D\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-43-55",
+            "content": "@@ -510,14 +510,14 @@\n o(n, 0, \n-2\n+4\n ))%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-44-02",
+            "content": "@@ -294,24 +294,21 @@\n %09return \n-contador\n+primo\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-45-12",
+            "content": "@@ -294,17 +294,24 @@\n %09return \n-n\n+contador\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-45-22",
+            "content": "@@ -294,21 +294,17 @@\n %09return \n-primo\n+n\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-45-30",
+            "content": "@@ -431,16 +431,17 @@\n %09return \n+0\n %0A%7D%0A%0Afunc\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-45-56",
+            "content": "@@ -388,23 +388,16 @@\n rimo++%0A%09\n-return \n enesimo_\n@@ -421,16 +421,26 @@\n , primo)\n+%0A%0A%09return \n %0A%7D%0A%0Afunc\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-45-58",
+            "content": "@@ -389,11 +389,9 @@\n imo+\n-=1 \n++\n %0A%09re\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-07_03-46-10",
+            "content": "@@ -1,542 +1,78 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc eh_primo(x int, div int) bool %7B%0A%09if x %3C= 1 %7B%0A%09%09return false%0A%09%7D%0A%0A%09if (x%25div == 0) && (x != div) %7B%0A%09%09return false%0A%09%7D else if div %3E= x %7B%0A%09%09return true%0A%09%7D%0A%0A%09return eh_primo(x, div+1)%0A%7D%0A%0Afunc enesimo_primo(n int, contador int, primo int) int %7B%0A%09if contador == n %7B%0A%09%09return primo%0A%09%7D%0A%0A%09if eh_primo(primo, 2) %7B%0A%09%09return enesimo_primo(n, contador+1, primo)%0A%09%7D%0A%0A%09primo += 1%0A%09fmt.Println(primo)%0A%09return enesimo_primo(n, contador, primo)%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%0A%09fmt.Scan(&n)%0A%0A%09fmt.Println(enesimo_primo(n, 0, 2))%0A%7D\n+@@ -388,33 +388,12 @@%0A rimo%0A- %0A +=%0A+1%0A  %0A-1%250A%2509fmt.Println(primo)%0A %250A%2509re\n %0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-06-07_03-46-33",
+            "content": "@@ -269,35 +269,8 @@\n t %7B%0A\n-%0A%09if eh_primo(primo, 2) %7B%0A%09\n %09if \n@@ -287,17 +287,16 @@\n = n %7B%0A%09%09\n-%09\n return p\n@@ -305,38 +305,80 @@\n mo%0A%09\n-%09%7D else %7B%0A%09%09%09contador += 1%0A%09%09%7D\n+%7D%0A%0A%09if eh_primo(primo, 2) %7B%0A%09%09return enesimo_primo(n, contador+1, primo)\n %0A%09%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-07_03-47-59",
+            "content": "@@ -265,16 +265,17 @@\n ) int %7B%0A\n+%0A\n %09if eh_p\n@@ -286,17 +286,17 @@\n (primo, \n-1\n+2\n ) %7B%0A%09%09if\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-07_03-48-20",
+            "content": "@@ -285,17 +285,17 @@\n (primo, \n-2\n+1\n ) %7B%0A%09%09if\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-07_03-48-22",
+            "content": "@@ -514,14 +514,14 @@\n o(n, 0, \n-1\n+2\n ))%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-07_03-48-53",
+            "content": "@@ -294,30 +294,8 @@\n ) %7B%0A\n-        contador += 1%0A\n %09%09if\n@@ -327,16 +327,44 @@\n n primo%0A\n+%09%09%7D else %7B%0A%09%09%09contador += 1%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-07_03-49-35",
+            "content": "@@ -290,18 +290,24 @@\n o, 2) %7B%0A\n-%09%09\n+        \n contador\n@@ -369,16 +369,36 @@\n mo += 1%0A\n+%09fmt.Println(primo)%0A\n %09return \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-07_03-49-46",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x <= 1 {\n\t\treturn false\n\t}\n\n\tif (x%div == 0) && (x != div) {\n\t\treturn false\n\t} else if div >= x {\n\t\treturn true\n\t}\n\n\treturn eh_primo(x, div+1)\n}\n\nfunc enesimo_primo(n int, contador int, primo int) int {\n\tif eh_primo(primo, 2) {\n\t\tcontador += 1\n\t\tif contador == n {\n\t\t\treturn primo\n\t\t}\n\t}\n\n\tprimo += 1\n\treturn enesimo_primo(n, contador, primo)\n}\n\nfunc main() {\n\tvar n int\n\n\tfmt.Scan(&n)\n\n\tfmt.Println(enesimo_primo(n, 0, 1))\n}\n",
+            "lines": "37"
+        }
+    ]
+}

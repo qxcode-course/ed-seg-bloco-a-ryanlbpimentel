@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-07_03-58-58",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,234 +23,53 @@\n mt%22%0A\n-%0A%0A\n func \n-escadaria(n int, a int) int%7B%0A    if a == n%7B%0A        return 1%0A    %7D %0A%0A    if a %3E n%7B%0A        return 0%0A    %7D%0A%0A    return escadaria(n, a+1) + escadaria(n, a+3) %0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A    fmt.Scan(&n)%0A    escadaria(n,1\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-07_04-07-19",
+            "content": "@@ -21,16 +21,17 @@\n  %22fmt%22%0A%0A\n+%0A\n func esc\n@@ -54,20 +54,22 @@\n int) int\n- \n %7B%0A\n-%09\n+    \n if a == \n@@ -69,21 +69,26 @@\n f a == n\n- \n %7B%0A\n-%09%09\n+        \n return 1\n@@ -92,21 +92,28 @@\n n 1%0A\n-%09%7D%0A%0A%09\n+    %7D %0A%0A    \n if a %3E n\n  %7B%0A%09\n@@ -112,13 +112,18 @@\n  %3E n\n- \n %7B%0A\n-%09%09\n+        \n retu\n@@ -131,13 +131,19 @@\n n 0%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n retu\n@@ -182,16 +182,17 @@\n (n, a+3)\n+ \n %0A%7D%0A%0Afunc\n@@ -212,17 +212,20 @@\n r n int%0A\n-%09\n+    \n fmt.Scan\n@@ -229,17 +229,20 @@\n can(&n)%0A\n-%09\n+    \n escadari\n@@ -245,14 +245,13 @@\n daria(n,\n- \n 1)%0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-07_04-07-21",
+            "content": "@@ -219,35 +219,7 @@\n , 1)\n-%0A%0A    fmt.Println(escadaria)\n %0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-07_04-08-06",
+            "content": "@@ -217,17 +217,20 @@\n (n, 1)%0A%0A\n-%09\n+    \n fmt.Prin\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-07_04-08-08",
+            "content": "@@ -200,16 +200,31 @@\n an(&n)%0A%09\n+escadaria(n, 1)\n %0A%0A%09fmt.P\n@@ -239,18 +239,12 @@\n scadaria\n-(n, 1)\n )%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-07_04-08-19",
+            "content": "@@ -199,16 +199,19 @@\n can(&n)%0A\n+%09%0A%0A\n %09fmt.Pri\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-07_04-08-23",
+            "content": "@@ -78,17 +78,17 @@\n %09return \n-a\n+1\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-07_04-09-50",
+            "content": "@@ -78,17 +78,17 @@\n %09return \n-1\n+a\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-07_04-10-04",
+            "content": "@@ -225,14 +225,14 @@\n aria(n, \n-0\n+1\n ))%0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-07_04-10-17",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc escadaria(n int, a int) int {\n\tif a == n {\n\t\treturn 1\n\t}\n\n\tif a > n {\n\t\treturn 0\n\t}\n\n\treturn escadaria(n, a+1) + escadaria(n, a+3)\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tfmt.Println(escadaria(n, 0))\n}\n",
+            "lines": "21"
+        }
+    ]
+}

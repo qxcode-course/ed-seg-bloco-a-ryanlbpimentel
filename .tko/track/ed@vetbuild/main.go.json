@@ -1,0 +1,444 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-25_18-50-44",
+            "content": "@@ -665,16 +665,19 @@\n tdin)%0A%0A%09\n+// \n v := New\n@@ -1178,24 +1178,27 @@\n status%22:%0A%09%09%09\n+// \n fmt.Println(\n@@ -1203,24 +1203,16 @@\n n(v.\n-capacity, v.size\n+Status()\n )%0A%09%09\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-05-25_18-51-42",
+            "content": "@@ -1192,41 +1192,21 @@\n rint\n-f(%22Size: %25d%5Cn, Capacity: %25d%22, v.s\n+ln(v.capacity\n , v.\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-05-25_18-52-03",
+            "content": "@@ -1225,23 +1225,16 @@\n  v.s\n-ize\n , v.\n-capacity\n+size\n )%0A%09%09\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-05-25_18-52-05",
+            "content": "@@ -1195,26 +1195,29 @@\n tf(%22\n-s\n+S\n ize:\n+ \n %25d\n+%5Cn\n , \n-c\n+C\n apacity:\n %25d%5Cn\n@@ -1212,20 +1212,19 @@\n apacity:\n+ \n %25d\n-%5Cn\n %22, v.siz\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-05-25_18-52-29",
+            "content": "@@ -1198,16 +1198,17 @@\n %22size:%25d\n+,\n  capacit\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-05-25_18-52-42",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -933,16 +933,19 @@\n it%22:%0A%09%09%09\n+// \n value, _\n@@ -974,16 +974,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n v = NewV\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-05-25_18-53-26",
+            "content": "@@ -1142,24 +1142,27 @@\n  %22show%22:%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-05-25_18-53-39",
+            "content": "@@ -1163,13 +1163,8 @@\n ln(v\n-.data\n )%0A%09%09\n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-05-25_18-53-59",
+            "content": "@@ -1168,17 +1168,8 @@\n data\n-%5B:v.size%5D\n )%0A%09%09\n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-05-25_18-54-07",
+            "content": "@@ -603,127 +603,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) PushBack(value int) %7B%0A%09if v.size == v.capacity %7B%0A%09%09v.resize()%0A%09%7D%0A%09v.data%5Bv.size%5D = value%0A%09v.size++%0A%7D%0A%0A\n func\n@@ -1021,16 +1021,19 @@\n sh%22:%0A%09%09%09\n+// \n for _, p\n@@ -1060,16 +1060,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1098,16 +1098,19 @@\n art)%0A%09%09%09\n+// \n %09v.PushB\n@@ -1123,16 +1123,19 @@\n lue)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-05-26_13-40-05",
+            "content": "@@ -677,17 +677,16 @@\n resize()\n- \n %0A%09%7D%0A%09v.d\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-05-26_13-40-14",
+            "content": "@@ -1141,18 +1141,16 @@\n sh%22:%0A%09%09%09\n-//\n for _, p\n@@ -1177,18 +1177,16 @@\n :%5D %7B%0A%09%09%09\n-//\n %09value, \n@@ -1212,18 +1212,16 @@\n art)%0A%09%09%09\n-//\n %09v.PushB\n@@ -1234,18 +1234,16 @@\n lue)%0A%09%09%09\n-//\n %7D%0A%09%09case\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-05-26_13-40-44",
+            "content": "@@ -639,18 +639,16 @@\n int) %7B%0A%09\n-//\n if v.siz\n@@ -666,18 +666,16 @@\n city %7B%0A%09\n-//\n %09v.resiz\n@@ -681,12 +681,11 @@\n ze()\n+ \n %0A%09\n-//\n %7D%0A%09v\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-05-26_13-41-04",
+            "content": "@@ -603,211 +603,8 @@\n %0A%7D%0A%0A\n-func resize(v *Vector) %7B%0A%09newCapacity := v.capacity * 2%0A%09if newCapacity == 0 %7B%0A%09%09newCapacity = 1%0A%09%7D%0A%0A%09newData := NewVector(newCapacity)%0A%0A%09for i := 0; i %3C v.size; i++ %7B%0A%09%09newData.data%5Bi%5D = v.data%5Bi%5D%0A%09%7D%0A%7D%0A\n func\n@@ -639,16 +639,18 @@\n int) %7B%0A%09\n+//\n if v.siz\n@@ -672,20 +672,25 @@\n  %7B%0A%09\n-%09\n+//%09v.\n resize(\n-v\n )%0A%09\n+//\n %7D%0A%09v\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-05-26_13-45-23",
+            "content": "@@ -870,21 +870,16 @@\n ity %7B%0A%09%09\n-v := \n resize(v\n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-05-26_13-46-12",
+            "content": "@@ -621,24 +621,16 @@\n *Vector)\n- *Vector\n  %7B%0A%09newC\n@@ -804,24 +804,8 @@\n %0A%09%7D%0A\n-%09return newData%0A\n %7D%0Afu\n@@ -872,16 +872,17 @@\n y %7B%0A%09%09v \n+:\n = resize\n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-05-26_13-46-51",
+            "content": "@@ -1370,16 +1370,18 @@\n sh%22:%0A%09%09%09\n+//\n for _, p\n@@ -1408,16 +1408,18 @@\n :%5D %7B%0A%09%09%09\n+//\n %09value, \n@@ -1445,16 +1445,18 @@\n art)%0A%09%09%09\n+//\n %09v.PushB\n@@ -1469,16 +1469,18 @@\n lue)%0A%09%09%09\n+//\n %7D%0A%09%09case\n",
+            "lines": "152"
+        },
+        {
+            "label": "2026-05-26_13-47-15",
+            "content": "@@ -713,32 +713,106 @@\n %7D%0A%0A%09\n-v.capacity = newCapacity\n+newData := NewVector(newCapacity)%0A%0A%09for i := 0; i %3C v.size; i++ %7B%0A%09%09newData.data%5Bi%5D = v.data%5Bi%5D%0A%09%7D\n %0A%09re\n@@ -816,17 +816,23 @@\n %09return \n-v\n+newData\n %0A%7D%0Afunc \n",
+            "lines": "152"
+        },
+        {
+            "label": "2026-06-01_18-49-11",
+            "content": "@@ -667,34 +667,8 @@\n * 2%0A\n-%09fmt.Println(newCapacity)%0A\n %09if \n@@ -713,106 +713,32 @@\n %7D%0A%0A%09\n-newData := NewVector(newCapacity)%0A%0A%09for i := 0; i %3C v.size; i++ %7B%0A%09%09newData.data%5Bi%5D = v.data%5Bi%5D%0A%09%7D\n+v.capacity = newCapacity\n %0A%09re\n@@ -746,15 +746,9 @@\n urn \n-newData\n+v\n %0A%7D%0Af\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-06-01_18-50-18",
+            "content": "@@ -837,40 +837,8 @@\n %5D%0A%09%7D\n-%0A%0A%09fmt.Println(newData.capacity)\n %0A%09re\n",
+            "lines": "153"
+        },
+        {
+            "label": "2026-06-01_18-51-11",
+            "content": "@@ -856,20 +856,24 @@\n newData.\n-data\n+capacity\n )%0A%09retur\n",
+            "lines": "155"
+        },
+        {
+            "label": "2026-06-01_18-51-34",
+            "content": "@@ -833,16 +833,44 @@\n ta%5Bi%5D%0A%09%7D\n+%0A%0A%09fmt.Println(newData.data)\n %0A%09return\n",
+            "lines": "155"
+        },
+        {
+            "label": "2026-06-01_18-54-19",
+            "content": "@@ -975,37 +975,8 @@\n e++%0A\n-%09fmt.Println(%22teste%22,v.data)%0A\n %7D%0A%0Af\n",
+            "lines": "153"
+        },
+        {
+            "label": "2026-06-01_18-54-52",
+            "content": "@@ -895,37 +895,8 @@\n ) %7B%0A\n-%09fmt.Println(%22teste%22,v.data)%0A\n %09if \n@@ -971,16 +971,45 @@\n .size++%0A\n+%09fmt.Println(%22teste%22,v.data)%0A\n %7D%0A%0Afunc \n",
+            "lines": "154"
+        },
+        {
+            "label": "2026-06-01_18-56-04",
+            "content": "@@ -970,37 +970,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(%22teste%22,v.data)%0A\n %09v.d\n",
+            "lines": "154"
+        },
+        {
+            "label": "2026-06-01_18-56-14",
+            "content": "@@ -999,18 +999,8 @@\n ta)%0A\n-%09v.size++%0A\n %09v.d\n@@ -1019,16 +1019,26 @@\n = value%0A\n+%09v.size++%0A\n %7D%0A%0Afunc \n",
+            "lines": "155"
+        },
+        {
+            "label": "2026-06-01_18-56-35",
+            "content": "@@ -996,16 +996,24 @@\n .data)%0A%09\n+v.size++\n %0A%09v.data\n@@ -1029,26 +1029,16 @@\n = value%0A\n-%09v.size++%0A\n %7D%0A%0Afunc \n",
+            "lines": "155"
+        },
+        {
+            "label": "2026-06-01_18-56-47",
+            "content": "@@ -910,17 +910,16 @@\n n(%22teste\n-1\n %22,v.data\n@@ -985,17 +985,16 @@\n n(%22teste\n-2\n %22,v.data\n@@ -1035,38 +1035,8 @@\n e++%0A\n-%09fmt.Println(%22teste3%22,v.data)%0A\n %7D%0A%0Af\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-06-01_18-57-13",
+            "content": "@@ -913,17 +913,16 @@\n teste1%22,\n- \n v.data)%0A\n@@ -989,25 +989,24 @@\n teste2%22,\n- \n v.data)%0A\n %0A%09v.data\n@@ -997,16 +997,17 @@\n v.data)%0A\n+%09\n %0A%09v.data\n@@ -1017,10 +1017,8 @@\n size\n-+1\n %5D = \n@@ -1055,17 +1055,16 @@\n teste3%22,\n- \n v.data)%0A\n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-06-01_18-57-41",
+            "content": "@@ -1014,16 +1014,18 @@\n a%5Bv.size\n++1\n %5D = valu\n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-06-01_18-57-56",
+            "content": "@@ -972,29 +972,8 @@\n %0A%09%7D%0A\n-%09v.size = v.size + 1%0A\n %09fmt\n@@ -1024,16 +1024,26 @@\n = value%0A\n+%09v.size++%0A\n %09fmt.Pri\n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-06-01_19-00-37",
+            "content": "@@ -663,17 +663,16 @@\n ity * 2%0A\n-%0A\n %09fmt.Pri\n@@ -968,16 +968,37 @@\n e(v)%0A%09%7D%0A\n+%09v.size = v.size + 1%0A\n %09fmt.Pri\n@@ -1049,18 +1049,8 @@\n lue%0A\n-%09v.size++%0A\n %09fmt\n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-06-01_19-01-07",
+            "content": "@@ -666,31 +666,8 @@\n  * 2\n-%0A%09newSize := v.size + 1\n %0A%0A%09f\n@@ -773,32 +773,8 @@\n ity)\n-%0A%09newData.size = newSize\n %0A%0A%09f\n@@ -835,17 +835,16 @@\n a%5Bi%5D%0A%09%7D%0A\n-%0A\n %09return \n@@ -1001,16 +1001,16 @@\n .data)%0A%0A\n-\n %09v.data%5B\n@@ -1025,16 +1025,26 @@\n = value%0A\n+%09v.size++%0A\n %09fmt.Pri\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-06-01_19-02-10",
+            "content": "@@ -662,16 +662,39 @@\n city * 2\n+%0A%09newSize := v.size + 1\n %0A%0A%09fmt.P\n@@ -792,16 +792,40 @@\n apacity)\n+%0A%09newData.size = newSize\n %0A%0A%09for i\n@@ -1077,18 +1077,8 @@\n lue%0A\n-%09v.size++%0A\n %09fmt\n",
+            "lines": "160"
+        },
+        {
+            "label": "2026-06-01_19-03-19",
+            "content": "@@ -664,16 +664,42 @@\n ty * 2%0A%0A\n+%09fmt.Println(newCapacity)%0A\n %09if newC\n@@ -713,16 +713,16 @@\n  == 0 %7B%0A\n-\n %09%09newCap\n@@ -893,16 +893,47 @@\n  int) %7B%0A\n+%09fmt.Println(%22teste1%22, v.data)%0A\n %09if v.si\n@@ -1005,116 +1005,9 @@\n ta)%0A\n-%09v.size++%0A%09if v.size %3C len(v.data) %7B%0A%09%09v.data%5Bv.size%5D = value%0A%09%7D else %7B%0A%09%09v.data = append(v.data, value)%0A%09%7D\n %0A\n+\n %09v.d\n@@ -1026,18 +1026,25 @@\n = value%0A\n-%0A\n %09\n+v.size++\n %0A%09fmt.Pr\n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-06-01_19-04-57",
+            "content": "@@ -1051,16 +1051,40 @@\n alue)%0A%09%7D\n+%0A%09v.data%5Bv.size%5D = value\n %0A%0A%09%0A%09fmt\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-06-01_19-04-58",
+            "content": "@@ -1028,13 +1028,32 @@\n data\n-%5B%5D\n  = \n+append(v.data, value)\n %0A%09%7D%0A\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-06-01_19-05-31",
+            "content": "@@ -959,30 +959,88 @@\n ++%0A%09\n-v.data%5Bv.size%5D = value\n+if v.size %3C len(v.data) %7B%0A%09%09v.data%5Bv.size%5D = value%0A%09%7D else %7B%0A%09%09v.data%5B%5D = %0A%09%7D%0A%0A%09\n %0A%09fm\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-06-01_19-05-32",
+            "content": "@@ -958,71 +958,8 @@\n e++%0A\n-%09if v.size %3E len(v.data) %7B%0A%09%09v.data = append(v.data, value)%0A%09%7D%0A\n %09v.d\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-06-01_19-05-51",
+            "content": "@@ -1018,20 +1018,8 @@\n ue)%0A\n-%09%7D else%7B%0A%09%09%0A\n %09%7D%0A%09\n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-06-01_19-06-02",
+            "content": "@@ -1,3203 +1,141 @@\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Atype Vector struct %7B%0A%09data     %5B%5Dint%0A%09size     int%0A%09capacity int%0A%7D%0A%0Afunc NewVector(capacity int) *Vector %7B%0A%09return &Vector%7B%0A%09%09data:     make(%5B%5Dint, capacity), // nunca use len(data) ou cap(data) ou qq m%C3%A9todo do go de manipula%C3%A7%C3%A3o de array%0A%09%09size:     0,%0A%09%09capacity: capacity,%0A%09%7D%0A%7D%0A%0Afunc Join(slice %5B%5Dint, sep string) string %7B%0A%09if len(slice) == 0 %7B%0A%09%09return %22%22%0A%09%7D%0A%09var result strings.Builder%0A%09fmt.Fprintf(&result, %22%25d%22, slice%5B0%5D)%0A%09for _, value := range slice%5B1:%5D %7B%0A%09%09fmt.Fprintf(&result, %22%25s%25d%22, sep, value)%0A%09%7D%0A%09return result.String()%0A%7D%0A%0Afunc resize(v *Vector) *Vector %7B%0A%09newCapacity := v.capacity * 2%0A%0A%09if newCapacity == 0 %7B%0A%09%09newCapacity = 1%0A%09%7D%0A%0A%09newData := NewVector(newCapacity)%0A%0A%09for i := 0; i %3C v.size; i++ %7B%0A%09%09newData.data%5Bi%5D = v.data%5Bi%5D%0A%09%7D%0A%0A%09return newData%0A%7D%0Afunc (v *Vector) PushBack(value int) %7B%0A%09if v.size == v.capacity %7B%0A%09%09v = resize(v)%0A%09%7D%0A%09fmt.Println(%22teste2%22, v.data)%0A%09v.size++%0A%09if v.size %3E len(v.data) %7B%0A%09%09v.data = append(v.data, value)%0A%09%7D else%7B%0A%09%09v.data%5Bv.size%5D = value%0A%09%7D%0A%09%0A%09fmt.Println(%22teste3%22, v.data)%0A%7D%0A%0Afunc main() %7B%0A%09var line, cmd string%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09v := NewVector(0)%0A%09for %7B%0A%09%09fmt.Print(%22$%22)%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09line = scanner.Text()%0A%09%09fmt.Println(line)%0A%09%09parts := strings.Fields(line)%0A%09%09if len(parts) == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09cmd = parts%5B0%5D%0A%0A%09%09switch cmd %7B%0A%09%09case %22end%22:%0A%09%09%09return%0A%09%09case %22init%22:%0A%09%09%09value, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09v = NewVector(value)%0A%09%09case %22push%22:%0A%09%09%09for _, part := range parts%5B1:%5D %7B%0A%09%09%09%09value, _ := strconv.Atoi(part)%0A%09%09%09%09v.PushBack(value)%0A%09%09%09%7D%0A%09%09case %22show%22:%0A%09%09%09fmt.Println(v.data%5B:v.size%5D)%0A%09%09case %22status%22:%0A%09%09%09fmt.Printf(%22size:%25d capacity:%25d%5Cn%22, v.size, v.capacity)%0A%09%09case %22pop%22:%0A%09%09%09// err := v.PopBack()%0A%09%09%09// if err != nil %7B%0A%09%09%09// %09fmt.Println(err)%0A%09%09%09// %7D%0A%09%09case %22insert%22:%0A%09%09%09// index, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09// value, _ := strconv.Atoi(parts%5B2%5D)%0A%09%09%09// err := v.Insert(index, value)%0A%09%09%09// if err != nil %7B%0A%09%09%09// %09fmt.Println(err)%0A%09%09%09// %7D%0A%09%09case %22erase%22:%0A%09%09%09// index, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09// err := v.Erase(index)%0A%09%09%09// if err != nil %7B%0A%09%09%09// %09fmt.Println(err)%0A%09%09%09// %7D%0A%09%09case %22indexOf%22:%0A%09%09%09// value, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09// index := v.IndexOf(value)%0A%09%09%09// fmt.Println(index)%0A%09%09case %22contains%22:%0A%09%09%09// value, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09// if v.Contains(value) %7B%0A%09%09%09// %09fmt.Println(%22true%22)%0A%09%09%09// %7D else %7B%0A%09%09%09// %09fmt.Println(%22false%22)%0A%09%09%09// %7D%0A%09%09case %22clear%22:%0A%09%09%09// v.Clear()%0A%09%09case %22capacity%22:%0A%09%09%09// fmt.Println(v.Capacity())%0A%09%09case %22get%22:%0A%09%09%09// index, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09// value, err := v.At(index)%0A%09%09%09// if err != nil %7B%0A%09%09%09// %09fmt.Println(err)%0A%09%09%09// %7D else %7B%0A%09%09%09// %09fmt.Println(value)%0A%09%09%09// %7D%0A%09%09case %22set%22:%0A%09%09%09// index, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09// value, _ := strconv.Atoi(parts%5B2%5D)%0A%09%09%09// err := v.Set(index, value)%0A%09%09%09// if err != nil %7B%0A%09%09%09// %09fmt.Println(err)%0A%09%09%09// %7D%0A%09%09%09//%0A%09%09case %22reserve%22:%0A%09%09%09// newCapacity, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09// v.Reserve(newCapacity)%0A%09%09case %22slice%22:%0A%09%09%09// start, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09%09// end, _ := strconv.Atoi(parts%5B2%5D)%0A%09%09%09// slice := v.Slice(start, end)%0A%09%09%09// fmt.Println(slice)%0A%09%09default:%0A%09%09%09fmt.Println(%22fail: comando invalido%22)%0A%09%09%7D%0A%09%7D%0A%7D\n+@@ -1021,24 +1021,29 @@%0A %250A%2509%257D else%257B%250A%2509%2509%0A+%250A%2509%257D%250A%2509%0A v.data%255Bv.siz%0A@@ -1057,13 +1057,8 @@%0A lue%250A%0A-%2509%257D%250A%2509%250A%0A %2509fmt\n %0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-06-01_19-06-15",
+            "content": "@@ -966,17 +966,16 @@\n v.size %3E\n-=\n  len(v.d\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-06-01_19-06-16",
+            "content": "@@ -951,38 +951,112 @@\n %0A%09v.\n-data%5Bv.size%5D = value%0A%09v.size++\n+size++%0A%09if v.size %3E= len(v.data) %7B%0A%09%09v.data = append(v.data, value)%0A%09%7D else%7B%0A%09%09v.data%5Bv.size%5D = value%0A%09%7D\n %0A%09%0A%09\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-06-01_19-06-55",
+            "content": "@@ -747,31 +747,8 @@\n ity)\n-%0A%09newData.size = v.size\n %0A%0A%09f\n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-06-01_19-07-17",
+            "content": "@@ -600,24 +600,30 @@\n g()%0A%7D%0A%0Afunc \n+resize\n (v *Vector) \n@@ -626,39 +626,19 @@\n or) \n-Reserve(newCapacity int)\n+*Vector\n  %7B%0A%09\n-if \n newC\n@@ -649,9 +649,9 @@\n ity \n-%3C\n+:\n = v.\n@@ -663,21 +663,11 @@\n ity \n-%7B%0A%09%09return%0A%09%7D\n+* 2\n %0A%0A%09i\n@@ -714,97 +714,146 @@\n %7D%0A%0A%09\n-v.d\n+newD\n ata \n+:\n = \n-append(v.data, make(%5B%5Dint, newCapacity-v.capacity)...)%0A%09v.capacity = newCapacity\n+NewVector(newCapacity)%0A%09newData.size = v.size%0A%0A%09for i := 0; i %3C v.size; i++ %7B%0A%09%09newData.data%5Bi%5D = v.data%5Bi%5D%0A%09%7D%0A%0A%09return newData\n %0A%7D%0Af\n@@ -924,31 +924,19 @@\n %0A%09%09v\n-.Reserve(v.capacity * 2\n+ = resize(v\n )%0A%09%7D\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-06-01_19-10-56",
+            "content": "@@ -924,18 +924,16 @@\n  2)%0A%09%7D%0A%09\n-//\n fmt.Prin\n@@ -991,18 +991,16 @@\n ze++%0A%09%0A%09\n-//\n fmt.Prin\n",
+            "lines": "154"
+        },
+        {
+            "label": "2026-06-01_19-11-19",
+            "content": "@@ -1576,145 +1576,26 @@\n rint\n-(%22%5B%22)%0A%09%09%09for i, value := range v.data%5B:v.size%5D %7B%0A%09%09%09%09if i %3E 0 %7B%0A%09%09%09%09%09fmt.Print(%22, %22)%0A%09%09%09%09%7D%0A%09%09%09%09fmt.Print(value)%0A%09%09%09%7D%0A%09%09%09fmt.Println(%22%5D%5Cn%22\n+ln(v.data%5B:v.size%5D\n )%0A%09%09\n",
+            "lines": "154"
+        },
+        {
+            "label": "2026-06-01_19-12-09",
+            "content": "@@ -1706,16 +1706,18 @@\n intln(%22%5D\n+%5Cn\n %22)%0A%09%09cas\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-06-01_19-12-39",
+            "content": "@@ -1701,16 +1701,18 @@\n mt.Print\n+ln\n (%22%5D%22)%0A%09%09\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-06-01_19-12-40",
+            "content": "@@ -1704,18 +1704,16 @@\n Print(%22%5D\n-%5Cn\n %22)%0A%09%09cas\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-06-01_19-12-55",
+            "content": "@@ -990,16 +990,17 @@\n .size++%0A\n+%09\n %0A%09//fmt.\n@@ -1032,168 +1032,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) At(index int) (int, error) %7B%0A%09if index %3C 0 %7C%7C index %3E= v.size %7B%0A%09%09return 0, fmt.Errorf(%22index out of bounds%22)%0A%09%7D%0A%09return v.data%5Bindex%5D, nil%0A%7D%0A%0A\n func\n@@ -2589,16 +2589,19 @@\n et%22:%0A%09%09%09\n+// \n index, _\n@@ -2626,24 +2626,27 @@\n arts%5B1%5D)%0A%09%09%09\n+// \n value, err :\n@@ -2662,16 +2662,19 @@\n dex)%0A%09%09%09\n+// \n if err !\n@@ -2680,24 +2680,27 @@\n != nil %7B%0A%09%09%09\n+// \n %09fmt.Println\n@@ -2708,16 +2708,19 @@\n err)%0A%09%09%09\n+// \n %7D else %7B\n@@ -2719,24 +2719,27 @@\n %7D else %7B%0A%09%09%09\n+// \n %09fmt.Println\n@@ -2741,32 +2741,35 @@\n intln(value)%0A%09%09%09\n+// \n %7D%0A%09%09case %22set%22:%0A\n",
+            "lines": "161"
+        },
+        {
+            "label": "2026-06-01_19-19-07",
+            "content": "@@ -1145,21 +1145,22 @@\n  out of \n-range\n+bounds\n %22)%0A%09%7D%0A%09r\n",
+            "lines": "168"
+        },
+        {
+            "label": "2026-06-01_19-19-31",
+            "content": "@@ -1190,177 +1190,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) Set(index int, value int) error %7B%0A%09if index %3C 0 %7C%7C index %3E= v.size %7B%0A%09%09return fmt.Errorf(%22index out of range%22)%0A%09%7D%0A%09v.data%5Bindex%5D = value%0A%09return nil%0A%7D%0A%0A\n func\n",
+            "lines": "168"
+        },
+        {
+            "label": "2026-06-01_19-19-59",
+            "content": "@@ -3069,32 +3069,35 @@\n %09case %22set%22:%0A%09%09%09\n+// \n index, _ := strc\n@@ -3114,24 +3114,27 @@\n arts%5B1%5D)%0A%09%09%09\n+// \n value, _ := \n@@ -3159,16 +3159,19 @@\n %5B2%5D)%0A%09%09%09\n+// \n err := v\n@@ -3188,24 +3188,27 @@\n , value)%0A%09%09%09\n+// \n if err != ni\n@@ -3206,32 +3206,35 @@\n err != nil %7B%0A%09%09%09\n+// \n %09fmt.Println(err\n@@ -3238,21 +3238,26 @@\n err)%0A%09%09%09\n+// \n %7D%0A%09%09%09\n+//\n %0A%09%09case \n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-06-01_19-20-34",
+            "content": "@@ -1359,84 +1359,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) Clear() %7B%0A%09v.size = 0%0A%09v.data = make(%5B%5Dint, v.capacity)%0A%7D%0A%0A\n func\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-06-01_19-22-36",
+            "content": "@@ -1396,29 +1396,36 @@\n e = 0%0A%09v\n- = NewVector(\n+.data = make(%5B%5Dint, \n v.capaci\n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-06-01_19-23-12",
+            "content": "@@ -1382,16 +1382,28 @@\n ear() %7B%0A\n+%09v.size = 0%0A\n %09v = New\n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-06-01_19-23-13",
+            "content": "@@ -2892,16 +2892,19 @@\n ar%22:%0A%09%09%09\n+// \n v.Clear(\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-06-01_19-23-39",
+            "content": "@@ -1387,13 +1387,10 @@\n  %7B%0A%09\n-new :\n+v \n = Ne\n@@ -1413,20 +1413,8 @@\n ty)%0A\n-%09a%0A%09v = new%0A\n %7D%0A%0Af\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-06-01_19-24-19",
+            "content": "@@ -1412,16 +1412,19 @@\n pacity)%0A\n+%09a%0A\n %09v = new\n",
+            "lines": "182"
+        },
+        {
+            "label": "2026-06-01_19-24-20",
+            "content": "@@ -1421,24 +1421,16 @@\n v = new%0A\n-%09return%0A\n %7D%0A%0Afunc \n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-06-01_19-25-14",
+            "content": "@@ -3299,16 +3299,19 @@\n r)%0A%09%09%09%7D%0A\n+%09%09%09\n %0A%09%09case \n",
+            "lines": "182"
+        },
+        {
+            "label": "2026-06-01_19-25-18",
+            "content": "@@ -1426,36 +1426,14 @@\n ew%0A%09\n-fmt.Println(%22teste%22, v.data)\n+return\n %0A%7D%0A%0A\n",
+            "lines": "182"
+        },
+        {
+            "label": "2026-06-01_19-25-36",
+            "content": "@@ -1387,68 +1387,75 @@\n  %7B%0A%09\n-for i := 0; i %3C v.size; i++ %7B%0A%09%09v.data%5Bi%5D = 0%0A%09%7D%0A%09v.size = 0\n+new := NewVector(v.capacity)%0A%09v = new%0A%09fmt.Println(%22teste%22, v.data)\n %0A%7D%0A%0A\n",
+            "lines": "182"
+        },
+        {
+            "label": "2026-06-01_19-26-43",
+            "content": "@@ -828,43 +828,8 @@\n ity%0A\n-%09fmt.Println(%22teste1%22, v.capacity)%0A\n %7D%0Afu\n",
+            "lines": "183"
+        },
+        {
+            "label": "2026-06-01_19-28-02",
+            "content": "@@ -736,42 +736,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(%22teste1%22, v.capacity)\n %0A%09v.\n@@ -825,16 +825,49 @@\n pacity%0A%09\n+fmt.Println(%22teste1%22, v.capacity)\n %0A%7D%0Afunc \n",
+            "lines": "184"
+        },
+        {
+            "label": "2026-06-01_19-28-30",
+            "content": "@@ -691,42 +691,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(%22teste1%22, v.capacity)\n %0A%09if\n@@ -733,16 +733,49 @@\n = 1%0A%09%7D%0A%09\n+fmt.Println(%22teste1%22, v.capacity)\n %0A%09v.data\n",
+            "lines": "184"
+        },
+        {
+            "label": "2026-06-01_19-28-38",
+            "content": "@@ -647,43 +647,8 @@\n ) %7B%0A\n-%09fmt.Println(%22teste1%22, v.capacity)%0A\n %09if \n@@ -688,16 +688,49 @@\n urn%0A%09%7D%0A%09\n+fmt.Println(%22teste1%22, v.capacity)\n %0A%09if new\n",
+            "lines": "184"
+        },
+        {
+            "label": "2026-06-01_19-28-56",
+            "content": "@@ -722,16 +722,17 @@\n turn%0A%09%7D%0A\n+%09\n %0A%09if new\n@@ -768,16 +768,17 @@\n  = 1%0A%09%7D%0A\n+%09\n %0A%09v.data\n@@ -861,16 +861,17 @@\n apacity%0A\n+%09\n %0A%7D%0Afunc \n",
+            "lines": "185"
+        },
+        {
+            "label": "2026-06-01_19-29-04",
+            "content": "@@ -3372,16 +3372,19 @@\n ve%22:%0A%09%09%09\n+// \n newCapac\n@@ -3419,16 +3419,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n v.Reserv\n",
+            "lines": "185"
+        },
+        {
+            "label": "2026-06-01_19-30-15",
+            "content": "@@ -644,18 +644,16 @@\n int) %7B%0A%09\n-//\n fmt.Prin\n",
+            "lines": "185"
+        },
+        {
+            "label": "2026-06-01_19-30-30",
+            "content": "@@ -1489,154 +1489,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) PopBack() (int, error) %7B%0A%09if v.size == 0 %7B%0A%09%09return 0, fmt.Errorf(%22vector is empty%22)%0A%09%7D%0A%09v.size--%0A%09return v.data%5Bv.size%5D, nil%0A%7D%0A%0A\n func\n@@ -2255,24 +2255,27 @@\n e %22pop%22:%0A%09%09%09\n+// \n err := v.Pop\n@@ -2280,24 +2280,27 @@\n opBack()%0A%09%09%09\n+// \n if err != ni\n@@ -2302,24 +2302,28 @@\n != nil %7B%0A%09%09%09\n+// %09\n fmt.Println(\n@@ -2326,24 +2326,27 @@\n tln(err)%0A%09%09%09\n+// \n %7D%0A%09%09case %22in\n",
+            "lines": "185"
+        },
+        {
+            "label": "2026-06-01_19-31-50",
+            "content": "@@ -2409,14 +2409,8 @@\n %0A%09%09%09\n-last, \n err \n",
+            "lines": "193"
+        },
+        {
+            "label": "2026-06-01_19-32-58",
+            "content": "@@ -2405,17 +2405,20 @@\n op%22:%0A%09%09%09\n-_\n+last\n , err :=\n",
+            "lines": "193"
+        },
+        {
+            "label": "2026-06-01_19-33-03",
+            "content": "@@ -1635,301 +1635,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) Insert(index int, value int) error %7B%0A%09if index %3C 0 %7C%7C index %3E v.size %7B%0A%09%09return fmt.Errorf(%22index out of range%22)%0A%09%7D%0A%09if v.size == v.capacity %7B%0A%09%09v.Reserve(v.capacity * 2)%0A%09%7D%0A%09copy(v.data%5Bindex+1:v.size+1%5D, v.data%5Bindex:v.size%5D)%0A%09v.data%5Bindex%5D = value%0A%09v.size++%0A%09return nil%0A%7D%0A%0A\n func\n@@ -2487,24 +2487,27 @@\n insert%22:%0A%09%09%09\n+// \n index, _ := \n@@ -2524,32 +2524,35 @@\n oi(parts%5B1%5D)%0A%09%09%09\n+// \n value, _ := strc\n@@ -2565,32 +2565,35 @@\n oi(parts%5B2%5D)%0A%09%09%09\n+// \n err := v.Insert(\n@@ -2601,32 +2601,35 @@\n ndex, value)%0A%09%09%09\n+// \n if err != nil %7B%0A\n@@ -2623,32 +2623,35 @@\n err != nil %7B%0A%09%09%09\n+// \n %09fmt.Println(err\n@@ -2647,32 +2647,35 @@\n Println(err)%0A%09%09%09\n+// \n %7D%0A%09%09case %22erase%22\n",
+            "lines": "193"
+        },
+        {
+            "label": "2026-06-01_19-33-40",
+            "content": "@@ -1826,72 +1826,61 @@\n %0A%09%7D%0A\n-%0A%09for i := v.size; i %3E index; i-- %7B%0A%09%09v.data%5Bi%5D = v.data%5Bi-1%5D%0A%09%7D\n+%09copy(v.data%5Bindex+1:v.size+1%5D, v.data%5Bindex:v.size%5D)\n %0A%09v.\n",
+            "lines": "206"
+        },
+        {
+            "label": "2026-06-01_19-33-52",
+            "content": "@@ -1939,221 +1939,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) Erase(index int) error %7B%0A%09if index %3C 0 %7C%7C index %3E= v.size %7B%0A%09%09return fmt.Errorf(%22index out of range%22)%0A%09%7D%0A%09for i := index; i %3C v.size-1; i++ %7B%0A%09%09v.data%5Bi%5D = v.data%5Bi+1%5D%0A%09%7D%0A%09v.size--%0A%09return nil%0A%7D%0A%0A\n func\n@@ -2745,33 +2745,32 @@\n err != nil %7B%0A%09%09%09\n-%09\n fmt.Println(err)\n@@ -2961,24 +2961,27 @@\n %22erase%22:%0A%09%09%09\n+// \n index, _ := \n@@ -3002,24 +3002,27 @@\n arts%5B1%5D)%0A%09%09%09\n+// \n err := v.Era\n@@ -3026,32 +3026,35 @@\n Erase(index)%0A%09%09%09\n+// \n if err != nil %7B%0A\n@@ -3048,32 +3048,35 @@\n err != nil %7B%0A%09%09%09\n+// \n %09fmt.Println(err\n@@ -3072,32 +3072,35 @@\n Println(err)%0A%09%09%09\n+// \n %7D%0A%09%09case %22indexO\n",
+            "lines": "209"
+        },
+        {
+            "label": "2026-06-01_19-34-44",
+            "content": "@@ -1891,10 +1891,8 @@\n %0A%09%7D%0A\n-%09%0A\n %09v.d\n@@ -1920,17 +1920,16 @@\n .size++%0A\n-%0A\n %09return \n@@ -2053,25 +2053,24 @@\n  range%22)%0A%09%7D%0A\n-%0A\n %09for i := in\n@@ -2123,17 +2123,16 @@\n i+1%5D%0A%09%7D%0A\n-%0A\n %09v.size-\n@@ -2133,17 +2133,16 @@\n .size--%0A\n-%0A\n %09return \n",
+            "lines": "220"
+        },
+        {
+            "label": "2026-06-01_19-34-54",
+            "content": "@@ -1760,25 +1760,24 @@\n  range%22)%0A%09%7D%0A\n-%0A\n %09if v.size =\n@@ -1883,24 +1883,25 @@\n ata%5Bi-1%5D%0A%09%7D%0A\n+%09\n %0A%09v.data%5Bind\n@@ -2158,140 +2158,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) IndexOf(value int) int %7B%0A%09for i := 0; i %3C v.size; i++ %7B%0A%09%09if v.data%5Bi%5D == value %7B%0A%09%09%09return i%0A%09%09%7D%0A%09%7D%0A%09return -1%0A%7D%0A%0A\n func\n@@ -3307,24 +3307,27 @@\n ndexOf%22:%0A%09%09%09\n+// \n value, _ := \n@@ -3348,24 +3348,27 @@\n arts%5B1%5D)%0A%09%09%09\n+// \n index := v.I\n@@ -3380,24 +3380,27 @@\n f(value)%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "225"
+        },
+        {
+            "label": "2026-06-01_19-35-38",
+            "content": "@@ -2290,86 +2290,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) Contains(value int) bool %7B%0A%09return v.IndexOf(value) != -1%0A%7D%0A%0A\n func\n",
+            "lines": "235"
+        },
+        {
+            "label": "2026-06-01_19-35-48",
+            "content": "@@ -3625,24 +3625,27 @@\n ntains%22:%0A%09%09%09\n+// \n value, _ := \n@@ -3670,16 +3670,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n if v.Con\n@@ -3695,24 +3695,27 @@\n value) %7B%0A%09%09%09\n+// \n %09fmt.Println\n@@ -3722,24 +3722,27 @@\n (%22true%22)%0A%09%09%09\n+// \n %7D else %7B%0A%09%09%09\n",
+            "lines": "239"
+        },
+        {
+            "label": "2026-06-01_19-36-09",
+            "content": "@@ -3721,32 +3721,35 @@\n %0A%09%09%09%7D else %7B%0A%09%09%09\n+// \n %09fmt.Println(%22fa\n@@ -3753,24 +3753,27 @@\n %22false%22)%0A%09%09%09\n+// \n %7D%0A%09%09case %22cl\n",
+            "lines": "239"
+        },
+        {
+            "label": "2026-06-01_19-36-10",
+            "content": "@@ -2368,152 +2368,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) Slice(start int, end int) %5B%5Dint %7B%0A%09if start %3C 0 %7C%7C end %3E v.size %7C%7C start %3E end %7B%0A%09%09return nil%0A%09%7D%0A%0A%09return v.data%5Bstart:end%5D%0A%7D%0A%0A\n func\n@@ -4270,16 +4270,19 @@\n ce%22:%0A%09%09%09\n+// \n start, _\n@@ -4311,16 +4311,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n end, _ :\n@@ -4350,16 +4350,19 @@\n %5B2%5D)%0A%09%09%09\n+// \n slice :=\n@@ -4381,24 +4381,27 @@\n rt, end)%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "239"
+        },
+        {
+            "label": "2026-06-01_19-37-26",
+            "content": "@@ -4521,12 +4521,8 @@\n nd)%0A\n-%09%09%09%0A\n %09%09%09f\n@@ -4533,133 +4533,16 @@\n rint\n-(%22%5B%22)%0A%09%09%09for i, value := range slice %7B%0A%09%09%09%09if i %3E 0 %7B%0A%09%09%09%09%09fmt.Print(%22, %22)%0A%09%09%09%09%7D%0A%09%09%09%09fmt.Print(value)%0A%09%09%09%7D%0A%09%09%09fmt.Print(%22%5D%5Cn%22\n+ln(slice\n )%0A%09%09\n",
+            "lines": "247"
+        },
+        {
+            "label": "2026-06-01_19-38-09",
+            "content": "@@ -4517,16 +4517,19 @@\n t, end)%0A\n+%09%09%09\n %0A%09%09%09fmt.\n",
+            "lines": "255"
+        },
+        {
+            "label": "2026-06-01_19-38-15",
+            "content": "@@ -2420,669 +2420,66 @@\n  %7B%0A%09\n-//+ Slice(start: int, end: int): *Vector    ' Retorna um novo vetor que %C3%A9 uma fatia do vetor original do %C3%ADndice start at%C3%A9 o %C3%ADndice end (exclusivo).%0A    //O m%C3%A9todo deve lidar com %C3%ADndices negativos e %C3%ADndices que excedem o tamanho do vetor de forma circular%0A    //Ele n%C3%A3o deve criar um novo bloco de mem%C3%B3ria para os elementos, mas sim compartilhar a mesma mem%C3%B3ria do vetor original%0A%09if start %3C 0 %7B%0A%09%09start = (start %25 v.size + v.size) %25 v.size%0A%09%7D%0A%09if end %3C 0 %7B%0A%09%09end = (end %25 v.size + v.size) %25 v.size%0A%09%7D%0A%09%0A%09if start %3E end %7B%0A%09%09end += v.size%0A%09%7D%0A%0A%09slice := NewVector(end - start)%0A%0A%09for i := start; i %3C end; i++ %7B%0A%09%09value, _ := v.At(i %25 v.size)%0A%09%09slice.PushBack(value)\n+if start %3C 0 %7C%7C end %3E v.size %7C%7C start %3E end %7B%0A%09%09return nil\n %0A%09%7D%0A\n@@ -2491,30 +2491,24 @@\n urn \n-slice\n+v\n .data%5B\n-:slice.size\n+start:end\n %5D%0A%7D%0A\n",
+            "lines": "255"
+        },
+        {
+            "label": "2026-06-01_19-40-23",
+            "content": "@@ -2415,16 +2415,396 @@\n %5B%5Dint %7B%0A\n+%09//+ Slice(start: int, end: int): *Vector    ' Retorna um novo vetor que %C3%A9 uma fatia do vetor original do %C3%ADndice start at%C3%A9 o %C3%ADndice end (exclusivo).%0A    //O m%C3%A9todo deve lidar com %C3%ADndices negativos e %C3%ADndices que excedem o tamanho do vetor de forma circular%0A    //Ele n%C3%A3o deve criar um novo bloco de mem%C3%B3ria para os elementos, mas sim compartilhar a mesma mem%C3%B3ria do vetor original%0A\n %09if star\n",
+            "lines": "272"
+        },
+        {
+            "label": "2026-06-01_19-40-27",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Vector struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewVector(capacity int) *Vector {\n\treturn &Vector{\n\t\tdata:     make([]int, capacity), // nunca use len(data) ou cap(data) ou qq m\u00e9todo do go de manipula\u00e7\u00e3o de array\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tvar result strings.Builder\n\tfmt.Fprintf(&result, \"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tfmt.Fprintf(&result, \"%s%d\", sep, value)\n\t}\n\treturn result.String()\n}\n\nfunc (v *Vector) Reserve(newCapacity int) {\n\t//fmt.Println(\"teste1\", v.capacity)\n\tif newCapacity <= v.capacity {\n\t\treturn\n\t}\n\n\tif newCapacity == 0 {\n\t\tnewCapacity = 1\n\t}\n\n\tv.data = append(v.data, make([]int, newCapacity-v.capacity)...)\n\tv.capacity = newCapacity\n\n}\nfunc (v *Vector) PushBack(value int) {\n\tif v.size == v.capacity {\n\t\tv.Reserve(v.capacity * 2)\n\t}\n\t//fmt.Println(\"teste2\", v.data)\n\tv.data[v.size] = value\n\tv.size++\n\n\t//fmt.Println(\"teste3\", v.data)\n}\n\nfunc (v *Vector) At(index int) (int, error) {\n\tif index < 0 || index >= v.size {\n\t\treturn 0, fmt.Errorf(\"index out of range\")\n\t}\n\treturn v.data[index], nil\n}\n\nfunc (v *Vector) Set(index int, value int) error {\n\tif index < 0 || index >= v.size {\n\t\treturn fmt.Errorf(\"index out of range\")\n\t}\n\tv.data[index] = value\n\treturn nil\n}\n\nfunc (v *Vector) Clear() {\n\tfor i := 0; i < v.size; i++ {\n\t\tv.data[i] = 0\n\t}\n\tv.size = 0\n}\n\nfunc (v *Vector) PopBack() (int, error) {\n\tif v.size == 0 {\n\t\treturn 0, fmt.Errorf(\"vector is empty\")\n\t}\n\tv.size--\n\treturn v.data[v.size], nil\n}\n\nfunc (v *Vector) Insert(index int, value int) error {\n\tif index < 0 || index > v.size {\n\t\treturn fmt.Errorf(\"index out of range\")\n\t}\n\n\tif v.size == v.capacity {\n\t\tv.Reserve(v.capacity * 2)\n\t}\n\n\tfor i := v.size; i > index; i-- {\n\t\tv.data[i] = v.data[i-1]\n\t}\n\n\tv.data[index] = value\n\tv.size++\n\n\treturn nil\n}\n\nfunc (v *Vector) Erase(index int) error {\n\tif index < 0 || index >= v.size {\n\t\treturn fmt.Errorf(\"index out of range\")\n\t}\n\n\tfor i := index; i < v.size-1; i++ {\n\t\tv.data[i] = v.data[i+1]\n\t}\n\n\tv.size--\n\n\treturn nil\n}\n\nfunc (v *Vector) IndexOf(value int) int {\n\tfor i := 0; i < v.size; i++ {\n\t\tif v.data[i] == value {\n\t\t\treturn i\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc (v *Vector) Contains(value int) bool {\n\treturn v.IndexOf(value) != -1\n}\n\nfunc (v *Vector) Slice(start int, end int) []int {\n\tif start < 0 {\n\t\tstart = (start % v.size + v.size) % v.size\n\t}\n\tif end < 0 {\n\t\tend = (end % v.size + v.size) % v.size\n\t}\n\t\n\tif start > end {\n\t\tend += v.size\n\t}\n\n\tslice := NewVector(end - start)\n\n\tfor i := start; i < end; i++ {\n\t\tvalue, _ := v.At(i % v.size)\n\t\tslice.PushBack(value)\n\t}\n\n\treturn slice.data[:slice.size]\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewVector(0)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tv = NewVector(value)\n\t\tcase \"push\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tv.PushBack(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Print(\"[\")\n\t\t\tfor i, value := range v.data[:v.size] {\n\t\t\t\tif i > 0 {\n\t\t\t\t\tfmt.Print(\", \")\n\t\t\t\t}\n\t\t\t\tfmt.Print(value)\n\t\t\t}\n\t\t\tfmt.Print(\"]\\n\")\n\t\tcase \"status\":\n\t\t\tfmt.Printf(\"size:%d capacity:%d\\n\", v.size, v.capacity)\n\t\tcase \"pop\":\n\t\t\t_, err := v.PopBack()\n\t\t\tif err != nil {\n\t\t\t\tfmt.Println(err)\n\t\t\t}\n\t\tcase \"insert\":\n\t\t\tindex, _ := strconv.Atoi(parts[1])\n\t\t\tvalue, _ := strconv.Atoi(parts[2])\n\t\t\terr := v.Insert(index, value)\n\t\t\tif err != nil {\n\t\t\t\tfmt.Println(err)\n\t\t\t}\n\t\tcase \"erase\":\n\t\t\tindex, _ := strconv.Atoi(parts[1])\n\t\t\terr := v.Erase(index)\n\t\t\tif err != nil {\n\t\t\t\tfmt.Println(err)\n\t\t\t}\n\t\tcase \"indexOf\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tindex := v.IndexOf(value)\n\t\t\tfmt.Println(index)\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tif v.Contains(value) {\n\t\t\t\tfmt.Println(\"true\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"false\")\n\t\t\t}\n\t\tcase \"clear\":\n\t\t\tv.Clear()\n\t\tcase \"capacity\":\n\t\t\t// fmt.Println(v.Capacity())\n\t\tcase \"get\":\n\t\t\tindex, _ := strconv.Atoi(parts[1])\n\t\t\tvalue, err := v.At(index)\n\t\t\tif err != nil {\n\t\t\t\tfmt.Println(err)\n\t\t\t} else {\n\t\t\t\tfmt.Println(value)\n\t\t\t}\n\t\tcase \"set\":\n\t\t\tindex, _ := strconv.Atoi(parts[1])\n\t\t\tvalue, _ := strconv.Atoi(parts[2])\n\t\t\terr := v.Set(index, value)\n\t\t\tif err != nil {\n\t\t\t\tfmt.Println(err)\n\t\t\t}\n\n\t\tcase \"reserve\":\n\t\t\tnewCapacity, _ := strconv.Atoi(parts[1])\n\t\t\tv.Reserve(newCapacity)\n\t\tcase \"slice\":\n\t\t\tstart, _ := strconv.Atoi(parts[1])\n\t\t\tend, _ := strconv.Atoi(parts[2])\n\t\t\tslice := v.Slice(start, end)\n\n\t\t\tfmt.Print(\"[\")\n\t\t\tfor i, value := range slice {\n\t\t\t\tif i > 0 {\n\t\t\t\t\tfmt.Print(\", \")\n\t\t\t\t}\n\t\t\t\tfmt.Print(value)\n\t\t\t}\n\t\t\tfmt.Print(\"]\\n\")\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "269"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-07_03-52-57",
+            "content": "@@ -507,22 +507,28 @@\n n(&n)%0A%0A%09\n-vet = \n+fmt.Println(\n enesimo_\n@@ -542,15 +542,16 @@\n , 0, 1, vet)\n+)\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-07_03-53-09",
+            "content": "@@ -544,189 +544,7 @@\n vet)\n-%0A%0A%09fmt.Print(%22%5B%22)%0A%0A%09for i := 0; i %3C= len(vet)-1; i++ %7B%0A%09%09if i != len(vet)-1 %7B%0A%09%09%09fmt.Printf(%22%25d, %22,vet%5Bi%5D)%0A%09%09%7D else%7B%0A            fmt.Print(%22%25d, %22,vet%5Bi%5D)%0A        %7D%0A%09%7D%0A%09fmt.Print(%22%5D%22)\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-07_03-55-21",
+            "content": "@@ -639,17 +639,16 @@\n (%22%25d, %22,\n- \n vet%5Bi%5D)%0A\n@@ -655,22 +655,30 @@\n %09%09%7D else\n- \n %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -679,24 +679,31 @@\n t.Print(\n+%22%25d, %22,\n vet%5Bi%5D)%0A\n %09%09%7D%0A%09%7D%0A%09\n@@ -694,18 +694,24 @@\n vet%5Bi%5D)%0A\n-%09%09\n+        \n %7D%0A%09%7D%0A%09fm\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-07_03-55-24",
+            "content": "@@ -704,10 +704,8 @@\n t(%22%5D\n-/n\n %22)%0A%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-07_03-55-32",
+            "content": "@@ -701,13 +701,13 @@\n rint\n-ln\n (%22%5D\n+/n\n %22)%0A%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-07_03-55-42",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x <= 1 {\n\t\treturn false\n\t}\n\n\tif (x%div == 0) && (x != div) {\n\t\treturn false\n\t} else if div >= x {\n\t\treturn true\n\t}\n\n\treturn eh_primo(x, div+1)\n}\n\nfunc enesimo_primo(n int, contador int, primo int, vet []int) []int {\n\tif eh_primo(primo, 2) {\n\t\tcontador += 1\n\t\tvet = append(vet, primo)\n\t\tif contador == n {\n\t\t\treturn vet\n\t\t}\n\t}\n\n\tprimo += 1\n\treturn enesimo_primo(n, contador, primo, vet)\n}\n\nfunc main() {\n\tvar n int\n\tvar vet []int\n\tfmt.Scan(&n)\n\n\tvet = enesimo_primo(n, 0, 1, vet)\n\n\tfmt.Print(\"[\")\n\n\tfor i := 0; i <= len(vet)-1; i++ {\n\t\tif i != len(vet)-1 {\n\t\t\tfmt.Printf(\"%d, \", vet[i])\n\t\t} else {\n\t\t\tfmt.Print(vet[i])\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n",
+            "lines": "49"
+        }
+    ]
+}

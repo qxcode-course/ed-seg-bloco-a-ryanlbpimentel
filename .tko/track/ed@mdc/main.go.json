@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_23-39-32",
+            "content": "@@ -76,16 +76,25 @@\n %09return \n+string(a)\n %0A%09%7D%0A%09ret\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-24_23-39-43",
+            "content": "@@ -80,28 +80,8 @@\n urn \n-fmt.Sprintf(%22%25d%22, a)\n %0A%09%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-24_23-39-44",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) string {\n\tif b == 0 {\n\t\treturn fmt.Sprintf(\"%d\", a)\n\t}\n\treturn mdc(b, a%b)\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n",
+            "lines": "18"
+        }
+    ]
+}

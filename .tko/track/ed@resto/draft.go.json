@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_01-41-20",
+            "content": "@@ -41,64 +41,35 @@\n     \n-var valor int%0A    fmt.Scan(&valor)%0A    fmt.Println(valor\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-24_01-41-56",
+            "content": "@@ -23,73 +23,8 @@\n mt%22%0A\n-%0Afunc Div_Resto(n int)%7B%0A    fmt.Printf(%22%25d %25d/n %22, n/2, n%252)%0A%0A%7D%0A%0A\n func\n@@ -80,22 +80,19 @@\n     \n-%0A    Div_Resto\n+fmt.Println\n (val\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-24_01-44-29",
+            "content": "@@ -68,11 +68,11 @@\n d %25d\n- \n /n\n+ \n %22, n\n@@ -80,16 +80,17 @@\n 2, n%252)%0A\n+%0A\n %7D%0A%0Afunc \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-24_01-44-45",
+            "content": "@@ -69,9 +69,9 @@\n  %25d \n-%5C\n+/\n n%22, \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-05-24_01-44-50",
+            "content": "@@ -84,57 +84,8 @@\n %252)%0A\n-%0A    if n/2 != 0 %7B%0A        Div_Resto(n/2)%0A    %7D%0A%0A\n %7D%0A%0Af\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-05-24_01-45-43",
+            "content": "@@ -43,16 +43,54 @@\n n int)%7B%0A\n+    fmt.Printf(%22%25d %25d %5Cn%22, n/2, n%252)%0A%0A\n     if n\n@@ -126,17 +126,8 @@\n /2)%0A\n-        %0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-24_01-45-57",
+            "content": "@@ -96,40 +96,8 @@\n     \n-fmt.Printf(%22%25d %25d %5Cn%22, n/2, n%252)\n %0A   \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-24_01-45-58",
+            "content": "@@ -136,45 +136,8 @@\n  %7D%0A%0A\n-    fmt.Printf(%22%25d %25d %5Cn%22, n/2, n%252)%0A\n %7D%0A%0Af\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-24_01-46-09",
+            "content": "@@ -84,16 +84,57 @@\n to(n/2)%0A\n+        fmt.Printf(%22%25d %25d %5Cn%22, n/2, n%252)%0A\n     %7D%0A%0A \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-24_01-46-11",
+            "content": "@@ -112,16 +112,17 @@\n f(%22%25d %25d\n+ \n %5Cn%22, n/2\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-24_01-46-25",
+            "content": "package main\nimport \"fmt\"\n\nfunc Div_Resto(n int){\n    if n/2 != 0 {\n        Div_Resto(n/2)\n    }\n\n    fmt.Printf(\"%d %d\\n\", n/2, n%2)\n}\n\nfunc main() {\n    var valor int\n    fmt.Scan(&valor)\n    \n    Div_Resto(valor)\n}\n",
+            "lines": "17"
+        }
+    ]
+}
