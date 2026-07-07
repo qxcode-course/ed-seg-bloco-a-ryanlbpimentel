@@ -1,0 +1,454 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_05-02-20",
+            "content": "@@ -158,50 +158,8 @@\n t %7B%0A\n-%09if a == nil %7C%7C b == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A\n %09if \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-07_05-03-01",
+            "content": "@@ -190,17 +190,17 @@\n %09return \n-1\n+0\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_05-03-18",
+            "content": "@@ -477,17 +477,17 @@\n %09return \n-1\n+0\n %0A%7D%0A%0A// -\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_05-03-24",
+            "content": "@@ -162,16 +162,28 @@\n %09if a ==\n+ nil %7C%7C b ==\n  nil %7B%0A%09\n@@ -186,25 +186,24 @@\n  %7B%0A%09%09return \n--\n 1%0A%09%7D%0A%0A%09if a.\n@@ -233,17 +233,47 @@\n urn 1%0A%09%7D\n-%0A\n+ else if a.Value == b.Value %7B%0A%09\n %09esquerd\n@@ -297,16 +297,17 @@\n eft, b)%0A\n+%09\n %09direita\n@@ -332,16 +332,17 @@\n ht, b)%0A%0A\n+%09\n %09esquerd\n@@ -366,16 +366,17 @@\n b.Left)%0A\n+%09\n %09direita\n@@ -401,16 +401,17 @@\n Right)%0A%0A\n+%09\n %09if esqu\n@@ -446,24 +446,25 @@\n ireitaB %7B%0A%09%09\n+%09\n return -1%0A%09%7D\n@@ -461,16 +461,20 @@\n turn -1%0A\n+%09%09%7D%0A\n %09%7D%0A%0A%09ret\n@@ -477,17 +477,17 @@\n %09return \n-0\n+1\n %0A%7D%0A%0A// -\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_05-04-15",
+            "content": "@@ -189,38 +189,8 @@\n %09%7D%0A%0A\n-%09if b == nil %7B%0A%09%09return 1%0A%09%7D%0A%0A\n %09if \n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-07_05-04-34",
+            "content": "@@ -253,30 +253,97 @@\n rn 1%0A%09%7D%0A\n-%0A%09fmt.Println(\n+%09esquerdaA := compare(a.Left, b)%0A%09direitaA := compare(a.Right, b)%0A%0A%09esquerdaB := \n compare(\n@@ -347,37 +347,95 @@\n re(a\n+, b\n .Left\n-, b.Left))%0A%0A%09if esquerda\n+)%0A%09direitaB := compare(a, b.Right)%0A%0A%09if esquerdaA+direitaA %3C esquerdaB+direitaB\n  %7B%0A%09\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-07-20",
+            "content": "@@ -294,18 +294,16 @@\n eft))%0A%0A%09\n-//\n if esque\n@@ -309,18 +309,16 @@\n erda %7B%0A%09\n-//\n %09return \n@@ -321,18 +321,16 @@\n urn -1%0A%09\n-//\n %7D%0A%0A%09retu\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_05-07-23",
+            "content": "@@ -255,23 +255,28 @@\n  1%0A%09%7D%0A%0A%09\n-return \n+fmt.Println(\n compare(\n@@ -290,16 +290,17 @@\n  b.Left)\n+)\n %0A%0A%09//if \n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_05-08-15",
+            "content": "@@ -259,19 +259,14 @@\n %7D%0A%0A%09\n-esquerda :=\n+return\n  com\n@@ -290,48 +290,12 @@\n ft)%0A\n-%09direita := compare(a.Right, b.Right)%0A\n %0A%09\n+//\n if e\n@@ -306,30 +306,21 @@\n rda \n-== direita \n %7B%0A%09\n+//\n %09return \n 0%0A%09%7D\n@@ -319,55 +319,26 @@\n urn \n-0%0A%09%7D else %7B%0A%09%09return compare(a.Left, b.Left)%0A%09%7D\n+-1%0A%09//%7D%0A%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_05-09-09",
+            "content": "@@ -379,76 +379,42 @@\n lse \n-if esquerda %3E direita %7B%0A%09%09return esquerda%0A%09%7D else %7B%0A%09%09return direita\n+%7B%0A%09%09return compare(a.Left, b.Left)\n %0A%09%7D%0A\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-07_05-09-45",
+            "content": "@@ -408,17 +408,24 @@\n %09return \n-1\n+esquerda\n %0A%09%7D else\n@@ -432,26 +432,31 @@\n  %7B%0A%09%09return \n--1\n+direita\n %0A%09%7D%0A%7D%0A%0A// --\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-10-02",
+            "content": "@@ -166,20 +166,8 @@\n a ==\n- nil && b !=\n  nil\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-10-38",
+            "content": "@@ -199,58 +199,22 @@\n 1%0A%09%7D\n- else if a == nil && b == nil %7B%0A%09%09return 0%0A%09%7D else\n+%0A%0A%09if b == nil\n  %7B%0A%09\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-11-20",
+            "content": "@@ -162,16 +162,28 @@\n %09if a ==\n+ nil && b !=\n  nil %7B%0A%09\n@@ -199,22 +199,58 @@\n 1%0A%09%7D\n-%0A%0A%09if b == nil\n+ else if a == nil && b == nil %7B%0A%09%09return 0%0A%09%7D else\n  %7B%0A%09\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-12-15",
+            "content": "@@ -185,16 +185,46 @@\n  -1%0A%09%7D%0A%0A\n+%09if b == nil %7B%0A%09%09return 1%0A%09%7D%0A%0A\n %09if a.Va\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-12-33",
+            "content": "@@ -166,20 +166,8 @@\n a ==\n- nil %7C%7C b ==\n  nil\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-07_05-12-43",
+            "content": "@@ -162,16 +162,28 @@\n %09if a ==\n+ nil %7C%7C b ==\n  nil %7B%0A%09\n@@ -197,17 +197,16 @@\n  -1%0A%09%7D%0A%0A\n-%0A\n %09if a.Va\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-07_05-15-40",
+            "content": "@@ -189,37 +189,8 @@\n %09%7D%0A%0A\n-%09if b == nil %7B%0A%09%09return 0%0A%09%7D%0A\n %0A%09if\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_05-15-44",
+            "content": "@@ -252,38 +252,16 @@\n urn 1%0A%09%7D\n- else %7B%0A%09%09return -1%0A%09%7D\n %0A%0A%09esque\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-16-00",
+            "content": "@@ -262,29 +262,8 @@\n lse \n-if a.Value %3C b.Value \n %7B%0A%09%09\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-07_05-16-14",
+            "content": "@@ -252,16 +252,59 @@\n urn 1%0A%09%7D\n+ else if a.Value %3C b.Value %7B%0A%09%09return -1%0A%09%7D\n %0A%0A%09esque\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-07_05-16-27",
+            "content": "@@ -166,20 +166,8 @@\n a ==\n- nil && b !=\n  nil\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-16-37",
+            "content": "@@ -158,50 +158,8 @@\n t %7B%0A\n-%09if a == nil && b == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A\n %09if \n@@ -217,25 +217,25 @@\n  %7B%0A%09%09return \n-1\n+0\n %0A%09%7D%0A%0A%09if a.V\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-17-02",
+            "content": "@@ -400,17 +400,20 @@\n erda\n-+\n+ == \n direita \n == 0\n@@ -408,21 +408,16 @@\n direita \n-== 0 \n %7B%0A%09%09retu\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-18-30",
+            "content": "@@ -400,20 +400,17 @@\n erda\n- == \n++\n direita \n %7B%0A%09%09\n@@ -397,32 +397,37 @@\n squerda+direita \n+== 0 \n %7B%0A%09%09return 0%0A%09%7D \n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-18-35",
+            "content": "@@ -389,33 +389,34 @@\n )%0A%0A%09if esquerda \n-+\n+==\n  direita == 0 %7B%0A\n@@ -408,21 +408,16 @@\n direita \n-== 0 \n %7B%0A%09%09retu\n@@ -441,17 +441,17 @@\n squerda \n-+\n+%3E\n  direita\n@@ -455,12 +455,8 @@\n ita \n-%3E 0 \n %7B%0A%09%09\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-19-02",
+            "content": "@@ -388,33 +388,35 @@\n t)%0A%0A%09if esquerda\n-+\n+ + \n direita == 0 %7B%0A%09\n@@ -444,17 +444,19 @@\n esquerda\n-+\n+ + \n direita \n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-19-04",
+            "content": "@@ -255,33 +255,33 @@\n  nil %7B%0A%09%09return \n-0\n+1\n %0A%09%7D%0A%0A%09if a.Value\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-19-38",
+            "content": "@@ -235,24 +235,54 @@\n turn -1%0A%09%7D%0A%0A\n+%09if b == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A\n %09if a.Value \n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-19-44",
+            "content": "@@ -243,38 +243,8 @@\n %09%7D%0A%0A\n-%09if b == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A\n %09if \n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_05-19-48",
+            "content": "@@ -259,25 +259,25 @@\n  %7B%0A%09%09return \n-1\n+0\n %0A%09%7D%0A%0A%09if a.V\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-20-26",
+            "content": "@@ -255,33 +255,33 @@\n  nil %7B%0A%09%09return \n-0\n+1\n %0A%09%7D%0A%0A%09if a.Value\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-20-31",
+            "content": "@@ -224,33 +224,34 @@\n  nil %7B%0A%09%09return \n-0\n+-1\n %0A%09%7D%0A%0A%09if b == ni\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-20-45",
+            "content": "@@ -186,25 +186,25 @@\n  %7B%0A%09%09return \n-1\n+0\n %0A%09%7D%0A%0A%09if a =\n@@ -228,26 +228,25 @@\n  %7B%0A%09%09return \n--1\n+0\n %0A%09%7D%0A%0A%09if b =\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-20-52",
+            "content": "@@ -309,16 +309,28 @@\n  1%0A%09%7D%0A%0A%09\n+esquerda := \n compare(\n@@ -382,16 +382,126 @@\n b.Right)\n+%0A%0A%09if esquerda+direita == 0 %7B%0A%09%09return 0%0A%09%7D else if esquerda+direita %3E 0 %7B%0A%09%09return 1%0A%09%7D else %7B%0A%09%09return -1%0A%09%7D\n %0A%7D%0A%0A// -\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-21-39",
+            "content": "@@ -310,30 +310,8 @@\n 1%0A%09%7D\n- else %7B%0A%09%09return -1%0A%09%7D\n %0A%0A%09c\n@@ -334,16 +334,27 @@\n .Left)%0A%09\n+direita := \n compare(\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-07_05-21-48",
+            "content": "@@ -273,61 +273,8 @@\n %09%7D%0A%0A\n-%09compare(a.Left, b.Left)%0A%09compare(a.Right, b.Right)%0A%0A\n %09if \n@@ -328,16 +328,69 @@\n rn -1%0A%09%7D\n+%0A%0A%09compare(a.Left, b.Left)%0A%09compare(a.Right, b.Right)\n %0A%7D%0A%0A// -\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-07_05-21-58",
+            "content": "@@ -274,59 +274,8 @@\n %7D%0A%0A%09\n-if a.Value %3E b.Value %7B%0A%09%09return 1%0A%09%7D%0A%0A%09esquerda := \n comp\n@@ -299,19 +299,8 @@\n t)%0A%09\n-direita := \n comp\n@@ -330,74 +330,25 @@\n %09if \n-esquerda+direita == 0 %7B%0A%09%09return 0%0A%09%7D else if esquerda+direita %3E 0\n+a.Value %3E b.Value\n  %7B%0A%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-07_05-22-18",
+            "content": "@@ -182,33 +182,33 @@\n  nil %7B%0A%09%09return \n-0\n+1\n %0A%09%7D%0A%0A%09if a == ni\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-22-29",
+            "content": "@@ -384,16 +384,125 @@\n Right)%0A%0A\n+%09if esquerda+direita == 0 %7B%0A%09%09return 0%0A%09%7D else if esquerda+direita %3E 0 %7B%0A%09%09return 1%0A%09%7D else %7B%0A%09%09return -1%0A%09%7D%0A\n %7D%0A%0A// --\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-28-37",
+            "content": "@@ -309,16 +309,28 @@\n  1%0A%09%7D%0A%0A%09\n+esquerda := \n compare(\n@@ -346,16 +346,27 @@\n .Left)%0A%09\n+direita := \n compare(\n@@ -383,25 +383,16 @@\n .Right)%0A\n-%09return 0\n %0A%7D%0A%0A// -\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_05-28-46",
+            "content": "@@ -313,20 +313,8 @@\n %7D%0A%0A%09\n-esquerda := \n comp\n@@ -338,19 +338,8 @@\n t)%0A%09\n-direita := \n comp\n@@ -364,117 +364,17 @@\n ht)%0A\n-%0A%09if esquerda+direita == 0 %7B%0A%09%09return 0%0A%09%7D else if esquerda+direita %3E 0 %7B%0A%09%09return 1%0A%09%7D else %7B%0A%09%09return -1%0A%09%7D\n+%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_05-28-54",
+            "content": "@@ -246,20 +246,8 @@\n %0A%09if\n- a != nil &&\n  b =\n@@ -259,25 +259,25 @@\n  %7B%0A%09%09return \n-1\n+0\n %0A%09%7D%0A%0A%09if a.V\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-30-08",
+            "content": "@@ -267,33 +267,33 @@\n  nil %7B%0A%09%09return \n-0\n+1\n %0A%09%7D%0A%0A%09if a.Value\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-31-22",
+            "content": "@@ -224,33 +224,34 @@\n  nil %7B%0A%09%09return \n-0\n+-1\n %0A%09%7D%0A%0A%09if a != ni\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-31-34",
+            "content": "@@ -228,26 +228,25 @@\n  %7B%0A%09%09return \n--1\n+0\n %0A%09%7D%0A%0A%09if a !\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-31-39",
+            "content": "@@ -228,24 +228,25 @@\n  %7B%0A%09%09return \n+-\n 1%0A%09%7D%0A%0A%09if a \n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-31-46",
+            "content": "@@ -186,25 +186,25 @@\n  %7B%0A%09%09return \n-1\n+0\n %0A%09%7D%0A%0A%09if a =\n@@ -228,25 +228,24 @@\n  %7B%0A%09%09return \n--\n 1%0A%09%7D%0A%0A%09if a \n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-31-51",
+            "content": "@@ -182,33 +182,32 @@\n  nil %7B%0A%09%09return \n--\n 1%0A%09%7D%0A%0A%09if a == n\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-31-57",
+            "content": "@@ -182,33 +182,34 @@\n  nil %7B%0A%09%09return \n-0\n+-1\n %0A%09%7D%0A%0A%09if a == ni\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-32-03",
+            "content": "@@ -1,1778 +1,76 @@\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Atype Node struct %7B%0A%09Value int%0A%09Left  *Node%0A%09Right *Node%0A%7D%0A%0Afunc compare(a, b *Node) int %7B%0A%09if a == nil && b == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A%09if a == nil && b != nil %7B%0A%09%09return -1%0A%09%7D%0A%0A%09if a != nil && b == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A%09if a.Value %3E b.Value %7B%0A%09%09return -1%0A%09%7D%0A%0A%09esquerda := compare(a.Left, b.Left)%0A%09direita := compare(a.Right, b.Right)%0A%0A%09if esquerda+direita == 0 %7B%0A%09%09return 0%0A%09%7D else if esquerda+direita %3E 0 %7B%0A%09%09return 1%0A%09%7D else %7B%0A%09%09return -1%0A%09%7D%0A%7D%0A%0A// ----------------------------------------------------------------------%0Afunc BShow(node *Node, history string) %7B%0A%09if node != nil && (node.Left != nil %7C%7C node.Right != nil) %7B%0A%09%09BShow(node.Left, history+%22l%22)%0A%09%7D%0A%09for i := 0; i %3C len(history)-1; i++ %7B%0A%09%09if history%5Bi%5D != history%5Bi+1%5D %7B%0A%09%09%09fmt.Print(%22%E2%94%82   %22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Print(%22    %22)%0A%09%09%7D%0A%09%7D%0A%09if history != %22%22 %7B%0A%09%09if history%5Blen(history)-1%5D == 'l' %7B%0A%09%09%09fmt.Print(%22%E2%95%AD%E2%94%80%E2%94%80%E2%94%80%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Print(%22%E2%95%B0%E2%94%80%E2%94%80%E2%94%80%22)%0A%09%09%7D%0A%09%7D%0A%09if node == nil %7B%0A%09%09fmt.Println(%22#%22)%0A%09%09return%0A%09%7D%0A%09fmt.Println(node.Value)%0A%09if node.Left != nil %7C%7C node.Right != nil %7B%0A%09%09BShow(node.Right, history+%22r%22)%0A%09%7D%0A%7D%0A%0Afunc create(parts *%5B%5Dstring) *Node %7B%0A%09elem := (*parts)%5B0%5D%0A%09*parts = (*parts)%5B1:%5D%0A%09if elem == %22#%22 %7B%0A%09%09return nil%0A%09%7D%0A%09value, _ := strconv.Atoi(elem)%0A%09node := &Node%7BValue: value%7D%0A%09node.Left = create(parts)%0A%09node.Right = create(parts)%0A%09return node%0A%7D%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09parts := strings.Split(scanner.Text(), %22 %22)%0A%09a := create(&parts)%0A%09BShow(a, %22%22)%0A%09scanner.Scan()%0A%09parts = strings.Split(scanner.Text(), %22 %22)%0A%09b := create(&parts)%0A%09BShow(b, %22%22)%0A%09result := compare(a, b)%0A%09if result == 0 %7B%0A%09%09fmt.Println(%22iguais%22)%0A%09%7D else if result %3C 0 %7B%0A%09%09fmt.Println(%22menor%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22maior%22)%0A%09%7D%0A%7D\n+@@ -310,25 +310,25 @@%0A  %257B%250A%2509%2509return %0A-0%0A+1%0A %250A%2509%257D%250A%250A%2509esquer\n %0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-07_05-32-15",
+            "content": "@@ -310,24 +310,25 @@\n  %7B%0A%09%09return \n+-\n 1%0A%09%7D%0A%0A%09esque\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-32-20",
+            "content": "@@ -322,50 +322,8 @@\n 1%0A%09%7D\n- else if a.Value %3C b.Value%7B%0A%09%09return -1%0A%09%7D\n %0A%0A%09e\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-07_05-32-37",
+            "content": "@@ -336,33 +336,32 @@\n .Value %3C b.Value\n- \n %7B%0A%09%09return -1%0A%09%7D\n@@ -537,25 +537,26 @@\n  %7B%0A%09%09return \n-0\n+-1\n %0A%09%7D%0A%7D%0A%0A// --\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_05-33-06",
+            "content": "@@ -538,26 +538,25 @@\n  %7B%0A%09%09return \n--1\n+0\n %0A%09%7D%0A%7D%0A%0A// --\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_05-33-10",
+            "content": "@@ -513,33 +513,33 @@\n  %3E 0 %7B%0A%09%09return \n-0\n+1\n %0A%09%7D else %7B%0A%09%09ret\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_05-33-15",
+            "content": "@@ -468,33 +468,33 @@\n == 0 %7B%0A%09%09return \n-1\n+0\n %0A%09%7D else if esqu\n@@ -513,33 +513,33 @@\n  %3E 0 %7B%0A%09%09return \n-1\n+0\n %0A%09%7D else %7B%0A%09%09ret\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_05-33-19",
+            "content": "@@ -476,17 +476,17 @@\n %09return \n-0\n+1\n %0A%09%7D else\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_05-33-22",
+            "content": "@@ -158,47 +158,130 @@\n t %7B%0A\n-%0A%09if a == nil && b != nil %7B%0A%09%09return -1\n+%09if a == nil && b == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A%09if a == nil && b != nil %7B%0A%09%09return -1%0A%09%7D%0A%0A%09if a != nil && b == nil %7B%0A%09%09return 0\n %0A%09%7D%0A\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_05-34-18",
+            "content": "@@ -158,130 +158,47 @@\n t %7B%0A\n-%09if a == nil && b == nil %7B%0A%09%09return 0%0A%09%7D%0A%0A%09if a == nil && b != nil %7B%0A%09%09return -1%0A%09%7D%0A%0A%09if a != nil && b == nil %7B%0A%09%09return 0\n+%0A%09if a == nil && b != nil %7B%0A%09%09return -1\n %0A%09%7D%0A\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-07_05-34-24",
+            "content": "@@ -538,24 +538,25 @@\n  %7B%0A%09%09return \n+-\n 1%0A%09%7D%0A%7D%0A%0A// -\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_05-34-57",
+            "content": "@@ -538,25 +538,24 @@\n  %7B%0A%09%09return \n--\n 1%0A%09%7D%0A%7D%0A%0A// -\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_05-35-10",
+            "content": "@@ -535,66 +535,21 @@\n lse \n-if esquerda+direita %3C 0 %7B%0A%09%09return -1%0A%09%7D else %7B%0A%09%09return 0\n+%7B%0A%09%09return -1\n %0A%09%7D%0A\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_05-35-28",
+            "content": "@@ -583,31 +583,8 @@\n e %7B%0A\n-%09%09fmt.Println(%22teste%22)%0A\n %09%09re\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-07_05-35-46",
+            "content": "@@ -575,24 +575,47 @@\n 1%0A%09%7D else %7B%0A\n+%09%09fmt.Println(%22teste%22)%0A\n %09%09return 0%0A%09\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-07-07_05-35-56",
+            "content": "@@ -561,11 +561,8 @@\n 0 %7B%0A\n-%09%09%0A\n %09%09re\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-07_05-36-00",
+            "content": "@@ -563,38 +563,8 @@\n %7B%0A%09%09\n-fmt.Println(esquerda, direita)\n %0A%09%09r\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-07-07_05-36-34",
+            "content": "@@ -553,24 +553,57 @@\n reita %3C 0 %7B%0A\n+%09%09fmt.Println(esquerda, direita)%0A\n %09%09return -1%0A\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-07-07_05-38-35",
+            "content": "@@ -372,17 +372,16 @@\n esquerda\n-1\n  := comp\n@@ -404,55 +404,16 @@\n ft)%0A\n-%09esquerda2 := compare(a.Left, b.Right)%0A\n %09direita\n 1 :=\n@@ -408,17 +408,16 @@\n %09direita\n-1\n  := comp\n@@ -442,88 +442,29 @@\n ht)%0A\n-%09direita2 := compare(a.Left, b.Right)%0A%0A%09if esquerda1+esquerda2+direita1+direita2\n+%0A%09if esquerda+direita\n  == \n@@ -501,37 +501,16 @@\n erda\n-1+esquerda2+direita1+direita2\n++direita\n  %3E 0\n@@ -546,37 +546,16 @@\n erda\n-1+esquerda2+direita1+direita2\n++direita\n  %3C 0\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-07_05-41-15",
+            "content": "@@ -402,20 +402,25 @@\n .Left)%0A%09\n-meio\n+esquerda2\n  := comp\n@@ -483,36 +483,88 @@\n ht)%0A\n-%0A%09if esquerda1+meio+direita1\n+%09direita2 := compare(a.Left, b.Right)%0A%0A%09if esquerda1+esquerda2+direita1+direita2\n  == \n@@ -599,28 +599,42 @@\n querda1+\n-meio\n+esquerda2+direita1\n +direita\n 1 %3E 0 %7B%0A\n@@ -625,17 +625,17 @@\n +direita\n-1\n+2\n  %3E 0 %7B%0A%09\n@@ -669,21 +669,35 @@\n da1+\n-meio+direita1\n+esquerda2+direita1+direita2\n  %3C 0\n",
+            "lines": "113"
+        },
+        {
+            "label": "2026-07-07_05-42-12",
+            "content": "@@ -372,16 +372,17 @@\n esquerda\n+1\n  := comp\n@@ -405,16 +405,50 @@\n ft)%0A\n+%09meio := compare(a.Left, b.Right)%0A\n %09direita\n  := \n@@ -443,16 +443,17 @@\n %09direita\n+1\n  := comp\n@@ -487,24 +487,30 @@\n esquerda\n+1+meio\n +direita\n  == 0 %7B%0A\n@@ -501,16 +501,17 @@\n +direita\n+1\n  == 0 %7B%0A\n@@ -540,24 +540,30 @@\n esquerda\n+1+meio\n +direita\n  %3E 0 %7B%0A%09\n@@ -554,16 +554,17 @@\n +direita\n+1\n  %3E 0 %7B%0A%09\n@@ -592,24 +592,30 @@\n esquerda\n+1+meio\n +direita\n  %3C 0 %7B%0A%09\n@@ -606,16 +606,17 @@\n +direita\n+1\n  %3C 0 %7B%0A%09\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-07-07_05-42-36",
+            "content": "@@ -275,17 +275,17 @@\n %09return \n-1\n+0\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-07_05-43-10",
+            "content": "@@ -267,33 +267,33 @@\n  nil %7B%0A%09%09return \n-0\n+1\n %0A%09%7D%0A%0A%09if a.Value\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-07_05-45-20",
+            "content": "@@ -275,17 +275,17 @@\n %09return \n-1\n+0\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-07_05-45-31",
+            "content": "@@ -267,33 +267,33 @@\n  nil %7B%0A%09%09return \n-0\n+1\n %0A%09%7D%0A%0A%09if a.Value\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-07_06-04-27",
+            "content": "@@ -515,32 +515,78 @@\n  0 %7B%0A%09%09return 1%0A\n+%09%7D else if esquerda+direita %3C 0 %7B%0A%09%09return -1%0A\n %09%7D else %7B%0A%09%09retu\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-07_06-04-44",
+            "content": "@@ -538,26 +538,25 @@\n  %7B%0A%09%09return \n--1\n+0\n %0A%09%7D%0A%7D%0A%0A// --\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_06-04-53",
+            "content": "@@ -275,17 +275,17 @@\n %09return \n-1\n+0\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_06-06-29",
+            "content": "@@ -537,41 +537,8 @@\n e %7B%0A\n-%09%09fmt.Println(esquerda, direita)%0A\n %09%09re\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-07_06-07-15",
+            "content": "@@ -471,11 +471,8 @@\n 0 %7B%0A\n-%09%09%0A\n %09%09re\n@@ -529,24 +529,57 @@\n 1%0A%09%7D else %7B%0A\n+%09%09fmt.Println(esquerda, direita)%0A\n %09%09return -1%0A\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-07-07_06-07-34",
+            "content": "@@ -473,38 +473,8 @@\n %7B%0A%09%09\n-fmt.Println(esquerda, direita)\n %0A%09%09r\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-07-07_06-07-36",
+            "content": "@@ -469,27 +469,36 @@\n = 0 %7B%0A%09%09\n-if \n+fmt.Println(\n esquerda\n  %3E direi\n@@ -493,18 +493,17 @@\n erda\n- %3E\n+,\n  direita\n  %7C%7C \n@@ -502,48 +502,9 @@\n eita\n- %7C%7C direita %3E esquerda %7B%0A%09%09%09return 1%0A%09%09%7D\n+)\n %0A%09%09r\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-07-07_06-08-29",
+            "content": "@@ -525,17 +525,16 @@\n %09return \n--\n 1%0A%09%09%7D%0A%09%09\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-07-07_06-09-10",
+            "content": "@@ -519,42 +519,8 @@\n a %7B%0A\n-%09%09%09fmt.Println(esquerda, direita)%0A\n %09%09%09r\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-07-07_06-09-36",
+            "content": "@@ -495,43 +495,55 @@\n ita \n-%7B%0A%09%09%09return -1%0A%09%09%7D else if \n+%7C%7C direita %3E esquerda %7B%0A%09%09%09fmt.Println(\n esquerda\n  %3C d\n@@ -542,18 +542,17 @@\n erda\n- %3C\n+,\n  direita\n  %7B%0A%09\n@@ -547,18 +547,17 @@\n  direita\n- %7B\n+)\n %0A%09%09%09retu\n@@ -559,16 +559,17 @@\n %09return \n+-\n 1%0A%09%09%7D%0A%09%09\n",
+            "lines": "113"
+        },
+        {
+            "label": "2026-07-07_06-10-16",
+            "content": "@@ -503,16 +503,17 @@\n %09return \n+-\n 1%0A%09%09%7D el\n@@ -545,25 +545,24 @@\n %7B%0A%09%09%09return \n--\n 1%0A%09%09%7D%0A%09%09retu\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-07-07_06-10-24",
+            "content": "@@ -439,16 +439,45 @@\n Right)%0A%0A\n+%09if esquerda+direita == 0 %7B%0A%09\n %09if esqu\n@@ -491,24 +491,25 @@\n direita %7B%0A%09%09\n+%09\n return 1%0A%09%7D \n@@ -497,32 +497,33 @@\n a %7B%0A%09%09%09return 1%0A\n+%09\n %09%7D else if esque\n@@ -536,24 +536,25 @@\n direita %7B%0A%09%09\n+%09\n return -1%0A%09%7D\n@@ -556,38 +556,10 @@\n -1%0A%09\n+%09\n %7D\n-%0A%0A%09if esquerda+direita == 0 %7B\n %0A%09%09r\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-07-07_06-32-00",
+            "content": "@@ -525,29 +525,8 @@\n 1%0A%09%7D\n- else %7B%0A%09%09return 0%0A%09%7D\n %0A%0A%09i\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-07-07_06-32-25",
+            "content": "@@ -451,25 +451,27 @@\n esquerda\n-+\n+ %3E \n direita \n == 0 %7B%0A%09\n@@ -462,25 +462,37 @@\n direita \n-== 0 %7B%0A%09%09\n+%7B%0A%09%09return 1%0A%09%7D else \n if esque\n@@ -487,33 +487,33 @@\n lse if esquerda \n-%3E\n+%3C\n  direita %7B%0A%09%09%09re\n@@ -499,33 +499,32 @@\n rda %3C direita %7B%0A\n-%09\n %09%09return 1%0A%09%09%7D e\n@@ -520,19 +520,19 @@\n urn \n+-\n 1%0A\n-%09\n %09%7D else \n if e\n@@ -519,32 +519,50 @@\n turn -1%0A%09%7D else \n+%7B%0A%09%09return 0%0A%09%7D%0A%0A%09\n if esquerda %3C di\n@@ -552,35 +552,33 @@\n %09if esquerda\n- %3C \n++\n direita \n %7B%0A%09%09%09return \n@@ -569,26 +569,14 @@\n ita \n-%7B%0A%09%09%09return -1%0A%09%09%7D\n+== 0 %7B\n %0A%09%09r\n",
+            "lines": "117"
+        },
+        {
+            "label": "2026-07-07_06-33-06",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc compare(a, b *Node) int {\n\tif a == nil && b == nil {\n\t\treturn 0\n\t}\n\n\tif a == nil && b != nil {\n\t\treturn -1\n\t}\n\n\tif a != nil && b == nil {\n\t\treturn 1\n\t}\n\n\tif a.Value > b.Value {\n\t\treturn 1\n\t} else if a.Value < b.Value {\n\t\treturn -1\n\t}\n\n\tesquerda := compare(a.Left, b.Left)\n\tdireita := compare(a.Right, b.Right)\n\n\tif esquerda+direita == 0 {\n\t\tif esquerda > direita {\n\t\t\treturn 1\n\t\t} else if esquerda < direita {\n\t\t\treturn -1\n\t\t}\n\t\treturn 0\n\t} else if esquerda+direita > 0 {\n\t\treturn 1\n\t} else {\n\t\treturn -1\n\t}\n}\n\n// ----------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\ta := create(&parts)\n\tBShow(a, \"\")\n\tscanner.Scan()\n\tparts = strings.Split(scanner.Text(), \" \")\n\tb := create(&parts)\n\tBShow(b, \"\")\n\tresult := compare(a, b)\n\tif result == 0 {\n\t\tfmt.Println(\"iguais\")\n\t} else if result < 0 {\n\t\tfmt.Println(\"menor\")\n\t} else {\n\t\tfmt.Println(\"maior\")\n\t}\n}\n",
+            "lines": "114"
+        }
+    ]
+}

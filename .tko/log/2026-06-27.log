@@ -1,0 +1,7 @@
+2026-06-27 21:53:22, SELF, v:1, k:ed@recursao, self:1, rate:100
+2026-06-27 21:53:35, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-06-27 21:53:45, SELF, v:1, k:ed@editorint, self:1, rate:100, concept:1
+2026-06-27 21:54:03, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-06-27 21:54:12, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:80
+2026-06-27 21:54:21, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-06-27 21:54:12, MOVE, v:1, k:ed@magicsearch, mode:EDIT

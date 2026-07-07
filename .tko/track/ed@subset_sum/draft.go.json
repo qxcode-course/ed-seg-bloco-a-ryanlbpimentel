@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_00-42-49",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,496 +23,53 @@\n mt%22%0A\n-%0A\n func \n-backtrackingSoma(arrayValores %5B%5Dint, valor int, qtdValores int) bool %7B%0A%09if qtdValores == 0 %7B%0A%09%09if valor == 0 %7B%0A%09%09%09return true%0A%09%09%7D else %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A%09if len(arrayValores) == 0 %7B%0A%09%09return false%0A%09%7D%0A%0A%09if backtrackingSoma(arrayValores%5B1:%5D, valor, qtdValores) %7B%0A%09%09return true%0A%09%7D%0A%0A%09return false%0A%7D%0A%0Afunc main() %7B%0A%09var qtd, valor int%0A%0A%09fmt.Scan(&qtd)%0A%09fmt.Scan(&valor)%0A%0A%09var valores %5B%5Dint%0A%0A%09for i := 0; i %3C qtd; i++ %7B%0A%09%09var v int%0A%09%09fmt.Scan(&v)%0A%09%09valores = append(valores, v)%0A%09%7D%0A\n+main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-06_05-37-35",
+            "content": "@@ -514,83 +514,6 @@\n %09%7D%0A%0A\n-%09resultado := backtrackingSoma(valores, valor, qtd)%0A%0A%09fmt.Println(resultado)%0A\n %7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-06_05-38-37",
+            "content": "@@ -321,19 +321,20 @@\n %09return \n-tru\n+fals\n e%0A%7D%0A%0Afun\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-06_05-38-50",
+            "content": "@@ -237,24 +237,17 @@\n e%0A%09%7D%0A%0A%09i\n-nclui :=\n+f\n  backtra\n@@ -296,19 +296,8 @@\n res)\n-%0A%09if inclui\n  %7B%0A%09\n@@ -318,139 +318,18 @@\n %7D%0A%0A%09\n-naoInclui := backtrackingSoma(arrayValores%5B1:%5D, valor-arrayValores%5B0%5D, qtdValores-1)%0A%09if naoInclui %7B%0A%09%09return true%0A%09%7D%0A%0A%09return fals\n+return tru\n e%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-06_05-40-29",
+            "content": "@@ -459,19 +459,20 @@\n %09return \n-tru\n+fals\n e%0A%7D%0A%0Afun\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-06_05-40-39",
+            "content": "@@ -300,17 +300,16 @@\n alores)%0A\n-%0A\n %09if incl\n@@ -417,17 +417,16 @@\n ores-1)%0A\n-%0A\n %09if naoI\n@@ -459,20 +459,19 @@\n %09return \n-fals\n+tru\n e%0A%7D%0A%0Afun\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-06_05-41-01",
+            "content": "@@ -455,54 +455,22 @@\n e%0A%09%7D\n- else%7B%0A        return false%0A    %7D%0A%0A%09return tru\n+%0A%0A%09return fals\n e%0A%7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-06_05-41-15",
+            "content": "@@ -456,21 +456,26 @@\n %0A%09%7D else\n- \n %7B%0A\n-%09%09\n+        \n return f\n@@ -479,18 +479,35 @@\n n false%0A\n-%09%7D\n+    %7D%0A%0A%09return true\n %0A%7D%0A%0Afunc\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-06_05-41-20",
+            "content": "@@ -451,18 +451,25 @@\n  true%0A%09%7D\n-%0A%0A\n+ else %7B%0A%09\n %09return \n@@ -474,16 +474,19 @@\n n false%0A\n+%09%7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-06_05-41-28",
+            "content": "@@ -290,24 +290,8 @@\n alor\n--arrayValores%5B0%5D\n , qt\n@@ -302,10 +302,8 @@\n ores\n--1\n )%0A%0A%09\n@@ -378,32 +378,48 @@\n lores%5B1:%5D, valor\n+-arrayValores%5B0%5D\n , qtdValores)%0A%0A%09\n@@ -410,24 +410,26 @@\n , qtdValores\n+-1\n )%0A%0A%09if naoIn\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-06_05-41-40",
+            "content": "@@ -461,19 +461,20 @@\n %09return \n-tru\n+fals\n e%0A%7D%0A%0Afun\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-06_05-41-46",
+            "content": "@@ -461,20 +461,19 @@\n %09return \n-fals\n+tru\n e%0A%7D%0A%0Afun\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-06_05-44-05",
+            "content": "@@ -76,18 +76,56 @@\n  int\n-) bool %7B%0A%0A\n+, qtdValores int) bool %7B%0A%09if qtdValores == 0 %7B%0A%09\n %09if \n@@ -129,32 +129,33 @@\n if valor == 0 %7B%0A\n+%09\n %09%09return true%0A%09%7D\n@@ -152,16 +152,17 @@\n rn true%0A\n+%09\n %09%7D else \n@@ -163,16 +163,17 @@\n  else %7B%0A\n+%09\n %09%09return\n@@ -175,24 +175,28 @@\n eturn false%0A\n+%09%09%7D%0A\n %09%7D%0A%0A%09if len(\n@@ -302,16 +302,30 @@\n lores%5B0%5D\n+, qtdValores-1\n )%0A%0A%09if i\n@@ -400,24 +400,36 @@\n s%5B1:%5D, valor\n+, qtdValores\n )%0A%0A%09if naoIn\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-06_05-46-25",
+            "content": "@@ -111,24 +111,49 @@\n turn true%0A%09%7D\n+ else %7B%0A%09%09return false%0A%09%7D\n %0A%0A%09if len(ar\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-07-06_05-46-36",
+            "content": "@@ -595,24 +595,29 @@\n lores, valor\n+, qtd\n )%0A%0A%09fmt.Prin\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-07-06_05-46-45",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc backtrackingSoma(arrayValores []int, valor int) bool {\n\n\tif valor == 0 {\n\t\treturn true\n\t}\n\n\tif len(arrayValores) == 0 {\n\t\treturn false\n\t}\n\n\tinclui := backtrackingSoma(arrayValores[1:], valor-arrayValores[0])\n\n\tif inclui {\n\t\treturn true\n\t}\n\n\tnaoInclui := backtrackingSoma(arrayValores[1:], valor)\n\n\tif naoInclui {\n\t\treturn true\n\t}\n\n\treturn false\n}\n\nfunc main() {\n\tvar qtd, valor int\n\n\tfmt.Scan(&qtd)\n\tfmt.Scan(&valor)\n\n\tvar valores []int\n\n\tfor i := 0; i < qtd; i++ {\n\t\tvar v int\n\t\tfmt.Scan(&v)\n\t\tvalores = append(valores, v)\n\t}\n\n\tresultado := backtrackingSoma(valores, valor)\n\n\tfmt.Println(resultado)\n}\n",
+            "lines": "47"
+        }
+    ]
+}

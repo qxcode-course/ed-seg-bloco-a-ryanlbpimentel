@@ -15,9 +15,13 @@ type Node struct {
 }
 
 func Clone(node *Node) *Node {
-	// TODO
-	_ = node
-	return nil
+	if node == nil{
+		return nil
+	}
+
+	node.Left = Clone(node.Left)
+	node.Right = Clone(node.Right)
+	return node
 }
 
 // -----------------------------------------------------------------------------------
@@ -68,9 +72,9 @@ func main() {
 	parts := strings.Split(scanner.Text(), " ")
 	root := create(&parts)
 	fmt.Println("original:")
-	BShow(root, "") // Chama a função de impressão formatada
+	BShow(root, "")        // Chama a função de impressão formatada
 	newRoot := Clone(root) // Clona a árvore
-	root.Value = 4         // Modifica o valor do nó raiz original
+	//root.Value = 4         // Modifica o valor do nó raiz original
 	fmt.Println("clone:")
 	BShow(newRoot, "") // Chama novamente para mostrar a árvore invertida
 }

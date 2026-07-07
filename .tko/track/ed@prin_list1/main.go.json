@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-28_07-00-58",
+            "content": "@@ -23,16 +23,27 @@\n %0A%09%22fmt%22%0A\n+%09%22strings%22%0A\n )%0A%0A// mo\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-28_07-01-05",
+            "content": "@@ -27,19 +27,8 @@\n mt%22%0A\n-%09%22strings%22%0A\n )%0A%0A/\n@@ -134,230 +134,17 @@\n  %7B%0A%09\n-var sb strings.Builder%0A%09for n := l.Front(); n != l.End(); n = n.Next() %7B%0A%09%09if n == sword %7B%0A%09%09%09sb.WriteString(fmt.Sprintf(%22(%25v)%22, n.Value))%0A%09%09%7D else %7B%0A%09%09%09sb.WriteString(fmt.Sprintf(%22%25v%22, n.Value))%0A%09%09%7D%0A%09%7D%0A%09return sb.String()\n+return %22%22\n %0A%7D%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-30_05-39-02",
+            "content": "@@ -465,66 +465,18 @@\n  %7B%0A%09\n-if it == l.End() %7B%0A%09%09return l.Front()%0A%09%7D%0A%09return it.Next()\n+return nil\n %0A%7D%0A%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-02_19-15-25",
+            "content": "@@ -267,12 +267,12 @@\n tf(%22\n+(\n %25v\n-%3E \n+)\n %22, n\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-07-02_19-15-47",
+            "content": "@@ -167,31 +167,8 @@\n lder\n-%0A%0A%09sb.WriteString(%22%5B %22)\n %0A%09fo\n@@ -266,16 +266,17 @@\n ntf(%22%25v%3E\n+ \n %22, n.Val\n@@ -345,87 +345,10 @@\n %09%09%7D%0A\n-%0A%09%09if n.Next() != l.End() %7B%0A%09%09%09sb.WriteString(%22 %22)%0A%09%09%7D%0A%09%7D%0A%09sb.WriteString(%22 %5D%22)\n+%09%7D\n %0A%09re\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-07-02_19-16-42",
+            "content": "@@ -683,18 +683,16 @@\n hosen)%0A%09\n-//\n fmt.Prin\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-19-36",
+            "content": "@@ -565,23 +565,16 @@\n %7B%0A%09if it\n-.Next()\n  == l.En\n@@ -585,19 +585,21 @@\n %7B%0A%09%09\n-it = it.Nex\n+return l.Fron\n t()%0A\n@@ -611,16 +611,23 @@\n eturn it\n+.Next()\n %0A%7D%0A%0Afunc\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-21-44",
+            "content": "@@ -588,25 +588,30 @@\n d() %7B%0A%09%09\n-return it\n+it = it.Next()\n %0A%09%7D%0A%09ret\n@@ -616,23 +616,16 @@\n eturn it\n-.Next()\n %0A%7D%0A%0Afunc\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-21-57",
+            "content": "@@ -611,16 +611,23 @@\n eturn it\n+.Next()\n %0A%7D%0A%0Afunc\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-22-11",
+            "content": "@@ -570,12 +570,14 @@\n  it.\n-n\n+N\n ext\n+()\n  == \n@@ -588,25 +588,25 @@\n d() %7B%0A%09%09\n-it.Next()\n+return it\n %0A%09%7D%0A%09ret\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-22-46",
+            "content": "@@ -592,18 +592,15 @@\n %09%09it\n- = it.n\n+.N\n ext\n+()\n %0A%09%7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-23-09",
+            "content": "@@ -598,21 +598,16 @@\n  it.next\n-.next\n %0A%09%7D%0A%09ret\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-23-51",
+            "content": "@@ -588,23 +588,31 @@\n ) %7B%0A%09%09it\n-.Next()\n+ = it.next.next\n %0A%09%7D%0A%09ret\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-24-14",
+            "content": "@@ -592,18 +592,8 @@\n %09%09it\n- = it.next\n .Nex\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-24-54",
+            "content": "@@ -599,20 +599,22 @@\n it.next.\n-n\n+N\n ext\n+()\n %0A%09%7D%0A%09ret\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-25-00",
+            "content": "@@ -566,22 +566,20 @@\n %0A%09if it.\n-N\n+n\n ext\n-()\n  == l.En\n@@ -598,21 +598,17 @@\n  it.\n-Next().N\n+next.n\n ext\n-()\n %0A%09%7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-25-34",
+            "content": "@@ -565,26 +565,19 @@\n %7B%0A%09i\n-t =\n+f\n  it.\n-next%0A%09if it\n+Next()\n  == \n@@ -600,12 +600,21 @@\n  it.\n-n\n+Next().N\n ext\n+()\n %0A%09%7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-02_19-26-00",
+            "content": "@@ -565,17 +565,19 @@\n %7B%0A%09i\n-f\n+t =\n  it.next\n  == \n@@ -572,16 +572,23 @@\n  it.next\n+%0A%09if it\n  == l.En\n@@ -595,29 +595,22 @@\n d() %7B%0A%09%09\n-return it.nex\n+it = i\n t.next%0A%09\n@@ -621,21 +621,16 @@\n eturn it\n-.next\n %0A%7D%0A%0Afunc\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-07-02_19-26-33",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvar sb strings.Builder\n\n\tsb.WriteString(\"[ \")\n\tfor n := l.Front(); n != l.End(); n = n.Next() {\n\t\tif n == sword {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%v>\", n.Value))\n\t\t} else {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%v\", n.Value))\n\t\t}\n\n\t\tif n.Next() != l.End() {\n\t\t\tsb.WriteString(\" \")\n\t\t}\n\t}\n\tsb.WriteString(\" ]\")\n\treturn sb.String()\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tif it.next == l.End() {\n\t\treturn it.next.next\n\t}\n\treturn it.next\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\t//fmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "54"
+        }
+    ]
+}

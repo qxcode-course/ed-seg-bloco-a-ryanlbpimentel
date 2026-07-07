@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-11_03-51-26",
+            "content": "@@ -146,11 +146,18 @@\n rint\n-ln(\n+f(%22%25c%5Cn%22, \n s%5B0%5D\n@@ -209,28 +209,104 @@\n r s \n-string%0A%0A%09fmt.Scan(s)\n+%5B%5Drune%0A%0A%09for %7B%0A%09%09var c rune%0A%09%09fmt.Scan(&c)%0A%0A%09%09if c == '%5Cn' %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09s = append(s, c)%0A%09%7D\n %0A%0A%09d\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-11_03-53-17",
+            "content": "@@ -76,29 +76,8 @@\n 0 %7B%0A\n-%09%09fmt.Print(%22oloko%22)%0A\n %09%09re\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-11_03-53-34",
+            "content": "@@ -241,9 +241,8 @@\n can(\n-&\n s)%0A%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-11_03-53-47",
+            "content": "@@ -167,18 +167,11 @@\n rint\n-f(%22%25c%5Cn%22, \n+ln(\n s%5B0%5D\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-11_03-54-08",
+            "content": "@@ -72,16 +72,37 @@\n  == 0 %7B%0A\n+%09%09fmt.Print(%22oloko%22)%0A\n %09%09return\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-11_03-54-19",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc diagonal(s string, k int) {\n\tif len(s) == 0 {\n\t\treturn\n\t}\n\n\tfor i := 0; i < k; i++ {\n\t\tfmt.Print(\" \")\n\t}\n\n\tfmt.Printf(\"%c\\n\", s[0])\n\n\tdiagonal(s[1:], k+1)\n}\n\nfunc main() {\n\tvar s string\n\n\tfmt.Scan(&s)\n\n\tdiagonal(string(s), 0)\n}\n",
+            "lines": "25"
+        }
+    ]
+}

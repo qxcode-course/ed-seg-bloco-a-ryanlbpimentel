@@ -1,0 +1,16 @@
+2026-07-03 22:32:45, SELF, v:1, k:ed@editorint, self:1, rate:100, study:180, concept:1
+2026-07-03 22:33:08, SELF, v:1, k:ed@bufferring, self:1, rate:50
+2026-07-03 22:33:11, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-07-03 22:33:39, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50, size:156
+2026-07-03 22:34:41, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50, size:163
+2026-07-03 22:35:01, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50
+2026-07-03 22:35:21, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50
+2026-07-03 22:36:11, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50
+2026-07-03 22:36:23, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50, size:160
+2026-07-03 22:36:31, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:161
+2026-07-03 22:36:39, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:159
+2026-07-03 22:36:43, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33
+2026-07-03 22:36:55, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50, size:162
+2026-07-03 22:37:11, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:66, size:161
+2026-07-03 22:37:10, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-03 22:37:09, MOVE, v:1, k:ed@bufferring, mode:EDIT

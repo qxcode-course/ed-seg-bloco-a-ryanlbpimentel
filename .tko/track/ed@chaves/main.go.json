@@ -1,0 +1,109 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_16-13-36",
+            "content": "@@ -7,16 +7,28 @@\n e main%0A%0A\n+import (%0A)%0A%0A\n func mai\n@@ -38,96 +38,7 @@\n  %7B%0A%09\n-fila := NewQueue%5Bint%5D()%0A%0A%09for i := 1; i %3C= 16; i++ %7B%0A%09%09fila.Enqueue(i)%0A%09%7D%0A%0A%09fila.String()\n %0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-07-05_16-17-52",
+            "content": "@@ -11,22 +11,8 @@\n in%0A%0A\n-import %22fmt%22%0A%0A\n func\n@@ -102,20 +102,8 @@\n %7D%0A%0A%09\n-fmt.Println(\n fila\n@@ -111,12 +111,11 @@\n String()\n-)\n %0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-07-05_16-19-17",
+            "content": "@@ -115,242 +115,8 @@\n %09%7D%0A%0A\n-%09//fmt.Println(fila.String())%0A%0A%09time1 := fila.Dequeue()%0A%09time2 := fila.Dequeue()%0A%0A%09var esquerda, direita int%0A%0A%09fmt.Scan(%22%25d %25d%22, &esquerda, &direita)%0A%0A%09if esquerda %3E direita %7B%0A%09%09fila.Enqueue(time1)%0A%09%7D else %7B%0A%09%09fila.Enqueue(time2)%0A%09%7D%0A%0A\n %09fmt\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-07-05_16-22-12",
+            "content": "@@ -146,35 +146,8 @@\n ))%0A%0A\n-%09for i := 0; i %3C 8; i++ %7B%0A%09\n %09tim\n@@ -167,17 +167,16 @@\n queue()%0A\n-%09\n %09time2 :\n@@ -193,17 +193,16 @@\n ueue()%0A%0A\n-%09\n %09var esq\n@@ -221,17 +221,16 @@\n ta int%0A%0A\n-%09\n %09fmt.Sca\n@@ -262,17 +262,16 @@\n reita)%0A%0A\n-%09\n %09if esqu\n@@ -285,25 +285,24 @@\n direita %7B%0A%09%09\n-%09\n fila.Enqueue\n@@ -309,17 +309,16 @@\n (time1)%0A\n-%09\n %09%7D else \n@@ -321,17 +321,16 @@\n lse %7B%0A%09%09\n-%09\n fila.Enq\n@@ -345,14 +345,12 @@\n e2)%0A\n-%09\n %09%7D%0A%0A\n-%09\n %09fmt\n@@ -373,13 +373,10 @@\n ring())%0A\n-%09%7D%0A\n %7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-05_16-22-38",
+            "content": "@@ -159,18 +159,17 @@\n  0; i %3C \n-16\n+8\n ; i++ %7B%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-05_16-22-53",
+            "content": "@@ -148,25 +148,25 @@\n %0A%0A%09for i := \n-1\n+0\n ; i %3C 16; i+\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-05_16-23-01",
+            "content": "@@ -416,66 +416,7 @@\n )%0A%09%7D\n-%0A%0A%09ganhador := fila.Dequeue()%0A%0A%09fmt.Println('A' + ganhador)\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-05_16-24-12",
+            "content": "@@ -457,20 +457,17 @@\n rint\n-f(%22%25c%22, 'A'+\n+ln('A' + \n ganh\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-07-05_16-24-29",
+            "content": "@@ -116,63 +116,10 @@\n %7D%0A%0A%09\n-fmt.Println(fila.String())%0A%0A%09teste := fila.Dequeue()%0A%0A%09\n+//\n fmt.\n@@ -143,15 +143,8 @@\n ng()\n-, teste\n )%0A%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-07-05_16-29-56",
+            "content": "@@ -141,18 +141,16 @@\n ng())%0A%0A%09\n-//\n teste :=\n@@ -171,10 +171,8 @@\n )%0A%0A%09\n-//\n fmt.\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-05_16-30-17",
+            "content": "@@ -214,33 +214,32 @@\n %09for i := 1; i %3C\n-=\n  16; i++ %7B%0A%09%09tim\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-05_16-30-28",
+            "content": "@@ -222,16 +222,17 @@\n = 1; i %3C\n+=\n  16; i++\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-05_16-30-32",
+            "content": "@@ -75,14 +75,15 @@\n  := \n-0\n+1\n ; i %3C\n+=\n  16;\n@@ -108,14 +108,8 @@\n eue(\n-'A' + \n i)%0A%09\n@@ -525,16 +525,20 @@\n f(%22%25c%22, \n+'A'+\n ganhador\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-05_16-31-46",
+            "content": "@@ -454,56 +454,8 @@\n %09%7D%0A%0A\n-%09%09fmt.Println(esquerda, direita, time1, time2)%0A%0A\n %09%09fm\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-05_16-32-31",
+            "content": "@@ -331,16 +331,25 @@\n mt.Scan(\n+%22%25d %25d%22, \n &esquerd\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-05_16-33-21",
+            "content": "@@ -443,18 +443,16 @@\n %0A%09%09%7D%0A%0A%09%09\n-//\n fmt.Prin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-05_16-33-33",
+            "content": "@@ -489,26 +489,24 @@\n , time2)%0A%0A%09%09\n-//\n fmt.Println(\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-05_16-33-40",
+            "content": "@@ -117,18 +117,16 @@\n i)%0A%09%7D%0A%0A%09\n-//\n fmt.Prin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-05_16-33-46",
+            "content": "@@ -567,19 +567,24 @@\n mt.Print\n-ln(\n+f(%22%25c%22, \n ganhador\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-05_16-33-59",
+            "content": "@@ -571,18 +571,11 @@\n rint\n-f(%22%25c%5Cn%22, \n+ln(\n ganh\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-05_16-34-05",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfila := NewQueue[int]()\n\n\tfor i := 0; i < 16; i++ {\n\t\tfila.Enqueue('A' + i)\n\t}\n\n\t//fmt.Println(fila.String())\n\n\t//teste := fila.Dequeue()\n\n\t//fmt.Println(fila.String(), teste)\n\n\tfor i := 1; i < 16; i++ {\n\t\ttime1 := fila.Dequeue()\n\t\ttime2 := fila.Dequeue()\n\n\t\tvar esquerda, direita int\n\n\t\tfmt.Scan(&esquerda, &direita)\n\n\t\tif esquerda > direita {\n\t\t\tfila.Enqueue(time1)\n\t\t} else {\n\t\t\tfila.Enqueue(time2)\n\t\t}\n\n\t\t//fmt.Println(esquerda, direita, time1, time2)\n\n\t\t//fmt.Println(fila.String())\n\t}\n\n\tganhador := fila.Dequeue()\n\n\tfmt.Printf(\"%c\\n\", ganhador)\n}\n",
+            "lines": "40"
+        }
+    ]
+}

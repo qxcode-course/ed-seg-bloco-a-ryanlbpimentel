@@ -22,9 +22,11 @@ expanded: []
 flags:
   inbox: all
   panel: skills
-  show_panel: 'true'
-  task_graph_mode: time
+  task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@vector
-selected_index: 3
+selected: ed@dfs
+selected_index: 8

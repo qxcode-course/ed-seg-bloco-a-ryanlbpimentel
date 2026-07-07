@@ -1,0 +1,134 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_18-30-08",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,20 +41,35 @@\n     \n-var char rune\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-06_00-09-32",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -34,17 +34,20 @@\n ain() %7B%0A\n-%09\n+    \n var char\n@@ -55,25 +55,7 @@\n rune\n-%0A%0A%09fmt.Scan(&char)\n %0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-07-06_00-09-42",
+            "content": "@@ -71,27 +71,7 @@\n har)\n-%0A%0A%09fmt.Println(char)\n %0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-07-06_00-09-57",
+            "content": "@@ -49,14 +49,12 @@\n har \n-string\n+rune\n %0A%0A%09f\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-07-06_00-10-07",
+            "content": "@@ -18,117 +18,62 @@\n ort \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Afunc main() %7B%0A%09buffer := bufio.NewReader(os.Stdin)%0A%09text := buffer.ReadString('%5Cn'\n+%22fmt%22%0A%0Afunc main() %7B%0A%09var char string%0A%0A%09fmt.Scan(&char\n )%0A%0A%09\n@@ -84,12 +84,16 @@\n Println(\n+char\n )%0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-07-06_00-11-20",
+            "content": "@@ -139,16 +139,12 @@\n Println(\n-text\n )%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-07-06_00-11-21",
+            "content": "@@ -101,11 +101,8 @@\n text\n-, _\n  := \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-07-06_00-11-31",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strings%22%0A\n )%0A%0Af\n@@ -133,42 +133,8 @@\n ')%0A%0A\n-%09char := strings.Split(text, %22%22)%0A%0A\n %09fmt\n@@ -146,12 +146,12 @@\n tln(\n-char\n+text\n )%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-07-06_00-13-08",
+            "content": "@@ -195,11 +195,8 @@\n char\n-%5B1%5D\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-06_00-13-33",
+            "content": "@@ -196,9 +196,9 @@\n har%5B\n-0\n+1\n %5D)%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-06_00-13-39",
+            "content": "@@ -196,9 +196,9 @@\n har%5B\n-3\n+0\n %5D)%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-06_00-13-49",
+            "content": "@@ -196,9 +196,9 @@\n har%5B\n-2\n+3\n %5D)%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-06_00-13-55",
+            "content": "@@ -196,9 +196,9 @@\n har%5B\n-1\n+2\n %5D)%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-06_00-14-03",
+            "content": "@@ -142,44 +142,8 @@\n %5Cn')\n-%0A%09trimmed := strings.TrimSpace(text)\n %0A%0A%09c\n@@ -168,14 +168,11 @@\n it(t\n-rimmed\n+ext\n , %22%22\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-06_00-15-17",
+            "content": "@@ -235,9 +235,9 @@\n har%5B\n-2\n+1\n %5D)%0A%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-07-06_00-15-21",
+            "content": "@@ -29,14 +29,21 @@\n io%22%0A\n+%09%22fmt%22%0A\n %09%22os%22%0A\n-\n %09%22st\n@@ -70,38 +70,8 @@\n ) %7B%0A\n-%09stack := NewStack%5Bstring%5D()%0A%0A\n %09buf\n@@ -219,268 +219,26 @@\n %0A%0A%09f\n-or _, c := range char %7B%0A%09%09switch c %7B%0A%09%09case %22(%22, %22%5B%22, %22%7B%22:%0A%09%09%09stack.Push(c)%0A%09%09case %22)%22, %22%5D%22, %22%7D%22:%0A%09%09%09top := stack.Pop()%0A%0A%09%09%09if (c == %22)%22 && top != %22(%22) %7C%7C (c == %22%5D%22 && top != %22%5B%22) %7C%7C (c == %22%7D%22 && top != %22%7B%22) %7B%0A%09%09%09%09println(%22desbalanceada%22)%0A%09%09%09%09return%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+mt.Println(char%5B2%5D)\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-07-06_00-30-02",
+            "content": "@@ -485,13 +485,14 @@\n %09%09%09%09\n-b\n re\n-ak\n+turn\n %0A%09%09%09\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-07-06_00-30-11",
+            "content": "@@ -29,15 +29,8 @@\n io%22%0A\n-%09%22fmt%22%0A\n %09%22os\n@@ -456,13 +456,9 @@\n %09%09%09%09\n-fmt.P\n+p\n rint\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-07-06_00-30-17",
+            "content": "@@ -275,45 +275,40 @@\n %7B%0A%09%09\n-if c == %22(%22 %7C%7C c == %22%5B%22 %7C%7C c ==\n+switch c %7B%0A%09%09case %22(%22, %22%5B%22,\n  %22%7B%22\n- %7B\n+:\n %0A%09%09%09\n@@ -327,16 +327,27 @@\n )%0A%09%09\n-%7D else %7B\n+case %22)%22, %22%5D%22, %22%7D%22:\n %0A%09%09%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-06_00-32-06",
+            "content": "@@ -341,80 +341,8 @@\n e %7B%0A\n-%09%09%09if stack.IsEmpty() %7B%0A%09%09%09%09fmt.Println(%22desbalanceada%22)%0A%09%09%09%09break%0A%09%09%09%7D%0A\n %09%09%09t\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-07-06_00-33-18",
+            "content": "@@ -370,36 +370,35 @@\n %09%09%09fmt.Println(%22\n-nao \n+des\n balanceada%22)%0A%09%09%09\n@@ -542,12 +542,11 @@\n ln(%22\n-nao \n+des\n bala\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-07-06_00-33-34",
+            "content": "@@ -383,33 +383,33 @@\n n(%22nao balancead\n-o\n+a\n %22)%0A%09%09%09%09break%0A%09%09%09\n@@ -552,17 +552,17 @@\n alancead\n-o\n+a\n %22)%0A%09%09%09%09b\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-07-06_00-33-42",
+            "content": "@@ -581,61 +581,7 @@\n %7D%0A%09%7D\n-%0A%0A%09if stack.IsEmpty() %7B%0A%09%09fmt.Println(%22balanceado%22)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-07-06_00-34-07",
+            "content": "@@ -391,38 +391,37 @@\n alanceado%22)%0A%09%09%09%09\n+b\n re\n-turn\n+ak\n %0A%09%09%09%7D%0A%09%09%09top := \n@@ -564,14 +564,13 @@\n %09%09%09%09\n+b\n re\n-turn\n+ak\n %0A%09%09%09\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-06_00-35-01",
+            "content": "@@ -635,50 +635,8 @@\n o%22)%0A\n-%09%7D else %7B%0A%09%09fmt.Println(%22nao balanceado%22)%0A\n %09%7D%0A%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-06_00-36-39",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc main() {\n\tstack := NewStack[string]()\n\n\tbuffer := bufio.NewReader(os.Stdin)\n\ttext, _ := buffer.ReadString('\\n')\n\ttrimmed := strings.TrimSpace(text)\n\n\tchar := strings.Split(trimmed, \"\")\n\n\tfor _, c := range char {\n\t\tif c == \"(\" || c == \"[\" || c == \"{\" {\n\t\t\tstack.Push(c)\n\t\t} else {\n\t\t\tif stack.IsEmpty() {\n\t\t\t\tfmt.Println(\"nao balanceado\")\n\t\t\t\treturn\n\t\t\t}\n\t\t\ttop := stack.Pop()\n\n\t\t\tif (c == \")\" && top != \"(\") || (c == \"]\" && top != \"[\") || (c == \"}\" && top != \"{\") {\n\t\t\t\tfmt.Println(\"nao balanceado\")\n\t\t\t\treturn\n\t\t\t}\n\t\t}\n\t}\n\n\tif stack.IsEmpty() {\n\t\tfmt.Println(\"balanceado\")\n\t} else {\n\t\tfmt.Println(\"nao balanceado\")\n\t}\n}\n",
+            "lines": "41"
+        }
+    ]
+}

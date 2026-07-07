@@ -1,0 +1,304 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-14_03-19-01",
+            "content": "@@ -275,333 +275,8 @@\n %0A%7D%0A%0A\n-type MultiSet struct %7B%0A%09data     %5B%5Dint%0A%09size     int%0A%09capacity int%0A%7D%0A%0Afunc NewMultiSet(capacity int) *MultiSet %7B%0A%09return &MultiSet%7B%0A%09%09data:     make(%5B%5Dint, capacity),%0A%09%09size:     0,%0A%09%09capacity: capacity,%0A%09%7D%0A%7D%0A%0Afunc (v *MultiSet) expand()%7B%0A%09for i := 0; i %3C v.capacity; i++%7B%0A%09%09v.data = append(v.data, 0)%0A%09%7D%0A%09v.capacity *= 2%0A%7D%0A%0A\n func\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-14_03-36-55",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -508,17 +508,16 @@\n expand()\n- \n %7B%0A%09for i\n@@ -538,25 +538,24 @@\n apacity; i++\n- \n %7B%0A%09%09v.data =\n@@ -600,578 +600,8 @@\n %0A%7D%0A%0A\n-func (v *MultiSet) insert(value int, index int) error %7B%0A%09//fmt.Println(v.data, index, value)%0A%09for i := v.size; i %3E index; i-- %7B%0A%09%09//fmt.Println(v.data, i, v.data%5Bi-1%5D)%0A%09%09v.data%5Bi%5D = v.data%5Bi-1%5D%0A%09%7D%0A%09v.data%5Bindex%5D = value%0A%09v.size++%0A%09//fmt.Println(v.data, index, value)%0A%09return nil%0A%7D%0A%0Afunc (v *MultiSet) Insert(value int) %7B%0A%09if v.size == v.capacity %7B%0A%09%09v.expand()%0A%09%7D%0A%09//fmt.Println(v.data)%0A%09for i := 0; i %3C v.capacity; i++ %7B%0A%09%09if v.data%5Bi%5D %3C value && v.data%5Bi%5D != 0 %7B%0A%09%09%09v.insert(value, i)%0A%09%09%09break%0A%09%09%7D else if v.data%5Bi%5D == value %7B%0A%09%09%09v.insert(value, i)%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%7D%0A%0A\n func\n@@ -1010,16 +1010,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -1048,16 +1048,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1086,16 +1086,19 @@\n art)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-14_15-26-45",
+            "content": "@@ -490,34 +490,33 @@\n ty,%0A%09%7D%0A%7D%0A%0Afunc (\n-ms\n+v\n  *MultiSet) expa\n@@ -531,34 +531,33 @@\n for i := 0; i %3C \n-ms\n+v\n .capacity; i++ %7B\n@@ -559,18 +559,17 @@\n i++ %7B%0A%09%09\n-ms\n+v\n .data = \n@@ -575,18 +575,17 @@\n  append(\n-ms\n+v\n .data, 0\n@@ -590,18 +590,17 @@\n  0)%0A%09%7D%0A%09\n-ms\n+v\n .capacit\n@@ -607,34 +607,33 @@\n y *= 2%0A%7D%0A%0Afunc (\n-ms\n+v\n  *MultiSet) inse\n@@ -680,18 +680,17 @@\n Println(\n-ms\n+v\n .data, i\n@@ -712,18 +712,17 @@\n or i := \n-ms\n+v\n .size; i\n@@ -779,18 +779,17 @@\n i-1%5D)%0A%09%09\n-ms\n+v\n .data%5Bi%5D\n@@ -791,18 +791,17 @@\n ta%5Bi%5D = \n-ms\n+v\n .data%5Bi-\n@@ -807,18 +807,17 @@\n -1%5D%0A%09%7D%0A%09\n-ms\n+v\n .data%5Bin\n@@ -830,18 +830,17 @@\n  value%0A%09\n-ms\n+v\n .size++%0A\n@@ -897,18 +897,17 @@\n %0A%0Afunc (\n-ms\n+v\n  *MultiS\n@@ -934,18 +934,17 @@\n ) %7B%0A%09if \n-ms\n+v\n .size ==\n@@ -944,18 +944,17 @@\n size == \n-ms\n+v\n .capacit\n@@ -959,18 +959,17 @@\n ity %7B%0A%09%09\n-ms\n+v\n .expand(\n@@ -1013,18 +1013,17 @@\n  0; i %3C \n-ms\n+v\n .capacit\n@@ -1036,18 +1036,17 @@\n  %7B%0A%09%09if \n-ms\n+v\n .data%5Bi%5D\n@@ -1057,18 +1057,17 @@\n alue && \n-ms\n+v\n .data%5Bi%5D\n@@ -1073,26 +1073,25 @@\n %5D != 0 %7B%0A%09%09%09\n-ms\n+v\n .insert(valu\n@@ -1117,18 +1117,17 @@\n else if \n-ms\n+v\n .data%5Bi%5D\n@@ -1141,18 +1141,17 @@\n ue %7B%0A%09%09%09\n-ms\n+v\n .insert(\n@@ -1255,16 +1255,19 @@\n Stdin)%0A%09\n+// \n ms := Ne\n@@ -1667,31 +1667,9 @@\n %0A%09%09%09\n-%09ms.Insert(value)%0A%09%09%09%7D%0A\n+%7D\n %0A%09%09c\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-06-14_15-28-17",
+            "content": "@@ -1725,161 +1725,8 @@\n w%22:%0A\n-%09%09%09fmt.Print(%22%5B%22)%0A%0A%09%09%09for i, value := range ms.data%5B:ms.size%5D %7B%0A%09%09%09%09if i %3E 0 %7B%0A%09%09%09%09%09fmt.Print(%22, %22)%0A%09%09%09%09%7D%0A%09%09%09%09fmt.Print(value)%0A%09%09%09%7D%0A%0A%09%09%09fmt.Println(%22%5D%22)%0A\n %09%09ca\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-14_15-28-41",
+            "content": "@@ -1076,10 +1076,72 @@\n lue \n-%7C%7C\n+&& ms.data%5Bi%5D != 0 %7B%0A%09%09%09ms.insert(value, i)%0A%09%09%09break%0A%09%09%7D else if\n  ms.\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-06-14_15-29-23",
+            "content": "@@ -990,16 +990,18 @@\n d()%0A%09%7D%0A%09\n+//\n fmt.Prin\n@@ -1000,26 +1000,25 @@\n fmt.Println(\n-ms\n+v\n .data)%0A%09for \n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-06-14_15-29-50",
+            "content": "@@ -852,16 +852,18 @@\n size++%0A%09\n+//\n fmt.Prin\n@@ -858,34 +858,33 @@\n %0A%09//fmt.Println(\n-ms\n+v\n .data, index, va\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-06-14_15-30-07",
+            "content": "@@ -855,10 +855,8 @@\n e++%0A\n-%09%0A\n %09fmt\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-06-14_15-30-44",
+            "content": "@@ -851,16 +851,17 @@\n .size++%0A\n+%09\n %0A%09fmt.Pr\n@@ -1065,16 +1065,38 @@\n ata%5Bi%5D %3C\n+ value %7C%7C ms.data%5Bi%5D =\n = value \n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-14_15-31-26",
+            "content": "@@ -1440,16 +1440,19 @@\n it%22:%0A%09%09%09\n+// \n value, _\n@@ -1480,16 +1480,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n ms = New\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-14_15-31-44",
+            "content": "@@ -1016,24 +1016,31 @@\n a)%0A%09for i :=\n+ 0; i %3C\n  ms.capacity\n@@ -1046,17 +1046,10 @@\n y; i\n- %3E 0; i--\n+++\n  %7B%0A%09\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-14_15-32-32",
+            "content": "@@ -1036,12 +1036,8 @@\n city\n- - 1\n ; i \n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-14_15-32-38",
+            "content": "@@ -1012,39 +1012,32 @@\n .data)%0A%09for i :=\n- 0; i %3C\n  ms.capacity; i+\n@@ -1028,29 +1028,40 @@\n  ms.capacity\n-; i++\n+ - 1; i %3E 0; i--\n  %7B%0A%09%09if ms.d\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-14_15-33-09",
+            "content": "@@ -989,17 +989,16 @@\n nd()%0A%09%7D%0A\n-%0A\n %09fmt.Pri\n@@ -1117,198 +1117,8 @@\n %0A%09%7D%0A\n-%0A%09primeiro, ultimo := 0, ms.capacity%0A%0A%09for primeiro != ultimo %7C%7C primeiro+1 == ultimo %7B%0A%09%09ms.data%5Bprimeiro%5D, ms.data%5Bultimo%5D = ms.data%5Bultimo%5D, ms.data%5Bprimeiro%5D%0A%09%09primeiro++%0A%09%09ultimo++%0A%09%7D%0A%0A\n %7D%0A%0Af\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-14_15-40-20",
+            "content": "@@ -1150,18 +1150,16 @@\n capacity\n--1\n %0A%0A%09for p\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-06-14_15-40-34",
+            "content": "@@ -1151,17 +1151,17 @@\n apacity-\n-2\n+1\n %0A%0A%09for p\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-06-14_15-40-40",
+            "content": "@@ -1155,9 +1155,9 @@\n ity-\n-4\n+2\n %0A%0A%09f\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-06-14_15-40-46",
+            "content": "@@ -1151,17 +1151,17 @@\n apacity-\n-1\n+4\n %0A%0A%09for p\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-06-14_15-40-51",
+            "content": "@@ -853,18 +853,16 @@\n ize++%0A%0A%09\n-//\n fmt.Prin\n@@ -888,16 +888,16 @@\n  value)%0A\n+\n %09return \n@@ -991,18 +991,16 @@\n ()%0A%09%7D%0A%0A%09\n-//\n fmt.Prin\n@@ -1157,38 +1157,8 @@\n y-1%0A\n-%09fmt.Println(primeiro, ultimo)\n %0A%09fo\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-06-14_15-41-24",
+            "content": "@@ -1204,16 +1204,40 @@\n meiro !=\n+ ultimo %7C%7C primeiro+1 ==\n  ultimo \n@@ -1316,49 +1316,8 @@\n ro%5D%0A\n-%09%09if primeiro+1 == ultimo %7B%0A%09%09%09break%0A%09%09%7D%0A\n %09%09pr\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-06-14_15-42-10",
+            "content": "@@ -1155,17 +1155,17 @@\n apacity-\n-2\n+1\n %0A%09fmt.Pr\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-14_15-42-34",
+            "content": "@@ -1157,16 +1157,47 @@\n acity-2%0A\n+%09fmt.Println(primeiro, ultimo)%0A\n %09for pri\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-14_15-42-53",
+            "content": "@@ -1161,39 +1161,8 @@\n y-2%0A\n-%09fmt.Println(primeiro, ultimo)%0A\n %09for\n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-06-14_15-43-00",
+            "content": "@@ -1114,24 +1114,263 @@\n reak%0A%09%09%7D%0A%09%7D%0A\n+%0A%09primeiro, ultimo := 0, ms.capacity-2%0A%09fmt.Println(primeiro, ultimo)%0A%09for primeiro != ultimo %7B%0A%09%09ms.data%5Bprimeiro%5D, ms.data%5Bultimo%5D = ms.data%5Bultimo%5D, ms.data%5Bprimeiro%5D%0A%09%09if primeiro+1 == ultimo %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09primeiro++%0A%09%09ultimo++%0A%09%7D%0A%0A\n %7D%0A%0Afunc main\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-14_15-43-39",
+            "content": "@@ -992,16 +992,40 @@\n d()%0A%09%7D%0A%0A\n+%09//fmt.Println(ms.data)%0A\n %09for i :\n@@ -1069,72 +1069,13 @@\n ata%5B\n-0\n+i\n %5D \n+%3C\n =\n-= 0 %7B%0A%09%09%09ms.insert(value, 0)%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09if ms.data%5Bi%5D %3E\n  val\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-06-14_15-49-01",
+            "content": "@@ -1105,17 +1105,16 @@\n ata%5Bi%5D %3E\n-=\n  value %7B\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-14_15-49-08",
+            "content": "@@ -1155,32 +1155,8 @@\n %09%09%7D%0A\n-%09%09ms.insert(value, i+1)%0A\n %09%7D%0A%7D\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-14_15-49-19",
+            "content": "@@ -1147,24 +1147,48 @@\n %09%09break%0A%09%09%7D%0A\n+%09%09ms.insert(value, i+1)%0A\n %09%7D%0A%7D%0A%0Afunc m\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-14_15-49-42",
+            "content": "@@ -1104,17 +1104,18 @@\n data%5Bi%5D \n-%3C\n+%3E=\n  value %7B\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-14_15-51-04",
+            "content": "@@ -1108,10 +1108,9 @@\n %5Bi%5D \n-%3E=\n+%3C\n  val\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-14_15-51-15",
+            "content": "@@ -1030,18 +1030,16 @@\n i++ %7B%0A%09%09\n-//\n if ms.da\n@@ -1053,18 +1053,16 @@\n = 0 %7B%0A%09%09\n-//\n %09ms.inse\n@@ -1076,18 +1076,16 @@\n e, 0)%0A%09%09\n-//\n %09break%0A%09\n@@ -1085,18 +1085,16 @@\n break%0A%09%09\n-//\n %7D%0A%0A%09%09if \n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-14_15-51-26",
+            "content": "@@ -1030,16 +1030,18 @@\n i++ %7B%0A%09%09\n+//\n if ms.da\n@@ -1051,24 +1051,26 @@\n 0%5D == 0 %7B%0A%09%09\n+//\n %09ms.insert(v\n@@ -1076,24 +1076,26 @@\n value, 0)%0A%09%09\n+//\n %09break%0A%09%09%7D%0A%0A\n@@ -1091,16 +1091,18 @@\n break%0A%09%09\n+//\n %7D%0A%0A%09%09if \n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-14_15-51-30",
+            "content": "@@ -1151,53 +1151,8 @@\n eak%0A\n-%09%09%7D else %7B%0A%09%09%09ms.insert(value, i+1)%0A%09%09%09break%0A\n %09%09%7D%0A\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-14_15-52-39",
+            "content": "@@ -1171,32 +1171,34 @@\n .insert(value, i\n++1\n )%0A%09%09%09break%0A%09%09%7D%0A%09\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-14_15-53-00",
+            "content": "@@ -1143,24 +1143,67 @@\n i)%0A%09%09%09break%0A\n+%09%09%7D else %7B%0A%09%09%09ms.insert(value, i)%0A%09%09%09break%0A\n %09%09%7D%0A%09%7D%0A%7D%0A%0Afu\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-14_15-53-06",
+            "content": "@@ -1154,30 +1154,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09fmt.Println(value)\n %0A%09%7D%0A\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-14_15-57-52",
+            "content": "@@ -1154,63 +1154,30 @@\n %0A%09%09%7D\n- else if ms.data%5Bi+1%5D == 0 %7B%0A%09%09%09ms.insert(value, i)%0A%09%09%7D\n+%0A%0A%09%09fmt.Println(value)\n %0A%09%7D%0A\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-14_15-58-55",
+            "content": "@@ -1090,61 +1090,8 @@\n %0A%09%09%7D\n- else if ms.data%5Bi%5D == 0 %7B%0A%09%09%09ms.insert(value, i)%0A%09%09%7D\n %0A%0A%09%09\n@@ -1150,17 +1150,71 @@\n reak%0A%09%09%7D\n-%0A\n+ else if ms.data%5Bi+1%5D == 0 %7B%0A%09%09%09ms.insert(value, i)%0A%09%09%7D\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-14_15-59-34",
+            "content": "@@ -1029,24 +1029,86 @@\n  i++ %7B%0A%09%09if \n+ms.data%5B0%5D == 0 %7B%0A%09%09%09ms.insert(value, 0)%0A%09%09%09break%0A%09%09%7D else if \n ms.data%5Bi%5D =\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-14_15-59-49",
+            "content": "@@ -1070,33 +1070,24 @@\n t(value, i)%0A\n-%09%09%09break%0A\n %09%09%7D%0A%0A%09%09if ms\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-14_16-00-06",
+            "content": "@@ -1162,158 +1162,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Contains(value int) bool %7B%0A%09for i := 0; i %3C ms.capacity; i++ %7B%0A%09%09if ms.data%5Bi%5D == value %7B%0A%09%09%09return true%0A%09%09%7D%0A%0A%09%7D%0A%09return false%0A%7D%0A%0A\n func\n@@ -1899,24 +1899,27 @@\n ntains%22:%0A%09%09%09\n+// \n value, _ := \n@@ -1943,102 +1943,8 @@\n %5B1%5D)\n-%0A%0A%09%09%09if ms.Contains(value) %7B%0A%09%09%09%09fmt.Println(%22true%22)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Println(%22false%22)%0A%09%09%09%7D\n %0A%09%09c\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-14_16-03-49",
+            "content": "@@ -1312,392 +1312,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) erase(index int) %7B%0A%09for i := index; i %3C ms.size-1; i++ %7B%0A%09%09ms.data%5Bi%5D = ms.data%5Bi+1%5D%0A%09%7D%0A%0A%09ms.data%5Bms.size-1%5D = 0%0A%09ms.size--%0A%7D%0A%0Afunc (ms *MultiSet) Erase(value int) bool %7B%0A%09for i := 0; i %3C= ms.size; i++ %7B%0A%09%09if ms.data%5Bi%5D == value %7B%0A%09%09%09//fmt.Println(%22achou%22)%0A%09%09%09ms.erase(i)%0A%09%09%09return true%0A%09%09%7D else %7B%0A%09%09%09//fmt.Println(%22nao achou%22)%0A%09%09%09continue%0A%09%09%7D%0A%09%7D%0A%09return false%0A%7D%0A%0A\n func\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-06-14_16-05-30",
+            "content": "@@ -2374,24 +2374,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2418,74 +2418,8 @@\n %5B1%5D)\n-%0A%0A%09%09%09if !ms.Erase(value) %7B%0A%09%09%09%09fmt.Println(%22value not found%22)%0A%09%09%09%7D\n %0A%09%09c\n",
+            "lines": "164"
+        },
+        {
+            "label": "2026-06-14_16-05-48",
+            "content": "@@ -1696,159 +1696,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Count(value int) int %7B%0A%09soma := 0%0A%09for i := 0; i %3C ms.capacity; i++ %7B%0A%09%09if ms.data%5Bi%5D == value %7B%0A%09%09%09soma++%0A%09%09%7D%0A%0A%09%7D%0A%09return soma%0A%7D%0A%0A\n func\n",
+            "lines": "168"
+        },
+        {
+            "label": "2026-06-14_16-06-37",
+            "content": "@@ -2794,24 +2794,27 @@\n %22count%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2838,41 +2838,8 @@\n %5B1%5D)\n-%0A%0A%09%09%09fmt.Println(ms.Count(value))\n %0A%09%09c\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-06-14_16-06-57",
+            "content": "@@ -1847,250 +1847,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Unique(value int) int %7B%0A%09maior := 0%0A%0A%09for i := ms.capacity; i %3C ms.capacity; i++ %7B%0A%09%09if ms.data%5Bi%5D %3E value %7B%0A%09%09%09maior = value%0A%09%09%7D%0A%0A%09%7D%0A%0A%09for i := 1; i %3C= maior; i++ %7B%0A%09%09if !ms.Contains(i) %7B%0A%09%09%09return i%0A%09%09%7D%0A%09%7D%0A%0A%09return 0%0A%7D%0A%0A\n func\n@@ -2882,17 +2882,16 @@\n nique%22:%0A\n-%0A\n %09%09case %22\n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-06-14_16-10-58",
+            "content": "@@ -3128,40 +3128,8 @@\n e%22:%0A\n-%09%09%09fmt.Println(ms.Unique(value))\n %0A%09%09c\n",
+            "lines": "201"
+        },
+        {
+            "label": "2026-06-14_16-11-11",
+            "content": "@@ -3148,16 +3148,23 @@\n s.Unique\n+(value)\n )%0A%09%09case\n",
+            "lines": "201"
+        },
+        {
+            "label": "2026-06-14_16-11-18",
+            "content": "@@ -1870,16 +1870,25 @@\n  Unique(\n+value int\n ) int %7B%0A\n@@ -1964,21 +1964,21 @@\n ta%5Bi%5D %3E \n-maior\n+value\n  %7B%0A%09%09%09ma\n@@ -1983,26 +1983,21 @@\n maior = \n-ms.data%5Bi%5D\n+value\n %0A%09%09%7D%0A%0A%09%7D\n@@ -3148,18 +3148,16 @@\n s.Unique\n-()\n )%0A%09%09case\n",
+            "lines": "201"
+        },
+        {
+            "label": "2026-06-14_16-12-01",
+            "content": "@@ -1883,22 +1883,11 @@\n  %7B%0A%09\n-soma := 0%0A%09val\n+mai\n or :\n@@ -1893,33 +1893,43 @@\n := 0%0A%0A%09for i := \n-0\n+ms.capacity\n ; i %3C ms.capacit\n@@ -1946,23 +1946,35 @@\n %09if \n-i == 0\n+ms.data%5Bi%5D %3E maior\n  %7B%0A%09%09%09\n-val\n+mai\n or =\n@@ -1991,64 +1991,84 @@\n %5D%0A%09%09\n-%09continue%0A%09%09%7D%0A%0A%09%09if ms.data%5Bi%5D != valor %7B%0A%09%09%09soma++%0A%09%09%7D%0A\n+%7D%0A%0A%09%7D%0A%0A%09for i := 1; i %3C= maior; i++ %7B%0A%09%09if !ms.Contains(i) %7B%0A%09%09%09return i%0A%09%09%7D\n %0A%09%7D%0A\n@@ -2068,36 +2068,33 @@\n %09%09%7D%0A%09%7D%0A%0A%09return \n-soma\n+0\n %0A%7D%0A%0Afunc main() \n",
+            "lines": "201"
+        },
+        {
+            "label": "2026-06-14_16-14-36",
+            "content": "@@ -2032,42 +2032,8 @@\n a++%0A\n-%09%09%09fmt.Println(ms.data%5Bi%5D, valor)%0A\n %09%09%7D%0A\n",
+            "lines": "201"
+        },
+        {
+            "label": "2026-06-14_16-14-55",
+            "content": "@@ -2018,38 +2018,16 @@\n valor %7B%0A\n-%09%09%09valor = ms.data%5Bi%5D%0A\n %09%09%09soma+\n",
+            "lines": "202"
+        },
+        {
+            "label": "2026-06-14_16-15-11",
+            "content": "@@ -2025,70 +2025,70 @@\n %0A%09%09%09\n-fmt.Println(ms.data%5Bi%5D, valor)%0A%09%09%09valor = ms.data%5Bi%5D%0A%09%09%09soma++\n+valor = ms.data%5Bi%5D%0A%09%09%09soma++%0A%09%09%09fmt.Println(ms.data%5Bi%5D, valor)\n %0A%09%09%7D\n",
+            "lines": "203"
+        },
+        {
+            "label": "2026-06-14_16-15-30",
+            "content": "@@ -1974,26 +1974,16 @@\n data%5Bi%5D%0A\n-%09%09%09soma++%0A\n %09%09%09conti\n",
+            "lines": "203"
+        },
+        {
+            "label": "2026-06-14_16-15-38",
+            "content": "@@ -1942,45 +1942,8 @@\n + %7B%0A\n-%09%09if ms.data%5Bi%5D == 0 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A\n %09%09if\n",
+            "lines": "204"
+        },
+        {
+            "label": "2026-06-14_16-16-21",
+            "content": "@@ -2064,26 +2064,24 @@\n  valor %7B%0A%09%09%09\n-//\n fmt.Println(\n",
+            "lines": "208"
+        },
+        {
+            "label": "2026-06-14_16-16-41",
+            "content": "@@ -2162,97 +2162,8 @@\n %0A%7D%0A%0A\n-func (ms *MultiSet) Clear() %7B%0A%09for i := 0; i %3C ms.capacity; i++ %7B%0A%09%09ms.data%5Bi%5D = 0%0A%09%7D%0A%7D%0A%0A\n func\n",
+            "lines": "208"
+        },
+        {
+            "label": "2026-06-14_16-17-33",
+            "content": "@@ -3334,22 +3334,8 @@\n r%22:%0A\n-%09%09%09ms.Clear()%0A\n %09%09de\n",
+            "lines": "214"
+        },
+        {
+            "label": "2026-06-14_16-17-47",
+            "content": "@@ -2247,22 +2247,8 @@\n 0%0A%09%7D\n-%0A%0A%09ms.size = 0\n %0A%7D%0A%0A\n",
+            "lines": "215"
+        },
+        {
+            "label": "2026-06-14_16-18-06",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\ntype MultiSet struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewMultiSet(capacity int) *MultiSet {\n\treturn &MultiSet{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (ms *MultiSet) expand() {\n\tfor i := 0; i < ms.capacity; i++ {\n\t\tms.data = append(ms.data, 0)\n\t}\n\tms.capacity *= 2\n}\n\nfunc (ms *MultiSet) insert(value int, index int) error {\n\t//fmt.Println(ms.data, index, value)\n\tfor i := ms.size; i > index; i-- {\n\t\t//fmt.Println(v.data, i, v.data[i-1])\n\t\tms.data[i] = ms.data[i-1]\n\t}\n\tms.data[index] = value\n\tms.size++\n\n\t//fmt.Println(ms.data, index, value)\n\treturn nil\n}\n\nfunc (ms *MultiSet) Insert(value int) {\n\tif ms.size == ms.capacity {\n\t\tms.expand()\n\t}\n\n\tfor i := 0; i < ms.capacity; i++ {\n\t\tif ms.data[i] == 0 {\n\t\t\tms.insert(value, i)\n\t\t\tbreak\n\t\t}\n\n\t\tif ms.data[i] >= value {\n\t\t\tms.insert(value, i)\n\t\t\tbreak\n\t\t}\n\n\t}\n}\n\nfunc (ms *MultiSet) Contains(value int) bool {\n\tfor i := 0; i < ms.capacity; i++ {\n\t\tif ms.data[i] == value {\n\t\t\treturn true\n\t\t}\n\n\t}\n\treturn false\n}\n\nfunc (ms *MultiSet) erase(index int) {\n\tfor i := index; i < ms.size-1; i++ {\n\t\tms.data[i] = ms.data[i+1]\n\t}\n\n\tms.data[ms.size-1] = 0\n\tms.size--\n}\n\nfunc (ms *MultiSet) Erase(value int) bool {\n\tfor i := 0; i <= ms.size; i++ {\n\t\tif ms.data[i] == value {\n\t\t\t//fmt.Println(\"achou\")\n\t\t\tms.erase(i)\n\t\t\treturn true\n\t\t} else {\n\t\t\t//fmt.Println(\"nao achou\")\n\t\t\tcontinue\n\t\t}\n\t}\n\treturn false\n}\n\nfunc (ms *MultiSet) Count(value int) int {\n\tsoma := 0\n\tfor i := 0; i < ms.capacity; i++ {\n\t\tif ms.data[i] == value {\n\t\t\tsoma++\n\t\t}\n\n\t}\n\treturn soma\n}\n\nfunc (ms *MultiSet) Unique() int {\n\tsoma := 0\n\tvalor := 0\n\n\tfor i := 0; i < ms.capacity; i++ {\n\t\tif ms.data[i] == 0 {\n\t\t\tbreak\n\t\t}\n\n\t\tif i == 0 {\n\t\t\tvalor = ms.data[i]\n\t\t\tsoma++\n\t\t\tcontinue\n\t\t}\n\n\t\tif ms.data[i] != valor {\n\t\t\t//fmt.Println(ms.data[i], valor)\n\t\t\tvalor = ms.data[i]\n\t\t\tsoma++\n\t\t}\n\n\t}\n\n\treturn soma\n}\n\nfunc (ms *MultiSet) Clear() {\n\tfor i := 0; i < ms.capacity; i++ {\n\t\tms.data[i] = 0\n\t}\n\n\tms.size = 0\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\tms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = args[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range args[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tms.Insert(value)\n\t\t\t}\n\n\t\tcase \"show\":\n\t\t\tfmt.Print(\"[\")\n\n\t\t\tfor i, value := range ms.data[:ms.size] {\n\t\t\t\tif i > 0 {\n\t\t\t\t\tfmt.Print(\", \")\n\t\t\t\t}\n\t\t\t\tfmt.Print(value)\n\t\t\t}\n\n\t\t\tfmt.Println(\"]\")\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\n\t\t\tif !ms.Erase(value) {\n\t\t\t\tfmt.Println(\"value not found\")\n\t\t\t}\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\n\t\t\tif ms.Contains(value) {\n\t\t\t\tfmt.Println(\"true\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"false\")\n\t\t\t}\n\t\tcase \"count\":\n\t\t\tvalue, _ := strconv.Atoi(args[1])\n\n\t\t\tfmt.Println(ms.Count(value))\n\t\tcase \"unique\":\n\t\t\tfmt.Println(ms.Unique())\n\t\tcase \"clear\":\n\t\t\tms.Clear()\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "217"
+        }
+    ]
+}

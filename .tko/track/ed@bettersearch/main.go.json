@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-14_03-00-32",
+            "content": "@@ -124,237 +124,27 @@\n  %7B%0A%09\n-low, high := 0, len(slice)-1%0A%0A%09for low %3C= high %7B%0A%09%09mid := (low + high) / 2%0A%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09return true, mid%0A%09%09%7D%0A%0A%09%09if slice%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else if slice%5Bmid%5D %3E value %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%0A%09%7D\n+_, _ = slice, value\n %0A%09re\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-14_03-05-06",
+            "content": "@@ -351,52 +351,8 @@\n %09%7D%0A%0A\n-%09%09if low == high %7B%0A%09%09%09return false, low%0A%09%09%7D%0A\n %09%7D%0A%09\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-14_03-06-35",
+            "content": "@@ -345,16 +345,61 @@\n  - 1%0A%09%09%7D\n+%0A%0A%09%09if low == high %7B%0A%09%09%09return false, low%0A%09%09%7D\n %0A%09%7D%0A%09ret\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-14_03-07-10",
+            "content": "@@ -250,71 +250,8 @@\n %0A%09%09%7D\n- else if slice%5Bvalue%5D != value %7B%0A%09%09%09return false, value + 1%0A%09%09%7D\n %0A%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-14_03-07-53",
+            "content": "@@ -256,43 +256,8 @@\n lse \n-%7B%0A%09%09%09if !value %3E len(slice)-1%7B%0A%09%09%09%09\n if s\n@@ -282,18 +282,16 @@\n ue %7B%0A%09%09%09\n-%09%09\n return f\n@@ -305,28 +305,12 @@\n alue\n-%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%0A%09%09%09%0A%09%09%09\n+ + 1\n %0A%09%09%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-14_03-08-58",
+            "content": "@@ -264,15 +264,16 @@\n %09if \n+!\n value \n-%3C\n+%3E\n  len\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-14_03-09-18",
+            "content": "@@ -280,17 +280,16 @@\n slice)-1\n- \n %7B%0A%09%09%09%09if\n@@ -350,16 +350,24 @@\n %7D%0A%09%09%09%7D%0A%0A\n+%09%09%09%0A%09%09%09%0A\n %09%09%7D%0A%0A%09%09i\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-14_03-09-21",
+            "content": "@@ -338,20 +338,16 @@\n e, value\n- + 1\n %0A%09%09%09%09%7D%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-14_03-09-39",
+            "content": "@@ -242,26 +242,63 @@\n rue, mid%0A%09%09%7D\n-%0A%0A\n+ else %7B%0A%09%09%09if value %3C len(slice)-1 %7B%0A%09%09\n %09%09if slice%5Bm\n@@ -300,14 +300,17 @@\n ice%5B\n-mid%5D %3C\n+value%5D !=\n  val\n@@ -321,31 +321,53 @@\n %0A%09%09%09\n-low = mid + 1%0A%09%09%7D else \n+%09%09return false, value + 1%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09\n if s\n@@ -376,17 +376,17 @@\n ce%5Bmid%5D \n-%3E\n+%3C\n  value %7B\n@@ -393,144 +393,72 @@\n %0A%09%09%09\n-high\n+low\n  = mid \n--\n++\n  1%0A%09%09%7D\n-%0A%0A%09%09if low %3E high %7B%0A%09%09%09if value %3C len(slice) %7B%0A%09%09%09%09if slice%5Bvalue%5D != value %7B%0A%09%09%09%09%09return false, value + 1%0A%09%09%09%09%7D%0A%09%09%09%7D%0A\n+ else if slice%5Bmid%5D %3E value %7B%0A%09%09%09high = mid - 1\n %0A%09%09%7D\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-14_03-11-48",
+            "content": "@@ -257,14 +257,112 @@\n %09if \n-low ==\n+slice%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else if slice%5Bmid%5D %3E value %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%0A%09%09if low %3E\n  hig\n@@ -471,107 +471,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09if slice%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else if slice%5Bmid%5D %3E value %7B%0A%09%09%09high = mid - 1%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-14_03-12-16",
+            "content": "@@ -248,16 +248,139 @@\n id%0A%09%09%7D%0A%0A\n+%09%09if low == high %7B%0A%09%09%09if value %3C len(slice) %7B%0A%09%09%09%09if slice%5Bvalue%5D != value %7B%0A%09%09%09%09%09return false, value + 1%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A\n %09%09if sli\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-14_03-12-52",
+            "content": "@@ -250,55 +250,8 @@\n %0A%09%09%7D\n- else if low == high %7B%0A%09%09%09return false, mid%0A%09%09%7D\n %0A%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-14_03-14-14",
+            "content": "@@ -286,19 +286,19 @@\n  false, \n-low\n+mid\n %0A%09%09%7D%0A%0A%09%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-14_03-14-35",
+            "content": "@@ -289,20 +289,16 @@\n lse, low\n- + 1\n %0A%09%09%7D%0A%0A%09%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-14_03-14-44",
+            "content": "@@ -286,19 +286,19 @@\n  false, \n-mid\n+low\n  + 1%0A%09%09%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-14_03-14-49",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\tlow, high := 0, len(slice)-1\n\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\n\t\tif slice[mid] == value {\n\t\t\treturn true, mid\n\t\t} else if low == high {\n\t\t\treturn false, mid + 1\n\t\t}\n\n\t\tif slice[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else if slice[mid] > value {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn false, 0\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "49"
+        }
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-11_03-58-15",
+            "content": "@@ -42,18 +42,8 @@\n a(s \n-string, k \n stri\n@@ -44,24 +44,24 @@\n s string) %7B%0A\n+\n     if len(s\n@@ -120,11 +120,8 @@\n )-1%5D\n-, k\n )%0A%0A \n@@ -190,16 +190,16 @@\n an(&s)%0A%0A\n+\n     proc\n@@ -207,11 +207,8 @@\n ssa(\n-s, \n s)%0A%7D\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-11_03-59-47",
+            "content": "@@ -21,16 +21,17 @@\n  %22fmt%22%0A%0A\n+%0A\n func pro\n@@ -58,17 +58,20 @@\n ring) %7B%0A\n-%09\n+    \n if len(s\n@@ -83,22 +83,34 @@\n 0 %7B%0A\n-%09%09return%0A%09%7D%0A%0A%09\n+        return%0A    %7D%0A%0A    \n proc\n@@ -132,17 +132,20 @@\n 1%5D, k)%0A%0A\n-%09\n+    \n fmt.Prin\n@@ -168,17 +168,20 @@\n ain() %7B%0A\n-%09\n+    \n var s st\n@@ -185,17 +185,20 @@\n  string%0A\n-%09\n+    \n fmt.Scan\n@@ -207,9 +207,12 @@\n s)%0A%0A\n-%09\n+    \n proc\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-11_03-59-50",
+            "content": "@@ -49,15 +49,16 @@\n ng, \n-pos int\n+k string\n ) %7B%0A\n@@ -71,19 +71,17 @@\n n(s) == \n-pos\n+0\n  %7B%0A%09%09ret\n@@ -105,19 +105,20 @@\n (s%5B:\n-pos%5D, pos+1\n+len(s)-1%5D, k\n )%0A%0A%09\n@@ -191,18 +191,13 @@\n essa(s, \n-len(s)\n+s\n )%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-11_04-01-14",
+            "content": "@@ -101,17 +101,16 @@\n cessa(s%5B\n-1\n :pos%5D, p\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-11_04-01-21",
+            "content": "@@ -105,9 +105,9 @@\n a(s%5B\n-0\n+1\n :pos\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-11_04-01-28",
+            "content": "@@ -64,16 +64,21 @@\n %09if \n-pos\n+len(s)\n  == \n-0\n+pos\n  %7B%0A%09\n@@ -116,9 +116,9 @@\n  pos\n--\n++\n 1)%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-11_04-01-45",
+            "content": "@@ -96,16 +96,17 @@\n cessa(s%5B\n+0\n :pos%5D, p\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-11_04-01-53",
+            "content": "@@ -112,16 +112,30 @@\n os-1)%0A%0A%09\n+fmt.Println(s)\n %0A%7D%0A%0Afunc\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-11_04-01-59",
+            "content": "@@ -87,23 +87,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(s)\n %0A%09pr\n@@ -111,16 +111,18 @@\n pos-1)%0A%0A\n+%09%0A\n %7D%0A%0Afunc \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-11_04-02-00",
+            "content": "@@ -83,16 +83,31 @@\n turn%0A%09%7D%0A\n+%09fmt.Println(s)\n %0A%09proces\n@@ -129,29 +129,8 @@\n -1)%0A\n-%09fmt.Println(s%5B:pos%5D)\n %0A%7D%0A%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-11_04-02-12",
+            "content": "@@ -100,18 +100,12 @@\n a(s%5B\n+:\n pos\n-:len(s)\n %5D, p\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-11_04-02-41",
+            "content": "@@ -106,18 +106,16 @@\n s:len(s)\n--1\n %5D, pos-1\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-11_04-02-50",
+            "content": "@@ -106,16 +106,18 @@\n s:len(s)\n+-1\n %5D, pos-1\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-11_04-02-55",
+            "content": "@@ -100,16 +100,22 @@\n a(s%5Bpos:\n+len(s)\n %5D, pos-1\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-11_04-03-07",
+            "content": "@@ -100,22 +100,16 @@\n a(s%5Bpos:\n-len(s)\n %5D, pos-1\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-11_04-03-15",
+            "content": "@@ -1,210 +1,102 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc processa(s string, pos int) %7B%0A%09if pos == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09processa(s%5Bpos:%5D, pos-1)%0A%09fmt.Println(s%5B:pos%5D)%0A%7D%0A%0Afunc main() %7B%0A%09var s string%0A%09fmt.Scan(&s)%0A%0A%09processa(s, len(s)-1)%0A%7D\n+@@ -100,16 +100,22 @@%0A a(s%255Bpos:%0A+len(s)%0A %255D, pos-1%0A@@ -203,14 +203,12 @@%0A , len(s)%0A--1%0A )%250A%257D%250A\n %0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-06-11_04-03-30",
+            "content": "@@ -68,9 +68,10 @@\n pos \n-%3C\n+==\n  0 %7B\n@@ -95,16 +95,22 @@\n ocessa(s\n+%5Bpos:%5D\n , pos-1)\n@@ -125,20 +125,20 @@\n intln(s%5B\n+:\n pos\n-:\n %5D)%0A%7D%0A%0Afu\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-11_04-05-29",
+            "content": "@@ -86,32 +86,8 @@\n %0A%09%7D%0A\n-    fmt.Println(s%5Bpos:%5D)\n %0A%09pr\n@@ -103,16 +103,37 @@\n  pos-1)%0A\n+%09fmt.Println(s%5Bpos:%5D)\n %0A%7D%0A%0Afunc\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-11_04-05-37",
+            "content": "@@ -82,17 +82,20 @@\n turn%0A%09%7D%0A\n-%09\n+    \n fmt.Prin\n@@ -127,16 +127,17 @@\n  pos-1)%0A\n+%0A\n %7D%0A%0Afunc \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-11_04-05-44",
+            "content": "@@ -189,12 +189,14 @@\n , len(s)\n+-1\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-11_04-05-46",
+            "content": "@@ -68,10 +68,9 @@\n pos \n-==\n+%3C\n  0 %7B\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-11_04-05-53",
+            "content": "@@ -68,9 +68,10 @@\n pos \n-%3C\n+==\n  0 %7B\n@@ -190,14 +190,12 @@\n , len(s)\n--1\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-11_04-06-03",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc processa(s string, pos int) {\n\tif pos < 0 {\n\t\treturn\n\t}\n\tfmt.Println(s[pos:])\n\tprocessa(s, pos-1)\n}\n\nfunc main() {\n\tvar s string\n\tfmt.Scan(&s)\n\n\tprocessa(s, len(s)-1)\n}\n",
+            "lines": "18"
+        }
+    ]
+}
